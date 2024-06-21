@@ -1,0 +1,18 @@
+{
+    '0': {'name': 'data-loss-protect', 'is_required': True, 'is_known': True},
+    '5': {'name': 'upfront-shutdown-script', 'is_required': False, 'is_known': True},
+    '7': {'name': 'gossip-queries', 'is_required': False, 'is_known': True},
+    '8': {'name': 'tlv-onion', 'is_required': True, 'is_known': True},
+    '12': {'name': 'static-remote-key', 'is_required': True, 'is_known': True},
+    '14': {'name': 'payment-addr', 'is_required': True, 'is_known': True},
+    '17': {'name': 'multi-path-payments', 'is_required': False, 'is_known': True},
+    '19': {'name': 'wumbo-channels', 'is_required': False, 'is_known': True},
+    '23': {'name': 'anchors-zero-fee-htlc-tx', 'is_required': False, 'is_known': True},
+    '25': {'name': 'unknown', 'is_required': False, 'is_known': False},
+    '27': {'name': 'shutdown-any-segwit', 'is_required': False, 'is_known': True},
+    '31': {'name': 'amp', 'is_required': False, 'is_known': True},
+    '45': {'name': 'explicit-commitment-type', 'is_required': False, 'is_known': True},
+    '55': {'name': 'keysend', 'is_required': False, 'is_known': True},
+    '181': {'name': 'simple-taproot-chans-x', 'is_required': False, 'is_known': True},
+    '2023': {'name': 'script-enforced-lease', 'is_required': False, 'is_known': True}
+}
