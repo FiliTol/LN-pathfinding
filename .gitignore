@@ -3,3 +3,4 @@ data/blocks.csv
 data/inputs.csv
 data/transactions.csv
 tutorials/
+data/features.json
