@@ -4,3 +4,4 @@ data/inputs.csv
 data/transactions.csv
 tutorials/
 data/features.json
+.python-version

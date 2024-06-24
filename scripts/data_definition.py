@@ -42,17 +42,16 @@ def node_cleaning(pd_object: pd.DataFrame) -> pd.DataFrame:
     :return: cleaned pandas dataframe for nodes
     """
     # Timestamp management
-    pd_object["last_update"] = pd.to_datetime(pd_object["last_update"], unit='s')
-    pd_object = pd_object[pd_object["last_update"] > "1970-01-01"]
+    pd_object["last_update"] = pd.to_datetime(pd_object["last_update"], unit="s")
+    pd_object = pd_object[pd_object.loc[:, "last_update"] > "1970-01-01"]
 
     # Ip addresses
-    pd_object['addresses'] = pd_object.iloc[:, 3].apply(lambda x: [i['addr'] for i in x])
-    pd_object["addresses"] = pd_object["addresses"].apply(_allocate_code)
+    pd_object.loc[:, "addresses"] = pd_object.iloc[:, 3].apply(
+        lambda x: [i["addr"] for i in x]
+    )
+    pd_object.loc[:, "addresses"] = pd_object.loc[:, "addresses"].apply(_allocate_code)
 
-    return pd_object.filter(items=["pub_key",
-                                   "alias",
-                                   "addresses"
-                                   ])
+    return pd_object.filter(items=["pub_key", "alias", "addresses"])
 
 
 def channel_cleaning(pd_object: pd.DataFrame) -> pd.DataFrame:
@@ -61,20 +60,25 @@ def channel_cleaning(pd_object: pd.DataFrame) -> pd.DataFrame:
     :return: cleaned pandas dataframe for channels
     """
     # Timestamp management
-    pd_object["last_update"] = pd.to_datetime(pd_object["last_update"], unit='s')
-    pd_object = pd_object[pd_object["last_update"] > "1970-01-01"]
+    pd_object["last_update"] = pd.to_datetime(pd_object["last_update"], unit="s")
+    pd_object = pd_object[pd_object.loc[:, "last_update"] > "1970-01-01"]
 
-    pd_object["capacity"] = pd_object["capacity"].astype(int)
+    pd_object.loc[:, "capacity"] = pd_object.loc[:, "capacity"].astype(int)
 
-    pd_object = pd_object[pd.notnull(pd_object["node1_policy"]) & pd.notnull(pd_object["node2_policy"])]
+    pd_object = pd_object[
+        pd.notnull(pd_object.loc[:, "node1_policy"]) & pd.notnull(pd_object.loc[:, "node2_policy"])
+    ]
 
-    return pd_object.filter(items=['channel_id',
-                                   'node1_pub',
-                                   'node2_pub',
-                                   'capacity',
-                                   'node1_policy',
-                                   'node2_policy'
-                                   ])
+    return pd_object.filter(
+        items=[
+            "channel_id",
+            "node1_pub",
+            "node2_pub",
+            "capacity",
+            "node1_policy",
+            "node2_policy",
+        ]
+    )
 
 
 def channel_features(pd_object: pd.DataFrame) -> pd.DataFrame:
@@ -83,26 +87,41 @@ def channel_features(pd_object: pd.DataFrame) -> pd.DataFrame:
     :return: new features for dataframe of channels
     """
     # Extract base fee values
-    pd_object['node1_fee_base_msat'] = pd_object['node1_policy'].apply(lambda x: x['fee_base_msat'])
-    pd_object['node2_fee_base_msat'] = pd_object['node2_policy'].apply(lambda x: x['fee_base_msat'])
+    pd_object["node1_fee_base_msat"] = pd_object["node1_policy"].apply(
+        lambda x: x["fee_base_msat"]
+    )
+    pd_object["node2_fee_base_msat"] = pd_object["node2_policy"].apply(
+        lambda x: x["fee_base_msat"]
+    )
     # Extract fee rate values
-    pd_object['node1_fee_rate_milli_msat'] = pd_object['node1_policy'].apply(lambda x: x['fee_rate_milli_msat'])
-    pd_object['node2_fee_rate_milli_msat'] = pd_object['node2_policy'].apply(lambda x: x['fee_rate_milli_msat'])
+    pd_object["node1_fee_rate_milli_msat"] = pd_object["node1_policy"].apply(
+        lambda x: x["fee_rate_milli_msat"]
+    )
+    pd_object["node2_fee_rate_milli_msat"] = pd_object["node2_policy"].apply(
+        lambda x: x["fee_rate_milli_msat"]
+    )
     # Change data type
     pd_object["node1_fee_base_msat"] = pd_object["node1_fee_base_msat"].astype(int)
     pd_object["node2_fee_base_msat"] = pd_object["node2_fee_base_msat"].astype(int)
-    pd_object["node1_fee_rate_milli_msat"] = pd_object["node1_fee_rate_milli_msat"].astype(int)
-    pd_object["node2_fee_rate_milli_msat"] = pd_object["node2_fee_rate_milli_msat"].astype(int)
+    pd_object["node1_fee_rate_milli_msat"] = pd_object[
+        "node1_fee_rate_milli_msat"
+    ].astype(int)
+    pd_object["node2_fee_rate_milli_msat"] = pd_object[
+        "node2_fee_rate_milli_msat"
+    ].astype(int)
 
-    return pd_object.filter(items=['channel_id',
-                                   'node1_pub',
-                                   'node2_pub',
-                                   'capacity',
-                                   'node1_fee_base_msat',
-                                   'node1_fee_rate_milli_msat',
-                                   'node2_fee_base_msat',
-                                   'node2_fee_rate_milli_msat'
-                                   ])
+    return pd_object.filter(
+        items=[
+            "channel_id",
+            "node1_pub",
+            "node2_pub",
+            "capacity",
+            "node1_fee_base_msat",
+            "node1_fee_rate_milli_msat",
+            "node2_fee_base_msat",
+            "node2_fee_rate_milli_msat",
+        ]
+    )
 
 
 class Channel(object):
