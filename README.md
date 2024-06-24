@@ -71,13 +71,13 @@ This first scenario is constituted by:
 
 #### Minimise cost
 
-$\min \sum_{(i,j) \in E} (h_{ij} x_{ij} + c_{ij}y_{ij})$
+$$\min \sum_{(i,j) \in E} (h_{ij} x_{ij} + c_{ij}y_{ij})$$
 
-$y_{ij} \le u_{ij}x_{ij} \text{ } \forall (i,j) \in E$
+$$y_{ij} \le u_{ij}x_{ij} \text{ } \forall (i,j) \in E$$
 
-$\sum_{j \in V:(i,j) \in E} y_{ij} - \sum_{j \in V:(j,i) \in E} y_{ji} = b_i$
+$$\sum_{j \in V:(i,j) \in E} y_{ij} - \sum_{j \in V:(j,i) \in E} y_{ji} = b_i$$
 
-$x \in \{0,1\}^{|A|} , y \in R _+ ^{|A|}$
+$$x \in \{0,1\}^{|A|} , y \in R _+ ^{|A|}$$
 
 Note that for the source $s$ and destination $t$ the $b$ is $b_s = 1$ and $b_t = -1$
 
