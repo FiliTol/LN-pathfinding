@@ -125,8 +125,9 @@ def channel_features(pd_object: pd.DataFrame) -> pd.DataFrame:
 
 
 class Channel(object):
-    pass
-
+    def __init__(self, pd_object: pd.DataFrame):
+        pass
 
 class Node(object):
-    pass
+    def __init__(self, pd_object: pd.DataFrame):
+        pass
