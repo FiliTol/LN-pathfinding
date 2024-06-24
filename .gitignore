@@ -5,4 +5,4 @@ data/transactions.csv
 tutorials/
 data/features.json
 .python-version
-scripts/__pychache__/
+scripts/__pycache__/
