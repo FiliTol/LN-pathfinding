@@ -128,6 +128,7 @@ class Channel(object):
     def __init__(self, pd_object: pd.DataFrame):
         pass
 
+
 class Node(object):
     def __init__(self, pd_object: pd.DataFrame):
         pass

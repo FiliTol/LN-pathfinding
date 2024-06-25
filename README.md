@@ -1,4 +1,4 @@
-# Draft 1
+# Draft
 
 This proposal consist into solving a Shortest Path Fixed Charge NFP problem in the context
  of a state-channel based payment protocol, where payments between
@@ -56,7 +56,7 @@ In the context of a state-channel based payment protocol, a payment between A an
 also be executed by breaking up the amount into smaller chuncks and executing multiple
 smaller payments in a parallel way. This element can enrich the problem formulation.
 
-## Draft 2
+## Sections
 
 This section aims at explaining and drafting the general structure of the work, listing
 the steps to execute.
@@ -65,9 +65,8 @@ the steps to execute.
 
 This first scenario is constituted by:
 - List of nodes
-- List of directed edges, each assigned with a fixed cost, a variable cost and an amount [thus every LN channel is described by two edges] 
+- List of directed edges, each assigned with a fixed cost, a variable cost and an amount [thus every LN channel is described by two edges]. The directed edges initially have capacity*0.5 of liquidity each.
 - Pair of sender-receiver nodes selected between a restricted group of nodes, the payment amount is chosen randomly
-- Consider every channel with always 50%-50% liquidity distribution between the peers
 
 #### Minimise cost
 
