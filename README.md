@@ -70,7 +70,7 @@ This first scenario is constituted by:
 
 #### Minimise cost
 
-$$\min \sum _{(i,j) \in E} (baseFee_{i,j} \times x_{i,j} + rateFee_{i,j} \times amount_{i,j})$$
+$$\min \sum_{(i,j) \in E} (baseFee_{i,j} \times x_{i,j} + rateFee_{i,j} \times amount_{i,j})$$
 
 $$amount_{i,j} \le liquidity_{i,j} \times x_{i,j} \text{ } \forall (i,j) \in E$$
 
