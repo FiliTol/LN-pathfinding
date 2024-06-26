@@ -4,19 +4,15 @@ import re
 import pyomo.environ as pyo
 
 
-def json_to_pd(data: str, obj: str) -> pd.DataFrame:
+def _json_to_pd(data: str) -> (pd.DataFrame, pd.DataFrame):
     """
     :param data: provide json path
-    :param obj:  nodes or channels
-    :return:     filtered pd.DataFrame for nodes or for channels, as required
+    :return:     pd.DataFrame for nodes and channels, as required
     """
     with open(data) as f:
         d = json.load(f)
-    # Correct error in name prompting
-    if obj == "channels":
-        obj = "edges"
-    pd_object: pd.DataFrame = pd.DataFrame(d[obj])
-    return pd_object
+    nodes, channels = pd.DataFrame(d["nodes"]), pd.DataFrame(d["edges"])
+    return nodes, channels
 
 
 def _allocate_code(addresses):
@@ -36,7 +32,7 @@ def _allocate_code(addresses):
     return sum(set(code))
 
 
-def node_cleaning(pd_object: pd.DataFrame) -> pd.DataFrame:
+def _node_cleaning(pd_object: pd.DataFrame) -> pd.DataFrame:
     """
     :param pd_object: pandas dataframe for nodes
     :return: cleaned pandas dataframe for nodes
@@ -54,7 +50,7 @@ def node_cleaning(pd_object: pd.DataFrame) -> pd.DataFrame:
     return pd_object.filter(items=["pub_key", "alias", "addresses"])
 
 
-def channel_cleaning(pd_object: pd.DataFrame) -> pd.DataFrame:
+def _channel_cleaning(pd_object: pd.DataFrame) -> pd.DataFrame:
     """
     :param pd_object: pandas dataframe for channels
     :return: cleaned pandas dataframe for channels
@@ -81,7 +77,7 @@ def channel_cleaning(pd_object: pd.DataFrame) -> pd.DataFrame:
     )
 
 
-def channel_features(pd_object: pd.DataFrame) -> pd.DataFrame:
+def _channel_features(pd_object: pd.DataFrame) -> pd.DataFrame:
     """
     :param pd_object: raw dataframe of channels
     :return: new features for dataframe of channels
@@ -122,6 +118,39 @@ def channel_features(pd_object: pd.DataFrame) -> pd.DataFrame:
             "node2_fee_rate_milli_msat",
         ]
     )
+
+
+# This function transforms the channels dataframe into a dataframe with the directed
+# relationships between peers and keep only the destination fee.
+def _channel_directed_edges_creation(pd_object: pd.DataFrame) -> pd.DataFrame:
+    """
+    :param pd_object: channels dataframe
+    :return: dataframe of channels with directed relationships and features
+    """
+    # Concatenate channel_id with pubkeys
+    pd_object["node1_pub"] = pd_object["channel_id"] + "-" + pd_object["node1_pub"]
+    pd_object["node2_pub"] = pd_object["channel_id"] + "-" + pd_object["node2_pub"]
+
+    # Copy dataframe and flip nodes
+    pd_object1 = pd_object.copy()
+    pd_object1["node1_pub"] = pd_object["node2_pub"]
+    pd_object1["node2_pub"] = pd_object["node1_pub"]
+    pd_object1["node2_fee_base_msat"] = pd_object["node1_fee_base_msat"]
+    pd_object1["node2_fee_rate_milli_msat"] = pd_object["node1_fee_rate_milli_msat"]
+
+    pd_object = pd.concat([pd_object, pd_object1])
+    pd_object = pd_object.filter(items=["channel_id", "node1_pub", "node2_pub", "capacity", "node2_fee_base_msat", "node2_fee_rate_milli_msat"])
+    pd_object.rename(columns={"node2_fee_base_msat": "fee_base_msat", "node2_fee_rate_milli_msat": "fee_rate_milli_msat"}, inplace=True)
+
+    return pd_object
+
+
+def load_and_transform(data: str) -> tuple:
+    nodes, channels = _json_to_pd(data)
+    channels = _channel_directed_edges_creation(_channel_features(_channel_cleaning(channels)))
+    nodes = _node_cleaning(nodes).set_index('pub_key')
+
+    return nodes, channels
 
 
 class Channel(object):
