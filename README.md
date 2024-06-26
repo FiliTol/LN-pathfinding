@@ -70,14 +70,12 @@ This first scenario is constituted by:
 
 #### Minimise cost
 
-$$\min \sum_{(i,j) \in E} (h_{ij} x_{ij} + c_{ij}y_{ij})$$
+$$\min \sum _{(i,j) \in E} (baseFee_{i,j} \times x_{i,j} + rateFee_{i,j} \times amount_{i,j})$$
 
-$$y_{ij} \le u_{ij}x_{ij} \text{ } \forall (i,j) \in E$$
+$$amount_{i,j} \le liquidity_{i,j} \times x_{i,j} \text{ } \forall (i,j) \in E$$
 
-$$\sum_{j \in V:(i,j) \in E} y_{ij} - \sum_{j \in V:(j,i) \in E} y_{ji} = b_i$$
+$$\sum_{(s,i) \in E} amount_{si} - \sum_{(i,t) \in E} amount_{it} = b_i \text{ } \forall i \in V$$
 
 $$x \in \{0,1\}^{|A|} , y \in R _+ ^{|A|}$$
 
 Note that for the source $s$ and destination $t$ the $b$ is $b_s = 1$ and $b_t = -1$
-
-
