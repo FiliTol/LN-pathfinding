@@ -1,0 +1,37 @@
+{
+	"MaxWeight": 15,
+	"Items": {
+		"AntRepellent": {
+			"weight": 1,
+			"rating": 2
+		},
+		"Beer": {
+			"weight": 3,
+			"rating": 9
+		},
+		"Blanket": {
+			"weight": 4,
+			"rating": 3
+		},
+		"Bratwurst": {
+			"weight": 3,
+			"rating": 8
+		},
+		"Brownies": {
+			"weight": 3,
+			"rating": 10
+		},
+		"Frisbee": {
+			"weight": 1,
+			"rating": 6
+		},
+		"Salad": {
+			"weight": 5,
+			"rating": 4
+		},
+		"Watermelon": {
+			"weight": 10,
+			"rating": 10
+		}
+	}
+}

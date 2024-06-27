@@ -7,3 +7,4 @@ data/features.json
 .python-version
 scripts/__pycache__/
 scripts/testing.ipynb
+data/Input/
