@@ -1,9 +1,9 @@
 # Draft
 
-This proposal consist into solving a Shortest Path Fixed Charge NFP problem in the context
- of a state-channel based payment protocol, where payments between
+This proposal consist into solving a Min Cost flow network problem in the context
+of a state-channel based payment protocol, where payments between
 partecipants flow based on the shortes and cheapest path between the two nodes.
-This specific problem is a mixture of the shortest path problem with the classical NFP problem,
+This specific problem is a mixture of the shortest path problem with the classical NF problem ,
 whereby the cost of taking a specific path is the sum of the fixed fees along the path plus
 the sum of the variable fee rates (that are proportional to the amount of the payment flowing
 across the edge).
@@ -61,6 +61,13 @@ smaller payments in a parallel way. This element can enrich the problem formulat
 This section aims at explaining and drafting the general structure of the work, listing
 the steps to execute.
 
+### Mock example
+
+- [] define the *single path constraint* whereby the flow can only go through a node once;
+- [] change the Objective function formulation in order to linearize the problem as in Fixed Charge problems;
+- [] create a directed graph of the mock dataset to test for solution robustness
+- [] test the liquidity-ripartition between twin-directed channels
+
 ### First scenario
 
 This first scenario is constituted by:
@@ -68,14 +75,3 @@ This first scenario is constituted by:
 - List of directed edges, each assigned with a fixed cost, a variable cost and an amount [thus every LN channel is described by two edges]. The directed edges initially have capacity*0.5 of liquidity each.
 - Pair of sender-receiver nodes selected between a restricted group of nodes, the payment amount is chosen randomly
 
-#### Minimise cost
-
-$$\min \sum_{(i,j) \in E} (baseFee_{i,j} \times x_{i,j} + rateFee_{i,j} \times amount_{i,j})$$
-
-$$amount_{i,j} \le liquidity_{i,j} \times x_{i,j} \text{ } \forall (i,j) \in E$$
-
-$$\sum_{(s,i) \in E} amount_{si} - \sum_{(i,t) \in E} amount_{it} = b_i \text{ } \forall i \in V$$
-
-$$x \in \{0,1\}^{|A|} , y \in R _+ ^{|A|}$$
-
-Note that for the source $s$ and destination $t$ the $b$ is $b_s = 1$ and $b_t = -1$

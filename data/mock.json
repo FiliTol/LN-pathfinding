@@ -1,15 +1,15 @@
 {
   "nodes": [
-    {"pub_key": "node1", "alias": "Thunderbolt", "addresses": 1},
-    {"pub_key": "node2", "alias": "LightningStrike", "addresses": 2},
-    {"pub_key": "node3", "alias": "ElectricStorm", "addresses": 3},
-    {"pub_key": "node4", "alias": "FlashCharge", "addresses": 1},
-    {"pub_key": "node5", "alias": "SparkPlug", "addresses": 2},
-    {"pub_key": "node6", "alias": "ThunderSpark", "addresses": 3},
-    {"pub_key": "node7", "alias": "BoltCharge", "addresses": 1},
-    {"pub_key": "node8", "alias": "ThunderFlash", "addresses": 2},
-    {"pub_key": "node9", "alias": "LightningBolt", "addresses": 3},
-    {"pub_key": "node10", "alias": "ElectricBolt", "addresses": 1}
+    {"pub_key": "node1", "alias": "Thunderbolt", "addresses": 1, "demand": 0},
+    {"pub_key": "node2", "alias": "LightningStrike", "addresses": 2, "demand": 0},
+    {"pub_key": "node3", "alias": "ElectricStorm", "addresses": 3, "demand": 0},
+    {"pub_key": "node4", "alias": "FlashCharge", "addresses": 1, "demand": 0},
+    {"pub_key": "node5", "alias": "SparkPlug", "addresses": 2, "demand": 0},
+    {"pub_key": "node6", "alias": "ThunderSpark", "addresses": 3, "demand": 0},
+    {"pub_key": "node7", "alias": "BoltCharge", "addresses": 1, "demand": 0},
+    {"pub_key": "node8", "alias": "ThunderFlash", "addresses": 2, "demand": 0},
+    {"pub_key": "node9", "alias": "LightningBolt", "addresses": 3, "demand": -2000},
+    {"pub_key": "node10", "alias": "ElectricBolt", "addresses": 1, "demand": 2000}
   ],
   "edges": [
     {
@@ -18,7 +18,7 @@
       "node2_pub": "node2",
       "capacity": 50000,
       "base_fee": 30,
-      "perc_fee": 0.5
+      "perc_fee": 0.005
     },
     {
       "channel_id": 2,
@@ -26,7 +26,7 @@
       "node2_pub": "node3",
       "capacity": 70000,
       "base_fee": 40,
-      "perc_fee": 0.3
+      "perc_fee": 0.003
     },
     {
       "channel_id": 3,
@@ -34,7 +34,7 @@
       "node2_pub": "node4",
       "capacity": 60000,
       "base_fee": 50,
-      "perc_fee": 0.4
+      "perc_fee": 0.004
     },
     {
       "channel_id": 4,
@@ -42,7 +42,7 @@
       "node2_pub": "node5",
       "capacity": 80000,
       "base_fee": 20,
-      "perc_fee": 0.2
+      "perc_fee": 0.002
     },
     {
       "channel_id": 5,
@@ -50,7 +50,7 @@
       "node2_pub": "node6",
       "capacity": 90000,
       "base_fee": 60,
-      "perc_fee": 0.6
+      "perc_fee": 0.006
     },
     {
       "channel_id": 6,
@@ -58,7 +58,7 @@
       "node2_pub": "node7",
       "capacity": 100000,
       "base_fee": 70,
-      "perc_fee": 0.7
+      "perc_fee": 0.007
     },
     {
       "channel_id": 7,
@@ -66,7 +66,7 @@
       "node2_pub": "node8",
       "capacity": 10000,
       "base_fee": 80,
-      "perc_fee": 0.8
+      "perc_fee": 0.008
     },
     {
       "channel_id": 8,
@@ -74,7 +74,7 @@
       "node2_pub": "node9",
       "capacity": 30000,
       "base_fee": 90,
-      "perc_fee": 0.9
+      "perc_fee": 0.009
     },
     {
       "channel_id": 9,
@@ -82,7 +82,7 @@
       "node2_pub": "node10",
       "capacity": 20000,
       "base_fee": 70,
-      "perc_fee": 0.7
+      "perc_fee": 0.007
     },
     {
       "channel_id": 10,
@@ -90,7 +90,7 @@
       "node2_pub": "node3",
       "capacity": 40000,
       "base_fee": 40,
-      "perc_fee": 0.4
+      "perc_fee": 0.004
     },
     {
       "channel_id": 11,
@@ -98,7 +98,7 @@
       "node2_pub": "node4",
       "capacity": 55000,
       "base_fee": 25,
-      "perc_fee": 0.55
+      "perc_fee": 0.0055
     },
     {
       "channel_id": 12,
@@ -106,7 +106,7 @@
       "node2_pub": "node5",
       "capacity": 75000,
       "base_fee": 35,
-      "perc_fee": 0.75
+      "perc_fee": 0.0075
     },
     {
       "channel_id": 13,
@@ -114,7 +114,7 @@
       "node2_pub": "node6",
       "capacity": 85000,
       "base_fee": 45,
-      "perc_fee": 0.85
+      "perc_fee": 0.0085
     },
     {
       "channel_id": 14,
@@ -122,7 +122,7 @@
       "node2_pub": "node7",
       "capacity": 95000,
       "base_fee": 55,
-      "perc_fee": 0.95
+      "perc_fee": 0.0095
     },
     {
       "channel_id": 15,
@@ -130,7 +130,7 @@
       "node2_pub": "node8",
       "capacity": 105000,
       "base_fee": 65,
-      "perc_fee": 0.65
+      "perc_fee": 0.0065
     },
     {
       "channel_id": 16,
@@ -138,7 +138,7 @@
       "node2_pub": "node9",
       "capacity": 15000,
       "base_fee": 75,
-      "perc_fee": 0.75
+      "perc_fee": 0.0075
     },
     {
       "channel_id": 17,
@@ -146,7 +146,7 @@
       "node2_pub": "node10",
       "capacity": 25000,
       "base_fee": 85,
-      "perc_fee": 0.85
+      "perc_fee": 0.0085
     },
     {
       "channel_id": 18,
@@ -154,7 +154,7 @@
       "node2_pub": "node4",
       "capacity": 45000,
       "base_fee": 45,
-      "perc_fee": 0.45
+      "perc_fee": 0.0045
     },
     {
       "channel_id": 19,
@@ -162,7 +162,7 @@
       "node2_pub": "node5",
       "capacity": 65000,
       "base_fee": 55,
-      "perc_fee": 0.65
+      "perc_fee": 0.0065
     },
     {
       "channel_id": 20,
@@ -170,7 +170,7 @@
       "node2_pub": "node6",
       "capacity": 85000,
       "base_fee": 65,
-      "perc_fee": 0.75
+      "perc_fee": 0.0075
     },
     {
       "channel_id": 21,
@@ -178,7 +178,7 @@
       "node2_pub": "node7",
       "capacity": 95000,
       "base_fee": 75,
-      "perc_fee": 0.85
+      "perc_fee": 0.0085
     },
     {
       "channel_id": 22,
@@ -186,7 +186,7 @@
       "node2_pub": "node8",
       "capacity": 105000,
       "base_fee": 85,
-      "perc_fee": 0.95
+      "perc_fee": 0.0095
     },
     {
       "channel_id": 23,
@@ -194,7 +194,7 @@
       "node2_pub": "node9",
       "capacity": 25000,
       "base_fee": 95,
-      "perc_fee": 0.55
+      "perc_fee": 0.0055
     },
     {
       "channel_id": 24,
@@ -202,7 +202,7 @@
       "node2_pub": "node10",
       "capacity": 35000,
       "base_fee": 65,
-      "perc_fee": 0.75
+      "perc_fee": 0.0075
     },
     {
       "channel_id": 25,
@@ -210,7 +210,7 @@
       "node2_pub": "node5",
       "capacity": 55000,
       "base_fee": 35,
-      "perc_fee": 0.35
+      "perc_fee": 0.0035
     }
   ]
 }
