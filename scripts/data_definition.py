@@ -146,8 +146,17 @@ def _channel_directed_edges_creation(pd_object: pd.DataFrame) -> pd.DataFrame:
 
 
 def load_and_transform(data: str) -> tuple:
+
     nodes, channels = _json_to_pd(data)
-    channels = _channel_directed_edges_creation(_channel_features(_channel_cleaning(channels)))
+
+    channels = _channel_directed_edges_creation(
+        _channel_features(
+            _channel_cleaning(
+                channels
+            )
+        )
+    ).set_index("channel_id")
+
     nodes = _node_cleaning(nodes).set_index('pub_key')
 
     return nodes, channels
