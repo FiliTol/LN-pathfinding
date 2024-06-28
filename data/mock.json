@@ -1,6 +1,6 @@
 {
   "nodes": [
-    {"pub_key": "node1", "alias": "Thunderbolt", "addresses": 1, "demand": 0},
+    {"pub_key": "node1", "alias": "Thunderbolt", "addresses": 1, "demand": -20000},
     {"pub_key": "node2", "alias": "LightningStrike", "addresses": 2, "demand": 0},
     {"pub_key": "node3", "alias": "ElectricStorm", "addresses": 3, "demand": 0},
     {"pub_key": "node4", "alias": "FlashCharge", "addresses": 1, "demand": 0},
@@ -8,8 +8,8 @@
     {"pub_key": "node6", "alias": "ThunderSpark", "addresses": 3, "demand": 0},
     {"pub_key": "node7", "alias": "BoltCharge", "addresses": 1, "demand": 0},
     {"pub_key": "node8", "alias": "ThunderFlash", "addresses": 2, "demand": 0},
-    {"pub_key": "node9", "alias": "LightningBolt", "addresses": 3, "demand": -2000},
-    {"pub_key": "node10", "alias": "ElectricBolt", "addresses": 1, "demand": 2000}
+    {"pub_key": "node9", "alias": "LightningBolt", "addresses": 3, "demand": 0},
+    {"pub_key": "node10", "alias": "ElectricBolt", "addresses": 1, "demand": 20000}
   ],
   "edges": [
     {
