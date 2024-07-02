@@ -1,3 +1,4 @@
+import time
 import random
 from multiprocessing import Pool
 import pandas as pd
@@ -193,10 +194,10 @@ def _find_channels(n: str, df_channels: pd.DataFrame) -> list:
     return channels_list
 
 
-def _parallel_channel_finding(args: tuple, pd_object: pd.DataFrame) -> pd.DataFrame:
+def _parallel_channel_finding(args: tuple, df_channels: pd.DataFrame) -> pd.DataFrame:
     dfs, i = args
     df = dfs[i].copy()
-    df["outgoing_channels"] = df.apply(_find_channels(pd_object), axis=1)
+    df["outgoing_channels"] = df.apply(_find_channels, args=(df_channels,), axis=1)
     return df
 
 
@@ -219,7 +220,8 @@ def _drop_not_connected(nodes: pd.DataFrame, channels: pd.DataFrame ) -> pd.Data
     :return: filtered nodes dataframe containing only the nodes
      that appear at least once in the channels dataframe
     """
-    return nodes[nodes.index.isin(channels["node1_pub"]) or nodes.index.isin(channels["node2_pub"])]
+    nodes = nodes[nodes.index.isin(channels["node1_pub"]) & nodes.index.isin(channels["node2_pub"])]
+    return nodes
 
 
 def split_compute_concat(nodes: pd.DataFrame, channels: pd.DataFrame, slices: int) -> pd.DataFrame:
@@ -234,8 +236,8 @@ def split_compute_concat(nodes: pd.DataFrame, channels: pd.DataFrame, slices: in
 
     # Compute in parallel the channel finding and appending of channels list
     pool = Pool()
-    inputs: list = [(dataframes, y) for y in range(slices)]
-    outputs: list = pool.map(_parallel_channel_finding, inputs)
+    inputs: list = [((dataframes, y), channels) for y in range(slices)]
+    outputs: list = pool.starmap(_parallel_channel_finding, inputs)
     pd_object = _flipped_channels(pd.concat(outputs))
 
     return pd_object
@@ -255,8 +257,9 @@ def _channel_directed_edges_creation(pd_object: pd.DataFrame) -> pd.DataFrame:
     """
 
     # Copy dataframe flip nodes
+    pd_object.reset_index(inplace=True)
     pd_object1 = pd_object.copy()
-    pd_object1.index = "INV" + pd_object1.index
+    pd_object1["channel_id"] = "INV" + pd_object1["channel_id"]
     pd_object1["node1_pub"] = pd_object["node2_pub"]
     pd_object1["node2_pub"] = pd_object["node1_pub"]
     pd_object1["node2_fee_base_msat"] = pd_object["node1_fee_base_msat"]
@@ -264,12 +267,12 @@ def _channel_directed_edges_creation(pd_object: pd.DataFrame) -> pd.DataFrame:
 
     pd_object = pd.concat([pd_object, pd_object1])
     pd_object = pd_object.filter(
-        items=["node1_pub", "node2_pub", "capacity", "node2_fee_base_msat", "node2_fee_rate_milli_msat"])
+        items=["channel_id", "node1_pub", "node2_pub", "capacity", "node2_fee_base_msat", "node2_fee_rate_milli_msat"])
     pd_object.rename(
         columns={"node2_fee_base_msat": "fee_base_msat", "node2_fee_rate_milli_msat": "fee_rate_milli_msat"},
         inplace=True)
 
-    return pd_object
+    return pd_object.set_index("channel_id")
 
 
 def _fees_conversion(pd_object: pd.DataFrame) -> pd.DataFrame:
@@ -321,9 +324,26 @@ def save_cleaned(nodes: pd.DataFrame, channels: pd.DataFrame):
     try:
         nodes.to_csv("data/nodes.csv")
         channels.to_csv("data/channels.csv")
-        return "Dataframes correctly saved in the data/ directory"
     except:
         return "Something went wrong while saving the dataframes in the data/ directory"
+
+
+if __name__ == "__main__":
+    start = time.time()
+
+    nodes, channels = json_to_pd("../data/network_graph_2024_06_12.json")
+    nodes = nodes_cleaning(nodes)
+
+    nodes = split_compute_concat(nodes, channels, slices=9)
+
+    channels = channels_cleaning(channels)
+    channels = directed_channels_final(channels)
+
+    save_cleaned(nodes, channels)
+
+    end = time.time()
+    print(f"It took {end - start} seconds to execute the whole script.")
+
 
 
 
