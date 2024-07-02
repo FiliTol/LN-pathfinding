@@ -3,7 +3,6 @@ from multiprocessing import Pool
 import pandas as pd
 import json
 import re
-import pyomo.environ as pyo
 from random import sample
 
 
@@ -118,17 +117,6 @@ def _fees_extraction(pd_object: pd.DataFrame) -> pd.DataFrame:
     return pd_object
 
 
-def _fees_conversion(pd_object: pd.DataFrame) -> pd.DataFrame:
-    """
-    :param pd_object: channels dataframe
-    :return: channels dataframe with converted fees
-    """
-    pd_object["fee_base_msat"] = pd_object["fee_base_msat"] / 1000
-    pd_object["fee_rate_milli_msat"] = pd_object["fee_rate_milli_msat"] / 1000000
-    pd_object.rename(columns={"fee_base_msat": "base_fee", "fee_rate_milli_msat": "rate_fee"}, inplace=True)
-    return pd_object
-
-
 def _channel_data_types(pd_object: pd.DataFrame) -> pd.DataFrame:
     """
     :param pd_object: raw dataframe of channels
@@ -147,6 +135,7 @@ def _channel_data_types(pd_object: pd.DataFrame) -> pd.DataFrame:
 
 
 def channels_cleaning(pd_object: pd.DataFrame) -> pd.DataFrame:
+    pd_object = _filter_dates(pd_object)
     pd_object = _channel_filtering(pd_object)
     pd_object = _fees_extraction(pd_object)
     pd_object = _channel_data_types(pd_object)
@@ -256,15 +245,85 @@ def split_compute_concat(nodes: pd.DataFrame, channels: pd.DataFrame, slices: in
 # Directed edges creation for channels dataframe |
 # ------------------------------------------------
 
+def _channel_directed_edges_creation(pd_object: pd.DataFrame) -> pd.DataFrame:
+    """
+    This function transforms the channels dataframe into a dataframe with the directed
+    relationships between peers and keep only the fee charged for going trough the specific
+    directed path.
+    :param pd_object: channels dataframe
+    :return: dataframe of channels with directed relationships and features
+    """
+
+    # Copy dataframe flip nodes
+    pd_object1 = pd_object.copy()
+    pd_object1.index = "INV" + pd_object1.index
+    pd_object1["node1_pub"] = pd_object["node2_pub"]
+    pd_object1["node2_pub"] = pd_object["node1_pub"]
+    pd_object1["node2_fee_base_msat"] = pd_object["node1_fee_base_msat"]
+    pd_object1["node2_fee_rate_milli_msat"] = pd_object["node1_fee_rate_milli_msat"]
+
+    pd_object = pd.concat([pd_object, pd_object1])
+    pd_object = pd_object.filter(
+        items=["node1_pub", "node2_pub", "capacity", "node2_fee_base_msat", "node2_fee_rate_milli_msat"])
+    pd_object.rename(
+        columns={"node2_fee_base_msat": "fee_base_msat", "node2_fee_rate_milli_msat": "fee_rate_milli_msat"},
+        inplace=True)
+
+    return pd_object
 
 
+def _fees_conversion(pd_object: pd.DataFrame) -> pd.DataFrame:
+    """
+    :param pd_object: channels dataframe
+    :return: channels dataframe with converted fees
+    """
+    pd_object["fee_base_msat"] = pd_object["fee_base_msat"] / 1000
+    pd_object["fee_rate_milli_msat"] = pd_object["fee_rate_milli_msat"] / 1000000
+    pd_object.rename(columns={"fee_base_msat": "base_fee", "fee_rate_milli_msat": "rate_fee"}, inplace=True)
+    return pd_object
 
 
+def directed_channels_final(pd_object: pd.DataFrame) -> pd.DataFrame:
+    """
+    :param pd_object: channels dataframe
+    :return: directed channel dataframe with adjusted fees
+    """
+    pd_object = _channel_directed_edges_creation(pd_object)
+    pd_object = _fees_conversion(pd_object)
+
+    return pd_object
 
 
+def create_demand(pd_object: pd.DataFrame) -> pd.DataFrame:
+    """
+    This function assigns the role of sender and receiver to
+    two random nodes in the network
+    :param pd_object: nodes dataframe
+    :return: nodes dataset with demand column
+    """
+    counterparties = sample(pd_object.index.to_list(), 2)
+    sender = counterparties[0]
+    receiver = counterparties[1]
+    random.seed(874631)
+    amount = random.randint(a=10000, b=30000)
+
+    print(
+        f"Transaction of {amount} sats from {pd_object[pd_object.index == sender]['alias'].item()} to {pd_object[pd_object.index == receiver]['alias'].item()}.")
+
+    pd_object["demand"] = 0
+    pd_object.loc[pd_object.index == sender, "demand"] = -amount
+    pd_object.loc[pd_object.index == receiver, "demand"] = amount
+
+    return pd_object
 
 
-
+def save_cleaned(nodes: pd.DataFrame, channels: pd.DataFrame):
+    try:
+        nodes.to_csv("data/nodes.csv")
+        channels.to_csv("data/channels.csv")
+        return "Dataframes correctly saved in the data/ directory"
+    except:
+        return "Something went wrong while saving the dataframes in the data/ directory"
 
 
 
