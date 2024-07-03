@@ -304,11 +304,11 @@ def create_demand(pd_object: pd.DataFrame) -> pd.DataFrame:
     :param pd_object: nodes dataframe
     :return: nodes dataset with demand column
     """
+    random.seed(874631)
     counterparties = sample(pd_object.index.to_list(), 2)
     sender = counterparties[0]
     receiver = counterparties[1]
-    random.seed(874631)
-    amount = random.randint(a=10000, b=30000)
+    amount = 10000 #random.randint(a=10000, b=30000)
 
     print(
         f"Transaction of {amount} sats from {pd_object[pd_object.index == sender]['alias'].item()} to {pd_object[pd_object.index == receiver]['alias'].item()}.")
@@ -322,8 +322,8 @@ def create_demand(pd_object: pd.DataFrame) -> pd.DataFrame:
 
 def save_cleaned(nodes: pd.DataFrame, channels: pd.DataFrame):
     try:
-        nodes.to_csv("data/nodes.csv")
-        channels.to_csv("data/channels.csv")
+        nodes.to_pickle("data/nodes.pkl")
+        channels.to_pickle("data/channels.pkl")
     except:
         return "Something went wrong while saving the dataframes in the data/ directory"
 
@@ -341,7 +341,7 @@ if __name__ == "__main__":
     channels = directed_channels_final(channels)
 
     save_cleaned(nodes, channels)
-    print("Dataframes saved as CSV files in the data/ folder")
+    print("Dataframes saved as pickles in the data/ folder")
 
     end = time.time()
     print(f"It took {end - start} seconds to execute the whole script.")
