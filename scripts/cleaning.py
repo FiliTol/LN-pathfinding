@@ -330,16 +330,19 @@ def save_cleaned(nodes: pd.DataFrame, channels: pd.DataFrame):
 
 if __name__ == "__main__":
     start = time.time()
-
-    nodes, channels = json_to_pd("../data/network_graph_2024_06_12.json")
+    print("Cleaning script started")
+    nodes, channels = json_to_pd("data/network_graph_2024_06_12.json")
     nodes = nodes_cleaning(nodes)
 
+    print("Working on the parallel multiprocess channel search. Please wait without interrupting."
+          "\nIt will took roughly 15 minutes.")
     nodes = split_compute_concat(nodes, channels, slices=9)
 
     channels = channels_cleaning(channels)
     channels = directed_channels_final(channels)
 
     save_cleaned(nodes, channels)
+    print("Dataframes saved as CSV files in the data/ folder")
 
     end = time.time()
     print(f"It took {end - start} seconds to execute the whole script.")
