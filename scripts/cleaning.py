@@ -333,12 +333,11 @@ if __name__ == "__main__":
     print("Cleaning script started")
     nodes, channels = json_to_pd("data/network_graph_2024_06_12.json")
     nodes = nodes_cleaning(nodes)
+    channels = channels_cleaning(channels)
 
-    print("Working on the parallel multiprocess channel search. Please wait without interrupting."
-          "\nIt will took roughly 15 minutes.")
+    print("Working on the parallel multiprocess channel search. Please wait without interrupting.")
     nodes = split_compute_concat(nodes, channels, slices=9)
 
-    channels = channels_cleaning(channels)
     channels = directed_channels_final(channels)
 
     save_cleaned(nodes, channels)
