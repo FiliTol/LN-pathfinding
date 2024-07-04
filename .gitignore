@@ -3,8 +3,12 @@ data/blocks.csv
 data/inputs.csv
 data/transactions.csv
 tutorials/
-data/features.json
+data/original/features.json
 .python-version
 scripts/__pycache__/
 scripts/testing.ipynb
 data/Input/
+scripts/.ipynb_checkpoints
+scripts/mock.ipynb
+scripts/scrape_mempool.ipynb
+data/mock/mock.json

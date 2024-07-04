@@ -63,7 +63,11 @@ def _node_addresses(pd_object: pd.DataFrame) -> pd.DataFrame:
     pd_object.loc[:, "addresses"] = pd_object.iloc[:, 3].apply(
         lambda x: [i["addr"] for i in x]
     )
-    pd_object.loc[:, "addresses"] = pd_object.loc[:, "addresses"].apply(_allocate_code)
+    try:
+        pd_object.loc[:, "addresses"] = pd_object.loc[:, "addresses"].apply(_allocate_code)
+    except:
+        print("Address not found, going ahead without addresses creation")
+        pass
 
     return pd_object
 
@@ -220,7 +224,7 @@ def _drop_not_connected(nodes: pd.DataFrame, channels: pd.DataFrame ) -> pd.Data
     :return: filtered nodes dataframe containing only the nodes
      that appear at least once in the channels dataframe
     """
-    nodes = nodes[nodes.index.isin(channels["node1_pub"]) & nodes.index.isin(channels["node2_pub"])]
+    nodes = nodes[nodes.index.isin(channels["node1_pub"]) | nodes.index.isin(channels["node2_pub"])]
     return nodes
 
 
@@ -275,13 +279,17 @@ def _channel_directed_edges_creation(pd_object: pd.DataFrame) -> pd.DataFrame:
     return pd_object.set_index("channel_id")
 
 
-def _fees_conversion(pd_object: pd.DataFrame) -> pd.DataFrame:
+def _fees_amount_conversion(pd_object: pd.DataFrame) -> pd.DataFrame:
     """
     :param pd_object: channels dataframe
     :return: channels dataframe with converted fees
     """
-    pd_object["fee_base_msat"] = pd_object["fee_base_msat"] / 1000
-    pd_object["fee_rate_milli_msat"] = pd_object["fee_rate_milli_msat"] / 1000000
+    # Turn channel capacity into millisats
+    pd_object["capacity"] = pd_object["capacity"]# * 1000
+
+    # Transform fees accordingly (base fee already in millisats)
+    # Fee rate in parts per million of a sat (ppm)
+    #pd_object["fee_rate_milli_msat"] = pd_object["fee_rate_milli_msat"] / 1000
     pd_object.rename(columns={"fee_base_msat": "base_fee", "fee_rate_milli_msat": "rate_fee"}, inplace=True)
     return pd_object
 
@@ -292,7 +300,7 @@ def directed_channels_final(pd_object: pd.DataFrame) -> pd.DataFrame:
     :return: directed channel dataframe with adjusted fees
     """
     pd_object = _channel_directed_edges_creation(pd_object)
-    pd_object = _fees_conversion(pd_object)
+    pd_object = _fees_amount_conversion(pd_object)
 
     return pd_object
 
@@ -308,7 +316,8 @@ def create_demand(pd_object: pd.DataFrame) -> pd.DataFrame:
     counterparties = sample(pd_object.index.to_list(), 2)
     sender = counterparties[0]
     receiver = counterparties[1]
-    amount = 10000 #random.randint(a=10000, b=30000)
+    # Amounts in millisat (aka 10'000'000 is 10'000 sats)
+    amount = 10000000 #random.randint(a=10000000, b=30000000)
 
     print(
         f"Transaction of {amount} sats from {pd_object[pd_object.index == sender]['alias'].item()} to {pd_object[pd_object.index == receiver]['alias'].item()}.")
@@ -320,18 +329,10 @@ def create_demand(pd_object: pd.DataFrame) -> pd.DataFrame:
     return pd_object
 
 
-def save_cleaned(nodes: pd.DataFrame, channels: pd.DataFrame):
-    try:
-        nodes.to_pickle("data/nodes.pkl")
-        channels.to_pickle("data/channels.pkl")
-    except:
-        return "Something went wrong while saving the dataframes in the data/ directory"
-
-
 if __name__ == "__main__":
     start = time.time()
     print("Cleaning script started")
-    nodes, channels = json_to_pd("data/network_graph_2024_06_12.json")
+    nodes, channels = json_to_pd("data/mock/mock_dataset.json")
     nodes = nodes_cleaning(nodes)
     channels = channels_cleaning(channels)
 
@@ -340,7 +341,8 @@ if __name__ == "__main__":
 
     channels = directed_channels_final(channels)
 
-    save_cleaned(nodes, channels)
+    nodes.to_pickle("data/mock/mock_nodes.pkl")
+    channels.to_pickle("data/mock/mock_channels.pkl")
     print("Dataframes saved as pickles in the data/ folder")
 
     end = time.time()
