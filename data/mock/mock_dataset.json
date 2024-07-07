@@ -2,75 +2,75 @@
     "nodes": [
         {
             "last_update": 1720108241,
-            "pub_key": "827485f8c1879fdc0e76deaf30a679d5a0c2f2c09a9c66fc58e74ec6eb63ce1bb3",
-            "alias": "gssmfkciaz.com",
+            "pub_key": "GPBGSG",
+            "alias": "GPBGSG.com",
             "addresses": [
                 {
                     "network": "tcp",
-                    "addr": "zdpkvvtzfpobbaaqamje.onion:9735"
+                    "addr": "runnbaompzhgjymaqesn.onion:9735"
                 }
             ],
-            "color": "#a4879a",
+            "color": "#f00abd",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": true,
+                    "is_known": true
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "ZMAHVA",
+            "alias": "ZMAHVA.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "laccbwvvizgysbhwqybp.onion:9735"
+                }
+            ],
+            "color": "#06c30b",
             "features": {
                 "0": {
                     "name": "data-loss-protect",
                     "is_required": false,
-                    "is_known": true
+                    "is_known": false
                 }
             },
             "custom_records": {}
         },
         {
             "last_update": 1720108241,
-            "pub_key": "a2a57978dc69ebd577185fb57ba191248b4539c5114d17cbc42b3c11cdd05b3f71",
-            "alias": "jeuaicjvuq.com",
+            "pub_key": "ARFUZV",
+            "alias": "ARFUZV.com",
             "addresses": [
                 {
                     "network": "tcp",
-                    "addr": "pmcdlmwutdyhqfoqelll.onion:9735"
+                    "addr": "igvirogwmtlatzqczfzc.onion:9735"
                 }
             ],
-            "color": "#3609cd",
+            "color": "#221eee",
             "features": {
                 "0": {
                     "name": "data-loss-protect",
-                    "is_required": true,
-                    "is_known": true
+                    "is_required": false,
+                    "is_known": false
                 }
             },
             "custom_records": {}
         },
         {
             "last_update": 1720108241,
-            "pub_key": "3e178a5b955bd2578bd49667e402ba84e1209e67c7899a2b1721443938823a7580",
-            "alias": "jqceikqnqr.com",
+            "pub_key": "ZVMBLR",
+            "alias": "ZVMBLR.com",
             "addresses": [
                 {
                     "network": "tcp",
-                    "addr": "ssxwythexmgdzlwarqmd.onion:9735"
+                    "addr": "gikhpobviyzzezjkpqot.onion:9735"
                 }
             ],
-            "color": "#a575b5",
-            "features": {
-                "0": {
-                    "name": "data-loss-protect",
-                    "is_required": true,
-                    "is_known": true
-                }
-            },
-            "custom_records": {}
-        },
-        {
-            "last_update": 1720108241,
-            "pub_key": "214bf69161742a9d5cb57c103f6590d01bcd0810ccff1b5347cd846dfea0525166",
-            "alias": "juopjvqqbd.com",
-            "addresses": [
-                {
-                    "network": "tcp",
-                    "addr": "ukegvqljyvdghdxcnlsj.onion:9735"
-                }
-            ],
-            "color": "#16d4ac",
+            "color": "#c57311",
             "features": {
                 "0": {
                     "name": "data-loss-protect",
@@ -82,15 +82,95 @@
         },
         {
             "last_update": 1720108241,
-            "pub_key": "5b61ab94b67bdc788382f9882031dceabb882e21999344b3fd5527ce32ec59bbce",
-            "alias": "sgwtuqrwoo.com",
+            "pub_key": "SQURSN",
+            "alias": "SQURSN.com",
             "addresses": [
                 {
                     "network": "tcp",
-                    "addr": "qmfzxbbpxnrhjdqqsscg.onion:9735"
+                    "addr": "advueyzjyvjfffeddpmj.onion:9735"
                 }
             ],
-            "color": "#902c00",
+            "color": "#8ea08e",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": true,
+                    "is_known": true
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "TMETCQ",
+            "alias": "TMETCQ.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "bvapubjcyavhixdmwvwj.onion:9735"
+                }
+            ],
+            "color": "#c9487c",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": false,
+                    "is_known": false
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "LRUSDV",
+            "alias": "LRUSDV.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "mzbjlcgwkfzluvgpstvn.onion:9735"
+                }
+            ],
+            "color": "#e01319",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": false,
+                    "is_known": true
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "HIBUMN",
+            "alias": "HIBUMN.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "lrxmxycarzmzylpkbmxi.onion:9735"
+                }
+            ],
+            "color": "#3e5dd3",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": false,
+                    "is_known": true
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "ZHSUSU",
+            "alias": "ZHSUSU.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "dpwihnwkxruvknrycung.onion:9735"
+                }
+            ],
+            "color": "#bb9d50",
             "features": {
                 "0": {
                     "name": "data-loss-protect",
@@ -102,55 +182,15 @@
         },
         {
             "last_update": 1720108241,
-            "pub_key": "830de2146b8d9af919759ceeba382cebc9af76937de6dde4006c03314ba1ac985d",
-            "alias": "owqatoqqwc.com",
+            "pub_key": "BBSRQT",
+            "alias": "BBSRQT.com",
             "addresses": [
                 {
                     "network": "tcp",
-                    "addr": "ktxdzpxydzjdwsztfvgv.onion:9735"
+                    "addr": "hnyipzibdhwxjzxdkkpy.onion:9735"
                 }
             ],
-            "color": "#2b9585",
-            "features": {
-                "0": {
-                    "name": "data-loss-protect",
-                    "is_required": false,
-                    "is_known": true
-                }
-            },
-            "custom_records": {}
-        },
-        {
-            "last_update": 1720108241,
-            "pub_key": "0ea82d0d6c70eac92326f48a7a6cc0e2197c2302bb087e381c82270e9197cabc68",
-            "alias": "qkrxyevsbk.com",
-            "addresses": [
-                {
-                    "network": "tcp",
-                    "addr": "awaqktuuxgakgyennoza.onion:9735"
-                }
-            ],
-            "color": "#1435f9",
-            "features": {
-                "0": {
-                    "name": "data-loss-protect",
-                    "is_required": false,
-                    "is_known": true
-                }
-            },
-            "custom_records": {}
-        },
-        {
-            "last_update": 1720108241,
-            "pub_key": "56b24749500e16a8705e6052d55655ce64205ecfdda708b4d45e1bf8dd398b4b22",
-            "alias": "jpydbfkdpj.com",
-            "addresses": [
-                {
-                    "network": "tcp",
-                    "addr": "tgpapqepbpajnnlvlewk.onion:9735"
-                }
-            ],
-            "color": "#831525",
+            "color": "#da4bb3",
             "features": {
                 "0": {
                     "name": "data-loss-protect",
@@ -162,15 +202,55 @@
         },
         {
             "last_update": 1720108241,
-            "pub_key": "da05875e44559f450d2fd10eecd3f4e96bd673e95238315330f708b4acdd752dcb",
-            "alias": "ynwlblafpm.com",
+            "pub_key": "QHHTIP",
+            "alias": "QHHTIP.com",
             "addresses": [
                 {
                     "network": "tcp",
-                    "addr": "jfhcfcbalyzoymgwkndr.onion:9735"
+                    "addr": "orrdlbfbmcncxxxdnajo.onion:9735"
                 }
             ],
-            "color": "#b6e86b",
+            "color": "#bbd1cc",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": true,
+                    "is_known": true
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "SZHMET",
+            "alias": "SZHMET.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "xchoagotzcuamxmfrqzz.onion:9735"
+                }
+            ],
+            "color": "#b77569",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": false,
+                    "is_known": false
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "BSQAGE",
+            "alias": "BSQAGE.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "eemczsqlvdfhhmmtiwrf.onion:9735"
+                }
+            ],
+            "color": "#a2e16e",
             "features": {
                 "0": {
                     "name": "data-loss-protect",
@@ -182,15 +262,335 @@
         },
         {
             "last_update": 1720108241,
-            "pub_key": "d0d53f9a3ae19dfe09d00869c8b7b6778e381e3d833d68559325917297f99dc5ef",
-            "alias": "ndfanexjre.com",
+            "pub_key": "VBNVLH",
+            "alias": "VBNVLH.com",
             "addresses": [
                 {
                     "network": "tcp",
-                    "addr": "xnpxflbeyeyqvmvrasoa.onion:9735"
+                    "addr": "rrjqsowcpkzfvjmpoerg.onion:9735"
                 }
             ],
-            "color": "#d75460",
+            "color": "#cd5e1c",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": true,
+                    "is_known": false
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "MCBADS",
+            "alias": "MCBADS.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "hjplskstqhweehgfcvwa.onion:9735"
+                }
+            ],
+            "color": "#620c85",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": true,
+                    "is_known": true
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "HHHQQM",
+            "alias": "HHHQQM.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "edsgfhzzejzeeqolbrxo.onion:9735"
+                }
+            ],
+            "color": "#ab9dd1",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": false,
+                    "is_known": true
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "GPOTBG",
+            "alias": "GPOTBG.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "jjgqxatwrrilvhibkbgz.onion:9735"
+                }
+            ],
+            "color": "#5b2a80",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": true,
+                    "is_known": true
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "GMOEUE",
+            "alias": "GMOEUE.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "juluzrfwlqbosifhcduq.onion:9735"
+                }
+            ],
+            "color": "#04be70",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": true,
+                    "is_known": false
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "ECADQA",
+            "alias": "ECADQA.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "zgzdngydwdjybazubwzm.onion:9735"
+                }
+            ],
+            "color": "#dd0cff",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": true,
+                    "is_known": false
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "OPEPRQ",
+            "alias": "OPEPRQ.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "slqcnzjphnxclmppmfsn.onion:9735"
+                }
+            ],
+            "color": "#44199d",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": true,
+                    "is_known": true
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "NVTDEO",
+            "alias": "NVTDEO.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "renuypwrcgckdsvgnkrc.onion:9735"
+                }
+            ],
+            "color": "#381d9f",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": true,
+                    "is_known": false
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "LDVOCG",
+            "alias": "LDVOCG.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "vlzqlnjqzrczdyweiorx.onion:9735"
+                }
+            ],
+            "color": "#2be472",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": true,
+                    "is_known": false
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "EPCHBS",
+            "alias": "EPCHBS.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "buhbsxembiayfmnllqxr.onion:9735"
+                }
+            ],
+            "color": "#066cff",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": false,
+                    "is_known": true
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "LRSDEI",
+            "alias": "LRSDEI.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "fviuefraxcengqtofhkc.onion:9735"
+                }
+            ],
+            "color": "#6bd5d6",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": true,
+                    "is_known": true
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "PRTNLT",
+            "alias": "PRTNLT.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "laprwxzoxywlkhqynpgz.onion:9735"
+                }
+            ],
+            "color": "#a7a002",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": false,
+                    "is_known": false
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "VUARUC",
+            "alias": "VUARUC.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "vcfsdipksddmdldqrrnt.onion:9735"
+                }
+            ],
+            "color": "#264d05",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": true,
+                    "is_known": true
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "GBVDIP",
+            "alias": "GBVDIP.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "ucypngsmnkfsceywmqcr.onion:9735"
+                }
+            ],
+            "color": "#e531d9",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": false,
+                    "is_known": true
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "BGRTDL",
+            "alias": "BGRTDL.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "dvihaseebdnsdwprcipl.onion:9735"
+                }
+            ],
+            "color": "#837253",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": true,
+                    "is_known": true
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "HTHLZO",
+            "alias": "HTHLZO.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "oujxpvpvhfrxwkynxuja.onion:9735"
+                }
+            ],
+            "color": "#d1067a",
+            "features": {
+                "0": {
+                    "name": "data-loss-protect",
+                    "is_required": false,
+                    "is_known": true
+                }
+            },
+            "custom_records": {}
+        },
+        {
+            "last_update": 1720108241,
+            "pub_key": "GLUVUH",
+            "alias": "GLUVUH.com",
+            "addresses": [
+                {
+                    "network": "tcp",
+                    "addr": "eonxzfrlnuhkclfyiuum.onion:9735"
+                }
+            ],
+            "color": "#a6ba1d",
             "features": {
                 "0": {
                     "name": "data-loss-protect",
@@ -203,870 +603,2900 @@
     ],
     "edges": [
         {
-            "channel_id": "138215290614285091",
-            "chan_point": "olhmlpomshpxbgeshusmdvgddnaqhwab:1",
+            "channel_id": "011722002092087151",
+            "chan_point": "rocrwlwsnj:1",
             "last_update": 1720108241,
-            "node1_pub": "830de2146b8d9af919759ceeba382cebc9af76937de6dde4006c03314ba1ac985d",
-            "node2_pub": "827485f8c1879fdc0e76deaf30a679d5a0c2f2c09a9c66fc58e74ec6eb63ce1bb3",
-            "capacity": "1908673",
+            "node1_pub": "QHHTIP",
+            "node2_pub": "LDVOCG",
+            "capacity": "6539988",
             "node1_policy": {
-                "time_lock_delta": 98,
-                "min_htlc": "742",
-                "fee_base_msat": "913",
-                "fee_rate_milli_msat": "8",
-                "disabled": false,
-                "max_htlc_msat": "8867407",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 79,
-                "min_htlc": "644",
-                "fee_base_msat": "336",
-                "fee_rate_milli_msat": "2",
-                "disabled": false,
-                "max_htlc_msat": "7168112",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "696807296004624629",
-            "chan_point": "bezfubfvbllgthvzxijnphbqbmgivvvt:1",
-            "last_update": 1720108241,
-            "node1_pub": "214bf69161742a9d5cb57c103f6590d01bcd0810ccff1b5347cd846dfea0525166",
-            "node2_pub": "0ea82d0d6c70eac92326f48a7a6cc0e2197c2302bb087e381c82270e9197cabc68",
-            "capacity": "1799384",
-            "node1_policy": {
-                "time_lock_delta": 58,
-                "min_htlc": "233",
-                "fee_base_msat": "267",
-                "fee_rate_milli_msat": "9",
-                "disabled": true,
-                "max_htlc_msat": "9534625",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 86,
-                "min_htlc": "913",
-                "fee_base_msat": "914",
+                "time_lock_delta": 62,
+                "min_htlc": "292",
+                "fee_base_msat": "166",
                 "fee_rate_milli_msat": "4",
                 "disabled": true,
-                "max_htlc_msat": "9924954",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "335223461554401385",
-            "chan_point": "gwfvtyrrmzvtoyadmicrwsazlyrcrfis:1",
-            "last_update": 1720108241,
-            "node1_pub": "827485f8c1879fdc0e76deaf30a679d5a0c2f2c09a9c66fc58e74ec6eb63ce1bb3",
-            "node2_pub": "5b61ab94b67bdc788382f9882031dceabb882e21999344b3fd5527ce32ec59bbce",
-            "capacity": "9448739",
-            "node1_policy": {
-                "time_lock_delta": 91,
-                "min_htlc": "165",
-                "fee_base_msat": "577",
-                "fee_rate_milli_msat": "6",
-                "disabled": true,
-                "max_htlc_msat": "8175424",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 75,
-                "min_htlc": "680",
-                "fee_base_msat": "610",
-                "fee_rate_milli_msat": "9",
-                "disabled": false,
-                "max_htlc_msat": "7807858",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "568584917910274735",
-            "chan_point": "uzbjwvzzakeilhpgbiikrbsnaupvyubr:1",
-            "last_update": 1720108241,
-            "node1_pub": "56b24749500e16a8705e6052d55655ce64205ecfdda708b4d45e1bf8dd398b4b22",
-            "node2_pub": "d0d53f9a3ae19dfe09d00869c8b7b6778e381e3d833d68559325917297f99dc5ef",
-            "capacity": "4191074",
-            "node1_policy": {
-                "time_lock_delta": 84,
-                "min_htlc": "755",
-                "fee_base_msat": "129",
-                "fee_rate_milli_msat": "5",
-                "disabled": true,
-                "max_htlc_msat": "1568897",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 73,
-                "min_htlc": "200",
-                "fee_base_msat": "165",
-                "fee_rate_milli_msat": "2",
-                "disabled": false,
-                "max_htlc_msat": "4135188",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "645159082695070086",
-            "chan_point": "rggjaknojtukkgmkiuarxscjcbfjdtbw:1",
-            "last_update": 1720108241,
-            "node1_pub": "830de2146b8d9af919759ceeba382cebc9af76937de6dde4006c03314ba1ac985d",
-            "node2_pub": "a2a57978dc69ebd577185fb57ba191248b4539c5114d17cbc42b3c11cdd05b3f71",
-            "capacity": "2566709",
-            "node1_policy": {
-                "time_lock_delta": 60,
-                "min_htlc": "489",
-                "fee_base_msat": "80",
-                "fee_rate_milli_msat": "4",
-                "disabled": true,
-                "max_htlc_msat": "6665806",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 51,
-                "min_htlc": "552",
-                "fee_base_msat": "401",
-                "fee_rate_milli_msat": "9",
-                "disabled": true,
-                "max_htlc_msat": "7938160",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "235291499342170689",
-            "chan_point": "ctzcvkwtkymgkacovyxvkitzuwtglfrd:1",
-            "last_update": 1720108241,
-            "node1_pub": "d0d53f9a3ae19dfe09d00869c8b7b6778e381e3d833d68559325917297f99dc5ef",
-            "node2_pub": "827485f8c1879fdc0e76deaf30a679d5a0c2f2c09a9c66fc58e74ec6eb63ce1bb3",
-            "capacity": "6738545",
-            "node1_policy": {
-                "time_lock_delta": 93,
-                "min_htlc": "963",
-                "fee_base_msat": "263",
-                "fee_rate_milli_msat": "5",
-                "disabled": false,
-                "max_htlc_msat": "5104496",
+                "max_htlc_msat": "2369856",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "node2_policy": {
                 "time_lock_delta": 92,
-                "min_htlc": "990",
-                "fee_base_msat": "997",
-                "fee_rate_milli_msat": "5",
-                "disabled": false,
-                "max_htlc_msat": "1644674",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "912410268750293781",
-            "chan_point": "rojjtpleowkquerbbabenqnqgncmbmep:1",
-            "last_update": 1720108241,
-            "node1_pub": "830de2146b8d9af919759ceeba382cebc9af76937de6dde4006c03314ba1ac985d",
-            "node2_pub": "3e178a5b955bd2578bd49667e402ba84e1209e67c7899a2b1721443938823a7580",
-            "capacity": "8463122",
-            "node1_policy": {
-                "time_lock_delta": 60,
-                "min_htlc": "765",
-                "fee_base_msat": "235",
-                "fee_rate_milli_msat": "9",
-                "disabled": false,
-                "max_htlc_msat": "3882861",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 78,
-                "min_htlc": "884",
-                "fee_base_msat": "431",
-                "fee_rate_milli_msat": "10",
-                "disabled": true,
-                "max_htlc_msat": "5372949",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "422996189883033293",
-            "chan_point": "dyhkndgmqdbcinkzoamwswuzxhvsngji:1",
-            "last_update": 1720108241,
-            "node1_pub": "0ea82d0d6c70eac92326f48a7a6cc0e2197c2302bb087e381c82270e9197cabc68",
-            "node2_pub": "a2a57978dc69ebd577185fb57ba191248b4539c5114d17cbc42b3c11cdd05b3f71",
-            "capacity": "4677120",
-            "node1_policy": {
-                "time_lock_delta": 72,
-                "min_htlc": "601",
-                "fee_base_msat": "898",
-                "fee_rate_milli_msat": "4",
-                "disabled": false,
-                "max_htlc_msat": "5982113",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 54,
-                "min_htlc": "774",
-                "fee_base_msat": "692",
-                "fee_rate_milli_msat": "10",
-                "disabled": false,
-                "max_htlc_msat": "2786208",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "225602391925895505",
-            "chan_point": "pssbsehkcnbputjqvvlhubcywpmnwvsj:1",
-            "last_update": 1720108241,
-            "node1_pub": "d0d53f9a3ae19dfe09d00869c8b7b6778e381e3d833d68559325917297f99dc5ef",
-            "node2_pub": "827485f8c1879fdc0e76deaf30a679d5a0c2f2c09a9c66fc58e74ec6eb63ce1bb3",
-            "capacity": "6262734",
-            "node1_policy": {
-                "time_lock_delta": 94,
-                "min_htlc": "328",
-                "fee_base_msat": "16",
-                "fee_rate_milli_msat": "10",
-                "disabled": true,
-                "max_htlc_msat": "8448648",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 64,
-                "min_htlc": "530",
-                "fee_base_msat": "437",
-                "fee_rate_milli_msat": "8",
-                "disabled": true,
-                "max_htlc_msat": "5329296",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "994774380474294288",
-            "chan_point": "zzxedmdnfwexvpxzozckwujnzbxgphuz:1",
-            "last_update": 1720108241,
-            "node1_pub": "5b61ab94b67bdc788382f9882031dceabb882e21999344b3fd5527ce32ec59bbce",
-            "node2_pub": "56b24749500e16a8705e6052d55655ce64205ecfdda708b4d45e1bf8dd398b4b22",
-            "capacity": "9437000",
-            "node1_policy": {
-                "time_lock_delta": 82,
-                "min_htlc": "451",
-                "fee_base_msat": "355",
-                "fee_rate_milli_msat": "5",
-                "disabled": false,
-                "max_htlc_msat": "8477719",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 55,
-                "min_htlc": "781",
-                "fee_base_msat": "970",
+                "min_htlc": "982",
+                "fee_base_msat": "432",
                 "fee_rate_milli_msat": "3",
-                "disabled": false,
-                "max_htlc_msat": "6149911",
+                "disabled": true,
+                "max_htlc_msat": "4456562",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "custom_records": {}
         },
         {
-            "channel_id": "884535364479151527",
-            "chan_point": "nvbllbzjvqfntcojgoljidevolwadjqq:1",
+            "channel_id": "388568654289184442",
+            "chan_point": "fvwvuesioi:1",
             "last_update": 1720108241,
-            "node1_pub": "830de2146b8d9af919759ceeba382cebc9af76937de6dde4006c03314ba1ac985d",
-            "node2_pub": "d0d53f9a3ae19dfe09d00869c8b7b6778e381e3d833d68559325917297f99dc5ef",
-            "capacity": "9135374",
+            "node1_pub": "TMETCQ",
+            "node2_pub": "ZVMBLR",
+            "capacity": "2836676",
             "node1_policy": {
-                "time_lock_delta": 52,
-                "min_htlc": "508",
-                "fee_base_msat": "674",
-                "fee_rate_milli_msat": "7",
-                "disabled": false,
-                "max_htlc_msat": "5808230",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 78,
-                "min_htlc": "527",
-                "fee_base_msat": "833",
-                "fee_rate_milli_msat": "5",
-                "disabled": false,
-                "max_htlc_msat": "8849778",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "465383720209775242",
-            "chan_point": "cjrvilvkkzlutfvgeufotgnwbmtoucta:1",
-            "last_update": 1720108241,
-            "node1_pub": "da05875e44559f450d2fd10eecd3f4e96bd673e95238315330f708b4acdd752dcb",
-            "node2_pub": "5b61ab94b67bdc788382f9882031dceabb882e21999344b3fd5527ce32ec59bbce",
-            "capacity": "3237705",
-            "node1_policy": {
-                "time_lock_delta": 94,
-                "min_htlc": "558",
-                "fee_base_msat": "622",
-                "fee_rate_milli_msat": "7",
-                "disabled": false,
-                "max_htlc_msat": "3098055",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 87,
-                "min_htlc": "583",
-                "fee_base_msat": "632",
-                "fee_rate_milli_msat": "6",
+                "time_lock_delta": 81,
+                "min_htlc": "935",
+                "fee_base_msat": "292",
+                "fee_rate_milli_msat": "3",
                 "disabled": true,
-                "max_htlc_msat": "9736451",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "315831027083268931",
-            "chan_point": "rluexcukeaozaqtujsljvzkxkahgmmna:1",
-            "last_update": 1720108241,
-            "node1_pub": "0ea82d0d6c70eac92326f48a7a6cc0e2197c2302bb087e381c82270e9197cabc68",
-            "node2_pub": "827485f8c1879fdc0e76deaf30a679d5a0c2f2c09a9c66fc58e74ec6eb63ce1bb3",
-            "capacity": "4310378",
-            "node1_policy": {
-                "time_lock_delta": 69,
-                "min_htlc": "158",
-                "fee_base_msat": "629",
-                "fee_rate_milli_msat": "4",
-                "disabled": true,
-                "max_htlc_msat": "8503617",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 74,
-                "min_htlc": "917",
-                "fee_base_msat": "561",
-                "fee_rate_milli_msat": "1",
-                "disabled": true,
-                "max_htlc_msat": "3851031",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "701888647094928096",
-            "chan_point": "opxsijagjbzuppelupiqfpqcezlvhysb:1",
-            "last_update": 1720108241,
-            "node1_pub": "5b61ab94b67bdc788382f9882031dceabb882e21999344b3fd5527ce32ec59bbce",
-            "node2_pub": "56b24749500e16a8705e6052d55655ce64205ecfdda708b4d45e1bf8dd398b4b22",
-            "capacity": "8876127",
-            "node1_policy": {
-                "time_lock_delta": 74,
-                "min_htlc": "582",
-                "fee_base_msat": "153",
-                "fee_rate_milli_msat": "1",
-                "disabled": true,
-                "max_htlc_msat": "6407258",
+                "max_htlc_msat": "9594994",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "node2_policy": {
                 "time_lock_delta": 95,
-                "min_htlc": "775",
-                "fee_base_msat": "962",
-                "fee_rate_milli_msat": "3",
-                "disabled": true,
-                "max_htlc_msat": "7231330",
+                "min_htlc": "947",
+                "fee_base_msat": "641",
+                "fee_rate_milli_msat": "5",
+                "disabled": false,
+                "max_htlc_msat": "5937565",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "custom_records": {}
         },
         {
-            "channel_id": "025129802109938764",
-            "chan_point": "hotoyjinluncpwoiemgnxaievsscmcjd:1",
+            "channel_id": "566119565343320227",
+            "chan_point": "weiqzjckrj:1",
             "last_update": 1720108241,
-            "node1_pub": "da05875e44559f450d2fd10eecd3f4e96bd673e95238315330f708b4acdd752dcb",
-            "node2_pub": "827485f8c1879fdc0e76deaf30a679d5a0c2f2c09a9c66fc58e74ec6eb63ce1bb3",
-            "capacity": "2356813",
+            "node1_pub": "HIBUMN",
+            "node2_pub": "VBNVLH",
+            "capacity": "5672156",
             "node1_policy": {
-                "time_lock_delta": 77,
-                "min_htlc": "471",
-                "fee_base_msat": "902",
+                "time_lock_delta": 64,
+                "min_htlc": "843",
+                "fee_base_msat": "944",
+                "fee_rate_milli_msat": "8",
+                "disabled": false,
+                "max_htlc_msat": "9378061",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 78,
+                "min_htlc": "135",
+                "fee_base_msat": "533",
+                "fee_rate_milli_msat": "7",
+                "disabled": false,
+                "max_htlc_msat": "5610093",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "509287029307734449",
+            "chan_point": "xbfefdsvtk:1",
+            "last_update": 1720108241,
+            "node1_pub": "NVTDEO",
+            "node2_pub": "VUARUC",
+            "capacity": "9942924",
+            "node1_policy": {
+                "time_lock_delta": 93,
+                "min_htlc": "196",
+                "fee_base_msat": "819",
+                "fee_rate_milli_msat": "6",
+                "disabled": false,
+                "max_htlc_msat": "4948818",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 92,
+                "min_htlc": "398",
+                "fee_base_msat": "90",
+                "fee_rate_milli_msat": "0",
+                "disabled": false,
+                "max_htlc_msat": "8994605",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "915756891927523405",
+            "chan_point": "gxmivpjurr:1",
+            "last_update": 1720108241,
+            "node1_pub": "BGRTDL",
+            "node2_pub": "SZHMET",
+            "capacity": "749634",
+            "node1_policy": {
+                "time_lock_delta": 70,
+                "min_htlc": "920",
+                "fee_base_msat": "456",
                 "fee_rate_milli_msat": "2",
                 "disabled": false,
-                "max_htlc_msat": "3142806",
+                "max_htlc_msat": "9002636",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "node2_policy": {
-                "time_lock_delta": 71,
-                "min_htlc": "197",
-                "fee_base_msat": "450",
-                "fee_rate_milli_msat": "10",
-                "disabled": true,
-                "max_htlc_msat": "5689373",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "203950074472598869",
-            "chan_point": "qepgoxfpurmgymuselvqbrisimjkwdrr:1",
-            "last_update": 1720108241,
-            "node1_pub": "a2a57978dc69ebd577185fb57ba191248b4539c5114d17cbc42b3c11cdd05b3f71",
-            "node2_pub": "3e178a5b955bd2578bd49667e402ba84e1209e67c7899a2b1721443938823a7580",
-            "capacity": "4472714",
-            "node1_policy": {
-                "time_lock_delta": 61,
-                "min_htlc": "862",
+                "time_lock_delta": 56,
+                "min_htlc": "225",
                 "fee_base_msat": "674",
-                "fee_rate_milli_msat": "8",
-                "disabled": false,
-                "max_htlc_msat": "6361460",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 97,
-                "min_htlc": "668",
-                "fee_base_msat": "193",
                 "fee_rate_milli_msat": "6",
-                "disabled": false,
-                "max_htlc_msat": "1508209",
+                "disabled": true,
+                "max_htlc_msat": "2622305",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "custom_records": {}
         },
         {
-            "channel_id": "135586243627583957",
-            "chan_point": "kmkmiasugyaqpocqganhxhurnsmymici:1",
+            "channel_id": "965236521774206983",
+            "chan_point": "gunlgfazqu:1",
             "last_update": 1720108241,
-            "node1_pub": "830de2146b8d9af919759ceeba382cebc9af76937de6dde4006c03314ba1ac985d",
-            "node2_pub": "56b24749500e16a8705e6052d55655ce64205ecfdda708b4d45e1bf8dd398b4b22",
-            "capacity": "8099933",
+            "node1_pub": "BGRTDL",
+            "node2_pub": "GMOEUE",
+            "capacity": "2087296",
             "node1_policy": {
-                "time_lock_delta": 75,
-                "min_htlc": "680",
-                "fee_base_msat": "912",
-                "fee_rate_milli_msat": "5",
-                "disabled": true,
-                "max_htlc_msat": "1107856",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
                 "time_lock_delta": 88,
-                "min_htlc": "811",
-                "fee_base_msat": "893",
-                "fee_rate_milli_msat": "10",
-                "disabled": true,
-                "max_htlc_msat": "2811921",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "818029460946773481",
-            "chan_point": "yqjvrdhotigmdvzvmwegvmacrdqavaar:1",
-            "last_update": 1720108241,
-            "node1_pub": "214bf69161742a9d5cb57c103f6590d01bcd0810ccff1b5347cd846dfea0525166",
-            "node2_pub": "56b24749500e16a8705e6052d55655ce64205ecfdda708b4d45e1bf8dd398b4b22",
-            "capacity": "9089902",
-            "node1_policy": {
-                "time_lock_delta": 62,
-                "min_htlc": "712",
-                "fee_base_msat": "373",
-                "fee_rate_milli_msat": "5",
-                "disabled": true,
-                "max_htlc_msat": "1805364",
+                "min_htlc": "293",
+                "fee_base_msat": "717",
+                "fee_rate_milli_msat": "3",
+                "disabled": false,
+                "max_htlc_msat": "4003559",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "node2_policy": {
-                "time_lock_delta": 61,
-                "min_htlc": "109",
-                "fee_base_msat": "664",
+                "time_lock_delta": 65,
+                "min_htlc": "863",
+                "fee_base_msat": "449",
                 "fee_rate_milli_msat": "3",
                 "disabled": true,
-                "max_htlc_msat": "1638191",
+                "max_htlc_msat": "9713508",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "custom_records": {}
         },
         {
-            "channel_id": "827110941538205859",
-            "chan_point": "dkvicyrfpxhyexpfhkdxfokjhdpqmqjy:1",
+            "channel_id": "433240487446436154",
+            "chan_point": "gjietgzqdq:1",
             "last_update": 1720108241,
-            "node1_pub": "5b61ab94b67bdc788382f9882031dceabb882e21999344b3fd5527ce32ec59bbce",
-            "node2_pub": "830de2146b8d9af919759ceeba382cebc9af76937de6dde4006c03314ba1ac985d",
-            "capacity": "6200509",
+            "node1_pub": "LDVOCG",
+            "node2_pub": "VBNVLH",
+            "capacity": "7451465",
             "node1_policy": {
-                "time_lock_delta": 68,
-                "min_htlc": "924",
-                "fee_base_msat": "770",
-                "fee_rate_milli_msat": "7",
-                "disabled": true,
-                "max_htlc_msat": "7974291",
+                "time_lock_delta": 85,
+                "min_htlc": "467",
+                "fee_base_msat": "818",
+                "fee_rate_milli_msat": "0",
+                "disabled": false,
+                "max_htlc_msat": "9286275",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "node2_policy": {
-                "time_lock_delta": 57,
-                "min_htlc": "770",
-                "fee_base_msat": "110",
+                "time_lock_delta": 89,
+                "min_htlc": "991",
+                "fee_base_msat": "377",
+                "fee_rate_milli_msat": "0",
+                "disabled": true,
+                "max_htlc_msat": "2580024",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "771536223762987937",
+            "chan_point": "hcpzhifbya:1",
+            "last_update": 1720108241,
+            "node1_pub": "SZHMET",
+            "node2_pub": "GBVDIP",
+            "capacity": "9549675",
+            "node1_policy": {
+                "time_lock_delta": 96,
+                "min_htlc": "886",
+                "fee_base_msat": "24",
+                "fee_rate_milli_msat": "2",
+                "disabled": false,
+                "max_htlc_msat": "1423464",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 50,
+                "min_htlc": "471",
+                "fee_base_msat": "167",
                 "fee_rate_milli_msat": "5",
                 "disabled": true,
-                "max_htlc_msat": "9508430",
+                "max_htlc_msat": "4531046",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "custom_records": {}
         },
         {
-            "channel_id": "367059165498746580",
-            "chan_point": "yudjyxcrysjqcgxrjsyxrqzjhghatojh:1",
+            "channel_id": "633067999152135391",
+            "chan_point": "ebghasdzrf:1",
             "last_update": 1720108241,
-            "node1_pub": "d0d53f9a3ae19dfe09d00869c8b7b6778e381e3d833d68559325917297f99dc5ef",
-            "node2_pub": "214bf69161742a9d5cb57c103f6590d01bcd0810ccff1b5347cd846dfea0525166",
-            "capacity": "7409070",
+            "node1_pub": "HTHLZO",
+            "node2_pub": "BSQAGE",
+            "capacity": "3878343",
             "node1_policy": {
-                "time_lock_delta": 99,
-                "min_htlc": "288",
-                "fee_base_msat": "388",
-                "fee_rate_milli_msat": "10",
-                "disabled": false,
-                "max_htlc_msat": "1481047",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 95,
-                "min_htlc": "639",
-                "fee_base_msat": "332",
-                "fee_rate_milli_msat": "0",
-                "disabled": true,
-                "max_htlc_msat": "3207387",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "253631660336763738",
-            "chan_point": "fynbnvuqkzeyfyzvioroqiirlhnvarcf:1",
-            "last_update": 1720108241,
-            "node1_pub": "da05875e44559f450d2fd10eecd3f4e96bd673e95238315330f708b4acdd752dcb",
-            "node2_pub": "830de2146b8d9af919759ceeba382cebc9af76937de6dde4006c03314ba1ac985d",
-            "capacity": "9884171",
-            "node1_policy": {
-                "time_lock_delta": 59,
-                "min_htlc": "169",
-                "fee_base_msat": "900",
-                "fee_rate_milli_msat": "7",
-                "disabled": false,
-                "max_htlc_msat": "9358509",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 68,
-                "min_htlc": "517",
-                "fee_base_msat": "441",
-                "fee_rate_milli_msat": "0",
-                "disabled": true,
-                "max_htlc_msat": "1398206",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "730991113601300785",
-            "chan_point": "vjdtkceccqtxbczfvcuwcyrldfgucsuw:1",
-            "last_update": 1720108241,
-            "node1_pub": "da05875e44559f450d2fd10eecd3f4e96bd673e95238315330f708b4acdd752dcb",
-            "node2_pub": "214bf69161742a9d5cb57c103f6590d01bcd0810ccff1b5347cd846dfea0525166",
-            "capacity": "8814837",
-            "node1_policy": {
-                "time_lock_delta": 67,
-                "min_htlc": "769",
-                "fee_base_msat": "363",
+                "time_lock_delta": 84,
+                "min_htlc": "635",
+                "fee_base_msat": "396",
                 "fee_rate_milli_msat": "8",
-                "disabled": true,
-                "max_htlc_msat": "4075639",
+                "disabled": false,
+                "max_htlc_msat": "4308554",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 52,
+                "min_htlc": "708",
+                "fee_base_msat": "505",
+                "fee_rate_milli_msat": "0",
+                "disabled": false,
+                "max_htlc_msat": "1703685",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "509629907370860399",
+            "chan_point": "pqejcvdlas:1",
+            "last_update": 1720108241,
+            "node1_pub": "ECADQA",
+            "node2_pub": "BBSRQT",
+            "capacity": "2960495",
+            "node1_policy": {
+                "time_lock_delta": 81,
+                "min_htlc": "394",
+                "fee_base_msat": "399",
+                "fee_rate_milli_msat": "8",
+                "disabled": false,
+                "max_htlc_msat": "3571752",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "node2_policy": {
                 "time_lock_delta": 76,
-                "min_htlc": "980",
-                "fee_base_msat": "937",
-                "fee_rate_milli_msat": "6",
-                "disabled": true,
-                "max_htlc_msat": "9894009",
+                "min_htlc": "903",
+                "fee_base_msat": "536",
+                "fee_rate_milli_msat": "10",
+                "disabled": false,
+                "max_htlc_msat": "9221040",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "custom_records": {}
         },
         {
-            "channel_id": "388740260182855793",
-            "chan_point": "bpmejdrthqjslofdzppxsimsnpulizve:1",
+            "channel_id": "261040205181194767",
+            "chan_point": "gtdxmnaqur:1",
             "last_update": 1720108241,
-            "node1_pub": "56b24749500e16a8705e6052d55655ce64205ecfdda708b4d45e1bf8dd398b4b22",
-            "node2_pub": "827485f8c1879fdc0e76deaf30a679d5a0c2f2c09a9c66fc58e74ec6eb63ce1bb3",
-            "capacity": "5723255",
+            "node1_pub": "HIBUMN",
+            "node2_pub": "GMOEUE",
+            "capacity": "8815591",
             "node1_policy": {
-                "time_lock_delta": 77,
-                "min_htlc": "155",
-                "fee_base_msat": "782",
-                "fee_rate_milli_msat": "6",
-                "disabled": true,
-                "max_htlc_msat": "7141247",
+                "time_lock_delta": 60,
+                "min_htlc": "485",
+                "fee_base_msat": "552",
+                "fee_rate_milli_msat": "3",
+                "disabled": false,
+                "max_htlc_msat": "1316026",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "node2_policy": {
                 "time_lock_delta": 57,
-                "min_htlc": "291",
-                "fee_base_msat": "0",
-                "fee_rate_milli_msat": "10",
+                "min_htlc": "167",
+                "fee_base_msat": "395",
+                "fee_rate_milli_msat": "2",
                 "disabled": true,
-                "max_htlc_msat": "8509354",
+                "max_htlc_msat": "7788027",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "custom_records": {}
         },
         {
-            "channel_id": "066920801588223489",
-            "chan_point": "ekzlyknhylkkpzascwdbzyptvpwflcen:1",
+            "channel_id": "732811954638785410",
+            "chan_point": "jrfufegvae:1",
             "last_update": 1720108241,
-            "node1_pub": "830de2146b8d9af919759ceeba382cebc9af76937de6dde4006c03314ba1ac985d",
-            "node2_pub": "da05875e44559f450d2fd10eecd3f4e96bd673e95238315330f708b4acdd752dcb",
-            "capacity": "7451217",
+            "node1_pub": "NVTDEO",
+            "node2_pub": "BBSRQT",
+            "capacity": "8778390",
             "node1_policy": {
-                "time_lock_delta": 53,
-                "min_htlc": "691",
-                "fee_base_msat": "878",
-                "fee_rate_milli_msat": "2",
-                "disabled": true,
-                "max_htlc_msat": "3362657",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 77,
-                "min_htlc": "315",
-                "fee_base_msat": "310",
-                "fee_rate_milli_msat": "2",
-                "disabled": true,
-                "max_htlc_msat": "4913619",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "690115385387454724",
-            "chan_point": "vwzsiklofzdwehxofyqrmetgboionmjh:1",
-            "last_update": 1720108241,
-            "node1_pub": "d0d53f9a3ae19dfe09d00869c8b7b6778e381e3d833d68559325917297f99dc5ef",
-            "node2_pub": "0ea82d0d6c70eac92326f48a7a6cc0e2197c2302bb087e381c82270e9197cabc68",
-            "capacity": "7454457",
-            "node1_policy": {
-                "time_lock_delta": 54,
-                "min_htlc": "226",
-                "fee_base_msat": "948",
+                "time_lock_delta": 67,
+                "min_htlc": "557",
+                "fee_base_msat": "827",
                 "fee_rate_milli_msat": "8",
                 "disabled": true,
-                "max_htlc_msat": "9941803",
+                "max_htlc_msat": "2300468",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "node2_policy": {
-                "time_lock_delta": 93,
-                "min_htlc": "468",
-                "fee_base_msat": "656",
-                "fee_rate_milli_msat": "7",
+                "time_lock_delta": 63,
+                "min_htlc": "866",
+                "fee_base_msat": "196",
+                "fee_rate_milli_msat": "9",
                 "disabled": false,
-                "max_htlc_msat": "8189047",
+                "max_htlc_msat": "4190455",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "custom_records": {}
         },
         {
-            "channel_id": "182896632114188086",
-            "chan_point": "jemkudtthqtxabkbucgnrlrbyztdwrxr:1",
+            "channel_id": "957504866265573325",
+            "chan_point": "hiurnftivu:1",
             "last_update": 1720108241,
-            "node1_pub": "5b61ab94b67bdc788382f9882031dceabb882e21999344b3fd5527ce32ec59bbce",
-            "node2_pub": "0ea82d0d6c70eac92326f48a7a6cc0e2197c2302bb087e381c82270e9197cabc68",
-            "capacity": "9789583",
+            "node1_pub": "BGRTDL",
+            "node2_pub": "ZVMBLR",
+            "capacity": "7271778",
             "node1_policy": {
-                "time_lock_delta": 71,
-                "min_htlc": "186",
-                "fee_base_msat": "1000",
-                "fee_rate_milli_msat": "1",
-                "disabled": false,
-                "max_htlc_msat": "6511611",
+                "time_lock_delta": 61,
+                "min_htlc": "485",
+                "fee_base_msat": "782",
+                "fee_rate_milli_msat": "8",
+                "disabled": true,
+                "max_htlc_msat": "6512012",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "node2_policy": {
-                "time_lock_delta": 79,
-                "min_htlc": "938",
-                "fee_base_msat": "1000",
-                "fee_rate_milli_msat": "4",
-                "disabled": true,
-                "max_htlc_msat": "3663149",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "289326993922303852",
-            "chan_point": "faoaljvvjgzdnzvxhqdpmydqbswjverf:1",
-            "last_update": 1720108241,
-            "node1_pub": "3e178a5b955bd2578bd49667e402ba84e1209e67c7899a2b1721443938823a7580",
-            "node2_pub": "d0d53f9a3ae19dfe09d00869c8b7b6778e381e3d833d68559325917297f99dc5ef",
-            "capacity": "1181475",
-            "node1_policy": {
-                "time_lock_delta": 95,
-                "min_htlc": "980",
-                "fee_base_msat": "189",
-                "fee_rate_milli_msat": "2",
-                "disabled": true,
-                "max_htlc_msat": "1211542",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 94,
-                "min_htlc": "571",
-                "fee_base_msat": "355",
+                "time_lock_delta": 91,
+                "min_htlc": "528",
+                "fee_base_msat": "519",
                 "fee_rate_milli_msat": "10",
                 "disabled": true,
-                "max_htlc_msat": "4425324",
+                "max_htlc_msat": "6079045",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "custom_records": {}
         },
         {
-            "channel_id": "994670535815660493",
-            "chan_point": "jigjrfaqguqermbvblvoxobznmvvexup:1",
+            "channel_id": "175791022622366338",
+            "chan_point": "dceghczltg:1",
             "last_update": 1720108241,
-            "node1_pub": "0ea82d0d6c70eac92326f48a7a6cc0e2197c2302bb087e381c82270e9197cabc68",
-            "node2_pub": "a2a57978dc69ebd577185fb57ba191248b4539c5114d17cbc42b3c11cdd05b3f71",
-            "capacity": "2126604",
+            "node1_pub": "PRTNLT",
+            "node2_pub": "LDVOCG",
+            "capacity": "6907228",
             "node1_policy": {
-                "time_lock_delta": 52,
-                "min_htlc": "682",
-                "fee_base_msat": "357",
-                "fee_rate_milli_msat": "9",
+                "time_lock_delta": 98,
+                "min_htlc": "475",
+                "fee_base_msat": "799",
+                "fee_rate_milli_msat": "1",
                 "disabled": false,
-                "max_htlc_msat": "7745815",
+                "max_htlc_msat": "1707698",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "node2_policy": {
-                "time_lock_delta": 66,
-                "min_htlc": "404",
-                "fee_base_msat": "923",
-                "fee_rate_milli_msat": "2",
-                "disabled": false,
-                "max_htlc_msat": "8120231",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "custom_records": {}
-        },
-        {
-            "channel_id": "339583913253586163",
-            "chan_point": "odqyhksfwxzdolkvtsnsdftsqcbqsebr:1",
-            "last_update": 1720108241,
-            "node1_pub": "0ea82d0d6c70eac92326f48a7a6cc0e2197c2302bb087e381c82270e9197cabc68",
-            "node2_pub": "56b24749500e16a8705e6052d55655ce64205ecfdda708b4d45e1bf8dd398b4b22",
-            "capacity": "7164676",
-            "node1_policy": {
-                "time_lock_delta": 97,
-                "min_htlc": "962",
-                "fee_base_msat": "788",
-                "fee_rate_milli_msat": "6",
+                "time_lock_delta": 83,
+                "min_htlc": "733",
+                "fee_base_msat": "397",
+                "fee_rate_milli_msat": "3",
                 "disabled": true,
-                "max_htlc_msat": "2982840",
-                "last_update": 1720108241,
-                "custom_records": {}
-            },
-            "node2_policy": {
-                "time_lock_delta": 77,
-                "min_htlc": "426",
-                "fee_base_msat": "424",
-                "fee_rate_milli_msat": "9",
-                "disabled": false,
-                "max_htlc_msat": "1448692",
+                "max_htlc_msat": "6863576",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "custom_records": {}
         },
         {
-            "channel_id": "935722946187533598",
-            "chan_point": "ktpfebryykjebjpitsyllvqnflsydurz:1",
+            "channel_id": "184530396815462792",
+            "chan_point": "pxadhclbqh:1",
             "last_update": 1720108241,
-            "node1_pub": "da05875e44559f450d2fd10eecd3f4e96bd673e95238315330f708b4acdd752dcb",
-            "node2_pub": "a2a57978dc69ebd577185fb57ba191248b4539c5114d17cbc42b3c11cdd05b3f71",
-            "capacity": "9975704",
+            "node1_pub": "MCBADS",
+            "node2_pub": "NVTDEO",
+            "capacity": "6830302",
             "node1_policy": {
-                "time_lock_delta": 72,
-                "min_htlc": "438",
-                "fee_base_msat": "543",
+                "time_lock_delta": 90,
+                "min_htlc": "632",
+                "fee_base_msat": "719",
+                "fee_rate_milli_msat": "3",
+                "disabled": true,
+                "max_htlc_msat": "6403914",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 54,
+                "min_htlc": "453",
+                "fee_base_msat": "770",
+                "fee_rate_milli_msat": "2",
+                "disabled": true,
+                "max_htlc_msat": "2597046",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "238247743409413299",
+            "chan_point": "zoowfihzcy:1",
+            "last_update": 1720108241,
+            "node1_pub": "ZVMBLR",
+            "node2_pub": "BGRTDL",
+            "capacity": "7785859",
+            "node1_policy": {
+                "time_lock_delta": 60,
+                "min_htlc": "664",
+                "fee_base_msat": "645",
+                "fee_rate_milli_msat": "8",
+                "disabled": true,
+                "max_htlc_msat": "7703085",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 60,
+                "min_htlc": "971",
+                "fee_base_msat": "472",
+                "fee_rate_milli_msat": "8",
+                "disabled": false,
+                "max_htlc_msat": "5353192",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "313991289014896473",
+            "chan_point": "mcuhjckjgv:1",
+            "last_update": 1720108241,
+            "node1_pub": "QHHTIP",
+            "node2_pub": "TMETCQ",
+            "capacity": "3576675",
+            "node1_policy": {
+                "time_lock_delta": 50,
+                "min_htlc": "292",
+                "fee_base_msat": "381",
+                "fee_rate_milli_msat": "6",
+                "disabled": false,
+                "max_htlc_msat": "5920580",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 62,
+                "min_htlc": "328",
+                "fee_base_msat": "744",
+                "fee_rate_milli_msat": "0",
+                "disabled": true,
+                "max_htlc_msat": "4118934",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "422771696583045183",
+            "chan_point": "tyuqanzzrd:1",
+            "last_update": 1720108241,
+            "node1_pub": "ZMAHVA",
+            "node2_pub": "PRTNLT",
+            "capacity": "7510381",
+            "node1_policy": {
+                "time_lock_delta": 82,
+                "min_htlc": "715",
+                "fee_base_msat": "360",
+                "fee_rate_milli_msat": "10",
+                "disabled": true,
+                "max_htlc_msat": "5136674",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 75,
+                "min_htlc": "548",
+                "fee_base_msat": "330",
+                "fee_rate_milli_msat": "0",
+                "disabled": true,
+                "max_htlc_msat": "2431848",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "115466993553930034",
+            "chan_point": "jukcdfxfut:1",
+            "last_update": 1720108241,
+            "node1_pub": "PRTNLT",
+            "node2_pub": "TMETCQ",
+            "capacity": "9734898",
+            "node1_policy": {
+                "time_lock_delta": 86,
+                "min_htlc": "966",
+                "fee_base_msat": "594",
+                "fee_rate_milli_msat": "10",
+                "disabled": true,
+                "max_htlc_msat": "5426526",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 64,
+                "min_htlc": "863",
+                "fee_base_msat": "208",
+                "fee_rate_milli_msat": "9",
+                "disabled": true,
+                "max_htlc_msat": "9060228",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "231445118580035221",
+            "chan_point": "ydmxxckiwi:1",
+            "last_update": 1720108241,
+            "node1_pub": "NVTDEO",
+            "node2_pub": "GMOEUE",
+            "capacity": "9944349",
+            "node1_policy": {
+                "time_lock_delta": 73,
+                "min_htlc": "359",
+                "fee_base_msat": "226",
+                "fee_rate_milli_msat": "3",
+                "disabled": true,
+                "max_htlc_msat": "5216772",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 59,
+                "min_htlc": "817",
+                "fee_base_msat": "760",
                 "fee_rate_milli_msat": "1",
                 "disabled": true,
-                "max_htlc_msat": "9491581",
+                "max_htlc_msat": "9712430",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "806021015350589167",
+            "chan_point": "ahawivdpcd:1",
+            "last_update": 1720108241,
+            "node1_pub": "SZHMET",
+            "node2_pub": "ZHSUSU",
+            "capacity": "2713111",
+            "node1_policy": {
+                "time_lock_delta": 85,
+                "min_htlc": "182",
+                "fee_base_msat": "604",
+                "fee_rate_milli_msat": "9",
+                "disabled": true,
+                "max_htlc_msat": "7823649",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 84,
+                "min_htlc": "456",
+                "fee_base_msat": "54",
+                "fee_rate_milli_msat": "1",
+                "disabled": false,
+                "max_htlc_msat": "5888518",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "270237245543307983",
+            "chan_point": "zxrwgiplkr:1",
+            "last_update": 1720108241,
+            "node1_pub": "SZHMET",
+            "node2_pub": "ZVMBLR",
+            "capacity": "4297659",
+            "node1_policy": {
+                "time_lock_delta": 67,
+                "min_htlc": "861",
+                "fee_base_msat": "524",
+                "fee_rate_milli_msat": "5",
+                "disabled": true,
+                "max_htlc_msat": "3542605",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 73,
+                "min_htlc": "966",
+                "fee_base_msat": "957",
+                "fee_rate_milli_msat": "10",
+                "disabled": false,
+                "max_htlc_msat": "9545216",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "760465890205358650",
+            "chan_point": "hrbdlnczbl:1",
+            "last_update": 1720108241,
+            "node1_pub": "ECADQA",
+            "node2_pub": "GLUVUH",
+            "capacity": "9638378",
+            "node1_policy": {
+                "time_lock_delta": 96,
+                "min_htlc": "540",
+                "fee_base_msat": "154",
+                "fee_rate_milli_msat": "4",
+                "disabled": false,
+                "max_htlc_msat": "8094686",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 100,
+                "min_htlc": "996",
+                "fee_base_msat": "639",
+                "fee_rate_milli_msat": "2",
+                "disabled": false,
+                "max_htlc_msat": "8939976",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "585710772869532748",
+            "chan_point": "dveookdkfq:1",
+            "last_update": 1720108241,
+            "node1_pub": "LDVOCG",
+            "node2_pub": "QHHTIP",
+            "capacity": "232172",
+            "node1_policy": {
+                "time_lock_delta": 89,
+                "min_htlc": "790",
+                "fee_base_msat": "740",
+                "fee_rate_milli_msat": "8",
+                "disabled": false,
+                "max_htlc_msat": "1124939",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 50,
+                "min_htlc": "594",
+                "fee_base_msat": "865",
+                "fee_rate_milli_msat": "4",
+                "disabled": false,
+                "max_htlc_msat": "4497992",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "176798743964978510",
+            "chan_point": "lkyvlzbhqm:1",
+            "last_update": 1720108241,
+            "node1_pub": "BSQAGE",
+            "node2_pub": "EPCHBS",
+            "capacity": "8034916",
+            "node1_policy": {
+                "time_lock_delta": 99,
+                "min_htlc": "460",
+                "fee_base_msat": "246",
+                "fee_rate_milli_msat": "9",
+                "disabled": true,
+                "max_htlc_msat": "8761144",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 72,
+                "min_htlc": "749",
+                "fee_base_msat": "96",
+                "fee_rate_milli_msat": "2",
+                "disabled": false,
+                "max_htlc_msat": "5900226",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "756462573807587304",
+            "chan_point": "dxbzwlrass:1",
+            "last_update": 1720108241,
+            "node1_pub": "VUARUC",
+            "node2_pub": "GMOEUE",
+            "capacity": "3427292",
+            "node1_policy": {
+                "time_lock_delta": 80,
+                "min_htlc": "223",
+                "fee_base_msat": "717",
+                "fee_rate_milli_msat": "6",
+                "disabled": true,
+                "max_htlc_msat": "9037600",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 54,
+                "min_htlc": "687",
+                "fee_base_msat": "12",
+                "fee_rate_milli_msat": "2",
+                "disabled": true,
+                "max_htlc_msat": "2420998",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "961544891204846015",
+            "chan_point": "ngghavtunn:1",
+            "last_update": 1720108241,
+            "node1_pub": "EPCHBS",
+            "node2_pub": "VBNVLH",
+            "capacity": "6395752",
+            "node1_policy": {
+                "time_lock_delta": 86,
+                "min_htlc": "300",
+                "fee_base_msat": "850",
+                "fee_rate_milli_msat": "7",
+                "disabled": false,
+                "max_htlc_msat": "7781743",
                 "last_update": 1720108241,
                 "custom_records": {}
             },
             "node2_policy": {
                 "time_lock_delta": 92,
-                "min_htlc": "267",
-                "fee_base_msat": "733",
+                "min_htlc": "156",
+                "fee_base_msat": "418",
+                "fee_rate_milli_msat": "7",
+                "disabled": true,
+                "max_htlc_msat": "5014809",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "006439780006730216",
+            "chan_point": "ivospcazfc:1",
+            "last_update": 1720108241,
+            "node1_pub": "GPBGSG",
+            "node2_pub": "GMOEUE",
+            "capacity": "9442335",
+            "node1_policy": {
+                "time_lock_delta": 73,
+                "min_htlc": "769",
+                "fee_base_msat": "234",
+                "fee_rate_milli_msat": "3",
+                "disabled": false,
+                "max_htlc_msat": "1269066",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 69,
+                "min_htlc": "897",
+                "fee_base_msat": "378",
+                "fee_rate_milli_msat": "3",
+                "disabled": true,
+                "max_htlc_msat": "9133037",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "596185632681577250",
+            "chan_point": "rgxanwmywc:1",
+            "last_update": 1720108241,
+            "node1_pub": "GBVDIP",
+            "node2_pub": "BSQAGE",
+            "capacity": "9747987",
+            "node1_policy": {
+                "time_lock_delta": 64,
+                "min_htlc": "633",
+                "fee_base_msat": "146",
+                "fee_rate_milli_msat": "7",
+                "disabled": true,
+                "max_htlc_msat": "6186871",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 62,
+                "min_htlc": "972",
+                "fee_base_msat": "524",
+                "fee_rate_milli_msat": "2",
+                "disabled": false,
+                "max_htlc_msat": "6407137",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "517246680661774138",
+            "chan_point": "vyktbesdnd:1",
+            "last_update": 1720108241,
+            "node1_pub": "GLUVUH",
+            "node2_pub": "NVTDEO",
+            "capacity": "1916308",
+            "node1_policy": {
+                "time_lock_delta": 79,
+                "min_htlc": "676",
+                "fee_base_msat": "113",
+                "fee_rate_milli_msat": "5",
+                "disabled": true,
+                "max_htlc_msat": "5240723",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 88,
+                "min_htlc": "897",
+                "fee_base_msat": "233",
+                "fee_rate_milli_msat": "8",
+                "disabled": false,
+                "max_htlc_msat": "9713582",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "232295902173959813",
+            "chan_point": "srfxnbxvhz:1",
+            "last_update": 1720108241,
+            "node1_pub": "GBVDIP",
+            "node2_pub": "GMOEUE",
+            "capacity": "3185877",
+            "node1_policy": {
+                "time_lock_delta": 94,
+                "min_htlc": "235",
+                "fee_base_msat": "958",
+                "fee_rate_milli_msat": "3",
+                "disabled": true,
+                "max_htlc_msat": "5168472",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 98,
+                "min_htlc": "369",
+                "fee_base_msat": "685",
+                "fee_rate_milli_msat": "5",
+                "disabled": true,
+                "max_htlc_msat": "3277205",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "466362424342743057",
+            "chan_point": "rrppcwxdnj:1",
+            "last_update": 1720108241,
+            "node1_pub": "ARFUZV",
+            "node2_pub": "GMOEUE",
+            "capacity": "2345921",
+            "node1_policy": {
+                "time_lock_delta": 68,
+                "min_htlc": "121",
+                "fee_base_msat": "159",
+                "fee_rate_milli_msat": "9",
+                "disabled": true,
+                "max_htlc_msat": "6817090",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 51,
+                "min_htlc": "914",
+                "fee_base_msat": "592",
+                "fee_rate_milli_msat": "8",
+                "disabled": false,
+                "max_htlc_msat": "4760586",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "242144886449035930",
+            "chan_point": "jezpbinnqj:1",
+            "last_update": 1720108241,
+            "node1_pub": "GBVDIP",
+            "node2_pub": "HHHQQM",
+            "capacity": "6309066",
+            "node1_policy": {
+                "time_lock_delta": 54,
+                "min_htlc": "610",
+                "fee_base_msat": "342",
+                "fee_rate_milli_msat": "9",
+                "disabled": true,
+                "max_htlc_msat": "2798838",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 98,
+                "min_htlc": "572",
+                "fee_base_msat": "350",
+                "fee_rate_milli_msat": "7",
+                "disabled": true,
+                "max_htlc_msat": "4309878",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "842803307026910706",
+            "chan_point": "rsmdqhhfau:1",
+            "last_update": 1720108241,
+            "node1_pub": "BGRTDL",
+            "node2_pub": "NVTDEO",
+            "capacity": "703737",
+            "node1_policy": {
+                "time_lock_delta": 90,
+                "min_htlc": "192",
+                "fee_base_msat": "944",
+                "fee_rate_milli_msat": "1",
+                "disabled": true,
+                "max_htlc_msat": "5939755",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 54,
+                "min_htlc": "179",
+                "fee_base_msat": "952",
+                "fee_rate_milli_msat": "2",
+                "disabled": false,
+                "max_htlc_msat": "3143632",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "679107110191841667",
+            "chan_point": "dumxisdidg:1",
+            "last_update": 1720108241,
+            "node1_pub": "ECADQA",
+            "node2_pub": "LRUSDV",
+            "capacity": "5911094",
+            "node1_policy": {
+                "time_lock_delta": 60,
+                "min_htlc": "166",
+                "fee_base_msat": "938",
+                "fee_rate_milli_msat": "4",
+                "disabled": false,
+                "max_htlc_msat": "8334947",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 76,
+                "min_htlc": "159",
+                "fee_base_msat": "329",
+                "fee_rate_milli_msat": "8",
+                "disabled": true,
+                "max_htlc_msat": "9681269",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "694864624705224851",
+            "chan_point": "ngsphwvxqg:1",
+            "last_update": 1720108241,
+            "node1_pub": "ZHSUSU",
+            "node2_pub": "HHHQQM",
+            "capacity": "2465221",
+            "node1_policy": {
+                "time_lock_delta": 57,
+                "min_htlc": "519",
+                "fee_base_msat": "838",
+                "fee_rate_milli_msat": "8",
+                "disabled": true,
+                "max_htlc_msat": "3098121",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 57,
+                "min_htlc": "629",
+                "fee_base_msat": "695",
+                "fee_rate_milli_msat": "1",
+                "disabled": true,
+                "max_htlc_msat": "1938607",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "163209919128842789",
+            "chan_point": "kqkiulkjej:1",
+            "last_update": 1720108241,
+            "node1_pub": "PRTNLT",
+            "node2_pub": "MCBADS",
+            "capacity": "1810910",
+            "node1_policy": {
+                "time_lock_delta": 69,
+                "min_htlc": "564",
+                "fee_base_msat": "872",
+                "fee_rate_milli_msat": "0",
+                "disabled": false,
+                "max_htlc_msat": "3522172",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 75,
+                "min_htlc": "734",
+                "fee_base_msat": "28",
+                "fee_rate_milli_msat": "5",
+                "disabled": false,
+                "max_htlc_msat": "4048933",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "081585050914345327",
+            "chan_point": "aqvdshljpe:1",
+            "last_update": 1720108241,
+            "node1_pub": "BBSRQT",
+            "node2_pub": "BSQAGE",
+            "capacity": "4759418",
+            "node1_policy": {
+                "time_lock_delta": 81,
+                "min_htlc": "116",
+                "fee_base_msat": "332",
+                "fee_rate_milli_msat": "7",
+                "disabled": false,
+                "max_htlc_msat": "1944090",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 91,
+                "min_htlc": "507",
+                "fee_base_msat": "933",
+                "fee_rate_milli_msat": "8",
+                "disabled": true,
+                "max_htlc_msat": "1735089",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "744059503721480494",
+            "chan_point": "qgjdcfglsh:1",
+            "last_update": 1720108241,
+            "node1_pub": "GMOEUE",
+            "node2_pub": "HHHQQM",
+            "capacity": "4912747",
+            "node1_policy": {
+                "time_lock_delta": 86,
+                "min_htlc": "297",
+                "fee_base_msat": "809",
+                "fee_rate_milli_msat": "7",
+                "disabled": true,
+                "max_htlc_msat": "1507108",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 66,
+                "min_htlc": "213",
+                "fee_base_msat": "321",
+                "fee_rate_milli_msat": "5",
+                "disabled": false,
+                "max_htlc_msat": "4023713",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "258368889645855165",
+            "chan_point": "rwslylodiv:1",
+            "last_update": 1720108241,
+            "node1_pub": "GLUVUH",
+            "node2_pub": "ARFUZV",
+            "capacity": "6373029",
+            "node1_policy": {
+                "time_lock_delta": 92,
+                "min_htlc": "417",
+                "fee_base_msat": "980",
+                "fee_rate_milli_msat": "6",
+                "disabled": false,
+                "max_htlc_msat": "4401439",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 53,
+                "min_htlc": "903",
+                "fee_base_msat": "731",
+                "fee_rate_milli_msat": "1",
+                "disabled": true,
+                "max_htlc_msat": "1459264",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "785669618570259084",
+            "chan_point": "nelpdsfnlm:1",
+            "last_update": 1720108241,
+            "node1_pub": "SZHMET",
+            "node2_pub": "LRSDEI",
+            "capacity": "5378061",
+            "node1_policy": {
+                "time_lock_delta": 62,
+                "min_htlc": "987",
+                "fee_base_msat": "177",
+                "fee_rate_milli_msat": "8",
+                "disabled": false,
+                "max_htlc_msat": "9462628",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 84,
+                "min_htlc": "919",
+                "fee_base_msat": "732",
+                "fee_rate_milli_msat": "9",
+                "disabled": false,
+                "max_htlc_msat": "2742783",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "329544070038057061",
+            "chan_point": "yntuvwvsbs:1",
+            "last_update": 1720108241,
+            "node1_pub": "GLUVUH",
+            "node2_pub": "GPBGSG",
+            "capacity": "2906500",
+            "node1_policy": {
+                "time_lock_delta": 72,
+                "min_htlc": "290",
+                "fee_base_msat": "478",
+                "fee_rate_milli_msat": "4",
+                "disabled": true,
+                "max_htlc_msat": "3533056",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 89,
+                "min_htlc": "557",
+                "fee_base_msat": "874",
+                "fee_rate_milli_msat": "5",
+                "disabled": true,
+                "max_htlc_msat": "1689854",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "989097267384589518",
+            "chan_point": "pqzwouphuv:1",
+            "last_update": 1720108241,
+            "node1_pub": "ARFUZV",
+            "node2_pub": "HHHQQM",
+            "capacity": "2755162",
+            "node1_policy": {
+                "time_lock_delta": 56,
+                "min_htlc": "748",
+                "fee_base_msat": "63",
+                "fee_rate_milli_msat": "5",
+                "disabled": false,
+                "max_htlc_msat": "1554320",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 100,
+                "min_htlc": "427",
+                "fee_base_msat": "170",
+                "fee_rate_milli_msat": "2",
+                "disabled": false,
+                "max_htlc_msat": "8876186",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "533207071039810530",
+            "chan_point": "uawbzdtztw:1",
+            "last_update": 1720108241,
+            "node1_pub": "BSQAGE",
+            "node2_pub": "EPCHBS",
+            "capacity": "1834938",
+            "node1_policy": {
+                "time_lock_delta": 74,
+                "min_htlc": "311",
+                "fee_base_msat": "949",
+                "fee_rate_milli_msat": "2",
+                "disabled": false,
+                "max_htlc_msat": "6004983",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 96,
+                "min_htlc": "347",
+                "fee_base_msat": "812",
+                "fee_rate_milli_msat": "7",
+                "disabled": false,
+                "max_htlc_msat": "6759078",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "413536745115533734",
+            "chan_point": "itcsaeprad:1",
+            "last_update": 1720108241,
+            "node1_pub": "LRSDEI",
+            "node2_pub": "GMOEUE",
+            "capacity": "1090028",
+            "node1_policy": {
+                "time_lock_delta": 51,
+                "min_htlc": "282",
+                "fee_base_msat": "325",
+                "fee_rate_milli_msat": "5",
+                "disabled": false,
+                "max_htlc_msat": "7416929",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 70,
+                "min_htlc": "218",
+                "fee_base_msat": "915",
+                "fee_rate_milli_msat": "3",
+                "disabled": false,
+                "max_htlc_msat": "8351264",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "377221482272889126",
+            "chan_point": "fcdyakhmoy:1",
+            "last_update": 1720108241,
+            "node1_pub": "PRTNLT",
+            "node2_pub": "VBNVLH",
+            "capacity": "260428",
+            "node1_policy": {
+                "time_lock_delta": 99,
+                "min_htlc": "935",
+                "fee_base_msat": "158",
+                "fee_rate_milli_msat": "1",
+                "disabled": true,
+                "max_htlc_msat": "1714308",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 95,
+                "min_htlc": "312",
+                "fee_base_msat": "958",
                 "fee_rate_milli_msat": "10",
                 "disabled": true,
-                "max_htlc_msat": "9618725",
+                "max_htlc_msat": "2639512",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "518366114161433538",
+            "chan_point": "edkuhjnnkb:1",
+            "last_update": 1720108241,
+            "node1_pub": "ZHSUSU",
+            "node2_pub": "VUARUC",
+            "capacity": "388485",
+            "node1_policy": {
+                "time_lock_delta": 50,
+                "min_htlc": "663",
+                "fee_base_msat": "614",
+                "fee_rate_milli_msat": "2",
+                "disabled": false,
+                "max_htlc_msat": "7311280",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 98,
+                "min_htlc": "870",
+                "fee_base_msat": "877",
+                "fee_rate_milli_msat": "3",
+                "disabled": false,
+                "max_htlc_msat": "3838280",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "380037816053471677",
+            "chan_point": "kyxwslkmdo:1",
+            "last_update": 1720108241,
+            "node1_pub": "SZHMET",
+            "node2_pub": "LDVOCG",
+            "capacity": "4424495",
+            "node1_policy": {
+                "time_lock_delta": 67,
+                "min_htlc": "782",
+                "fee_base_msat": "740",
+                "fee_rate_milli_msat": "5",
+                "disabled": false,
+                "max_htlc_msat": "1633709",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 63,
+                "min_htlc": "304",
+                "fee_base_msat": "246",
+                "fee_rate_milli_msat": "1",
+                "disabled": false,
+                "max_htlc_msat": "5663364",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "162738838273924784",
+            "chan_point": "dozohmxzcf:1",
+            "last_update": 1720108241,
+            "node1_pub": "SZHMET",
+            "node2_pub": "LRUSDV",
+            "capacity": "5321250",
+            "node1_policy": {
+                "time_lock_delta": 77,
+                "min_htlc": "700",
+                "fee_base_msat": "726",
+                "fee_rate_milli_msat": "6",
+                "disabled": true,
+                "max_htlc_msat": "8645831",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 86,
+                "min_htlc": "532",
+                "fee_base_msat": "513",
+                "fee_rate_milli_msat": "6",
+                "disabled": true,
+                "max_htlc_msat": "5142201",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "554481573432695784",
+            "chan_point": "wxypysphud:1",
+            "last_update": 1720108241,
+            "node1_pub": "LDVOCG",
+            "node2_pub": "SZHMET",
+            "capacity": "8493794",
+            "node1_policy": {
+                "time_lock_delta": 66,
+                "min_htlc": "813",
+                "fee_base_msat": "317",
+                "fee_rate_milli_msat": "6",
+                "disabled": true,
+                "max_htlc_msat": "7857333",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 81,
+                "min_htlc": "129",
+                "fee_base_msat": "727",
+                "fee_rate_milli_msat": "1",
+                "disabled": false,
+                "max_htlc_msat": "1560522",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "214890512685236442",
+            "chan_point": "lfxulwhayj:1",
+            "last_update": 1720108241,
+            "node1_pub": "GBVDIP",
+            "node2_pub": "NVTDEO",
+            "capacity": "3077336",
+            "node1_policy": {
+                "time_lock_delta": 97,
+                "min_htlc": "622",
+                "fee_base_msat": "983",
+                "fee_rate_milli_msat": "2",
+                "disabled": true,
+                "max_htlc_msat": "4102718",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 81,
+                "min_htlc": "562",
+                "fee_base_msat": "805",
+                "fee_rate_milli_msat": "6",
+                "disabled": false,
+                "max_htlc_msat": "5522185",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "006956148336906485",
+            "chan_point": "vlkklyicrk:1",
+            "last_update": 1720108241,
+            "node1_pub": "LRUSDV",
+            "node2_pub": "GPOTBG",
+            "capacity": "7049935",
+            "node1_policy": {
+                "time_lock_delta": 65,
+                "min_htlc": "913",
+                "fee_base_msat": "281",
+                "fee_rate_milli_msat": "7",
+                "disabled": false,
+                "max_htlc_msat": "4791919",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 61,
+                "min_htlc": "616",
+                "fee_base_msat": "259",
+                "fee_rate_milli_msat": "10",
+                "disabled": true,
+                "max_htlc_msat": "1703851",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "561603895727122649",
+            "chan_point": "dclopfyqln:1",
+            "last_update": 1720108241,
+            "node1_pub": "ZVMBLR",
+            "node2_pub": "GLUVUH",
+            "capacity": "5516097",
+            "node1_policy": {
+                "time_lock_delta": 83,
+                "min_htlc": "744",
+                "fee_base_msat": "455",
+                "fee_rate_milli_msat": "3",
+                "disabled": false,
+                "max_htlc_msat": "1972809",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 50,
+                "min_htlc": "241",
+                "fee_base_msat": "421",
+                "fee_rate_milli_msat": "9",
+                "disabled": true,
+                "max_htlc_msat": "1378028",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "491476424193496790",
+            "chan_point": "rzyppwzjwp:1",
+            "last_update": 1720108241,
+            "node1_pub": "ZVMBLR",
+            "node2_pub": "VBNVLH",
+            "capacity": "6512724",
+            "node1_policy": {
+                "time_lock_delta": 63,
+                "min_htlc": "772",
+                "fee_base_msat": "959",
+                "fee_rate_milli_msat": "0",
+                "disabled": false,
+                "max_htlc_msat": "6214901",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 76,
+                "min_htlc": "863",
+                "fee_base_msat": "524",
+                "fee_rate_milli_msat": "1",
+                "disabled": true,
+                "max_htlc_msat": "6100467",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "429283863956163674",
+            "chan_point": "tworlahohj:1",
+            "last_update": 1720108241,
+            "node1_pub": "GBVDIP",
+            "node2_pub": "ZHSUSU",
+            "capacity": "2194042",
+            "node1_policy": {
+                "time_lock_delta": 99,
+                "min_htlc": "391",
+                "fee_base_msat": "137",
+                "fee_rate_milli_msat": "1",
+                "disabled": true,
+                "max_htlc_msat": "3359468",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 100,
+                "min_htlc": "673",
+                "fee_base_msat": "114",
+                "fee_rate_milli_msat": "7",
+                "disabled": true,
+                "max_htlc_msat": "3443965",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "914681820091458102",
+            "chan_point": "tmnadcjxlq:1",
+            "last_update": 1720108241,
+            "node1_pub": "EPCHBS",
+            "node2_pub": "GPBGSG",
+            "capacity": "6673522",
+            "node1_policy": {
+                "time_lock_delta": 98,
+                "min_htlc": "903",
+                "fee_base_msat": "78",
+                "fee_rate_milli_msat": "7",
+                "disabled": false,
+                "max_htlc_msat": "6956354",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 74,
+                "min_htlc": "919",
+                "fee_base_msat": "538",
+                "fee_rate_milli_msat": "0",
+                "disabled": true,
+                "max_htlc_msat": "5503889",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "610713300495684473",
+            "chan_point": "goxlrgzowm:1",
+            "last_update": 1720108241,
+            "node1_pub": "LRUSDV",
+            "node2_pub": "TMETCQ",
+            "capacity": "163896",
+            "node1_policy": {
+                "time_lock_delta": 66,
+                "min_htlc": "676",
+                "fee_base_msat": "247",
+                "fee_rate_milli_msat": "8",
+                "disabled": false,
+                "max_htlc_msat": "4705787",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 81,
+                "min_htlc": "369",
+                "fee_base_msat": "290",
+                "fee_rate_milli_msat": "5",
+                "disabled": true,
+                "max_htlc_msat": "1739510",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "325109199965391629",
+            "chan_point": "haoefxhcdb:1",
+            "last_update": 1720108241,
+            "node1_pub": "HTHLZO",
+            "node2_pub": "HHHQQM",
+            "capacity": "346077",
+            "node1_policy": {
+                "time_lock_delta": 96,
+                "min_htlc": "203",
+                "fee_base_msat": "971",
+                "fee_rate_milli_msat": "4",
+                "disabled": false,
+                "max_htlc_msat": "7437163",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 88,
+                "min_htlc": "121",
+                "fee_base_msat": "279",
+                "fee_rate_milli_msat": "7",
+                "disabled": false,
+                "max_htlc_msat": "1112815",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "619754269223974742",
+            "chan_point": "dmedkspcqk:1",
+            "last_update": 1720108241,
+            "node1_pub": "ZHSUSU",
+            "node2_pub": "LRUSDV",
+            "capacity": "257256",
+            "node1_policy": {
+                "time_lock_delta": 66,
+                "min_htlc": "586",
+                "fee_base_msat": "355",
+                "fee_rate_milli_msat": "3",
+                "disabled": false,
+                "max_htlc_msat": "7048641",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 69,
+                "min_htlc": "612",
+                "fee_base_msat": "621",
+                "fee_rate_milli_msat": "0",
+                "disabled": true,
+                "max_htlc_msat": "1102073",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "072985178495404734",
+            "chan_point": "dtplharzko:1",
+            "last_update": 1720108241,
+            "node1_pub": "HTHLZO",
+            "node2_pub": "HHHQQM",
+            "capacity": "8294418",
+            "node1_policy": {
+                "time_lock_delta": 64,
+                "min_htlc": "143",
+                "fee_base_msat": "972",
+                "fee_rate_milli_msat": "8",
+                "disabled": true,
+                "max_htlc_msat": "4608919",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 96,
+                "min_htlc": "986",
+                "fee_base_msat": "935",
+                "fee_rate_milli_msat": "2",
+                "disabled": false,
+                "max_htlc_msat": "6115442",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "089328887721625172",
+            "chan_point": "jernfehmbi:1",
+            "last_update": 1720108241,
+            "node1_pub": "LDVOCG",
+            "node2_pub": "ECADQA",
+            "capacity": "1400471",
+            "node1_policy": {
+                "time_lock_delta": 66,
+                "min_htlc": "139",
+                "fee_base_msat": "221",
+                "fee_rate_milli_msat": "6",
+                "disabled": false,
+                "max_htlc_msat": "5473854",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 65,
+                "min_htlc": "441",
+                "fee_base_msat": "481",
+                "fee_rate_milli_msat": "5",
+                "disabled": false,
+                "max_htlc_msat": "4843756",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "977492784906179181",
+            "chan_point": "ncjhxqqzmf:1",
+            "last_update": 1720108241,
+            "node1_pub": "OPEPRQ",
+            "node2_pub": "ARFUZV",
+            "capacity": "2613229",
+            "node1_policy": {
+                "time_lock_delta": 71,
+                "min_htlc": "303",
+                "fee_base_msat": "134",
+                "fee_rate_milli_msat": "10",
+                "disabled": true,
+                "max_htlc_msat": "2498209",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 79,
+                "min_htlc": "465",
+                "fee_base_msat": "67",
+                "fee_rate_milli_msat": "1",
+                "disabled": true,
+                "max_htlc_msat": "8943077",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "525191170208517963",
+            "chan_point": "qldteootkp:1",
+            "last_update": 1720108241,
+            "node1_pub": "ARFUZV",
+            "node2_pub": "GPBGSG",
+            "capacity": "4967771",
+            "node1_policy": {
+                "time_lock_delta": 91,
+                "min_htlc": "887",
+                "fee_base_msat": "15",
+                "fee_rate_milli_msat": "4",
+                "disabled": true,
+                "max_htlc_msat": "9578992",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 60,
+                "min_htlc": "177",
+                "fee_base_msat": "671",
+                "fee_rate_milli_msat": "4",
+                "disabled": true,
+                "max_htlc_msat": "6598647",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "424499171965925179",
+            "chan_point": "xfjirswpzi:1",
+            "last_update": 1720108241,
+            "node1_pub": "NVTDEO",
+            "node2_pub": "SZHMET",
+            "capacity": "6330918",
+            "node1_policy": {
+                "time_lock_delta": 78,
+                "min_htlc": "757",
+                "fee_base_msat": "337",
+                "fee_rate_milli_msat": "9",
+                "disabled": false,
+                "max_htlc_msat": "2607878",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 82,
+                "min_htlc": "889",
+                "fee_base_msat": "32",
+                "fee_rate_milli_msat": "7",
+                "disabled": false,
+                "max_htlc_msat": "1251868",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "154949368396805306",
+            "chan_point": "qaknfgihha:1",
+            "last_update": 1720108241,
+            "node1_pub": "HHHQQM",
+            "node2_pub": "VBNVLH",
+            "capacity": "4478999",
+            "node1_policy": {
+                "time_lock_delta": 77,
+                "min_htlc": "582",
+                "fee_base_msat": "518",
+                "fee_rate_milli_msat": "0",
+                "disabled": true,
+                "max_htlc_msat": "6632704",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 99,
+                "min_htlc": "381",
+                "fee_base_msat": "545",
+                "fee_rate_milli_msat": "2",
+                "disabled": true,
+                "max_htlc_msat": "3997153",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "159643358597114912",
+            "chan_point": "kgsavtssyf:1",
+            "last_update": 1720108241,
+            "node1_pub": "GBVDIP",
+            "node2_pub": "GLUVUH",
+            "capacity": "5330825",
+            "node1_policy": {
+                "time_lock_delta": 65,
+                "min_htlc": "346",
+                "fee_base_msat": "431",
+                "fee_rate_milli_msat": "2",
+                "disabled": true,
+                "max_htlc_msat": "1281118",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 96,
+                "min_htlc": "640",
+                "fee_base_msat": "431",
+                "fee_rate_milli_msat": "8",
+                "disabled": false,
+                "max_htlc_msat": "1642943",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "894691968145078302",
+            "chan_point": "fsooanpxst:1",
+            "last_update": 1720108241,
+            "node1_pub": "LDVOCG",
+            "node2_pub": "ZHSUSU",
+            "capacity": "6488398",
+            "node1_policy": {
+                "time_lock_delta": 55,
+                "min_htlc": "237",
+                "fee_base_msat": "684",
+                "fee_rate_milli_msat": "4",
+                "disabled": false,
+                "max_htlc_msat": "5706553",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 51,
+                "min_htlc": "474",
+                "fee_base_msat": "18",
+                "fee_rate_milli_msat": "8",
+                "disabled": false,
+                "max_htlc_msat": "6338415",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "382824411717768987",
+            "chan_point": "yqdrjuplpv:1",
+            "last_update": 1720108241,
+            "node1_pub": "HIBUMN",
+            "node2_pub": "QHHTIP",
+            "capacity": "1884720",
+            "node1_policy": {
+                "time_lock_delta": 100,
+                "min_htlc": "704",
+                "fee_base_msat": "588",
+                "fee_rate_milli_msat": "7",
+                "disabled": true,
+                "max_htlc_msat": "4373392",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 95,
+                "min_htlc": "407",
+                "fee_base_msat": "281",
+                "fee_rate_milli_msat": "8",
+                "disabled": false,
+                "max_htlc_msat": "2294105",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "044239091024997970",
+            "chan_point": "ylbaccuzui:1",
+            "last_update": 1720108241,
+            "node1_pub": "BSQAGE",
+            "node2_pub": "NVTDEO",
+            "capacity": "1346055",
+            "node1_policy": {
+                "time_lock_delta": 90,
+                "min_htlc": "791",
+                "fee_base_msat": "932",
+                "fee_rate_milli_msat": "10",
+                "disabled": false,
+                "max_htlc_msat": "3939222",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 94,
+                "min_htlc": "519",
+                "fee_base_msat": "625",
+                "fee_rate_milli_msat": "6",
+                "disabled": false,
+                "max_htlc_msat": "5222411",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "303549289660800317",
+            "chan_point": "sjgvzyvelq:1",
+            "last_update": 1720108241,
+            "node1_pub": "ZMAHVA",
+            "node2_pub": "SZHMET",
+            "capacity": "736629",
+            "node1_policy": {
+                "time_lock_delta": 70,
+                "min_htlc": "475",
+                "fee_base_msat": "32",
+                "fee_rate_milli_msat": "9",
+                "disabled": false,
+                "max_htlc_msat": "2967382",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 58,
+                "min_htlc": "828",
+                "fee_base_msat": "13",
+                "fee_rate_milli_msat": "2",
+                "disabled": false,
+                "max_htlc_msat": "5726637",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "624818930888932629",
+            "chan_point": "ehnmnmkepk:1",
+            "last_update": 1720108241,
+            "node1_pub": "VBNVLH",
+            "node2_pub": "VUARUC",
+            "capacity": "7360147",
+            "node1_policy": {
+                "time_lock_delta": 94,
+                "min_htlc": "352",
+                "fee_base_msat": "292",
+                "fee_rate_milli_msat": "3",
+                "disabled": false,
+                "max_htlc_msat": "2875429",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 70,
+                "min_htlc": "398",
+                "fee_base_msat": "237",
+                "fee_rate_milli_msat": "7",
+                "disabled": false,
+                "max_htlc_msat": "5264820",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "754173711394729952",
+            "chan_point": "gwgnxxqonu:1",
+            "last_update": 1720108241,
+            "node1_pub": "BGRTDL",
+            "node2_pub": "BBSRQT",
+            "capacity": "1363543",
+            "node1_policy": {
+                "time_lock_delta": 65,
+                "min_htlc": "979",
+                "fee_base_msat": "821",
+                "fee_rate_milli_msat": "3",
+                "disabled": false,
+                "max_htlc_msat": "9859976",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 57,
+                "min_htlc": "203",
+                "fee_base_msat": "844",
+                "fee_rate_milli_msat": "6",
+                "disabled": true,
+                "max_htlc_msat": "6849504",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "827793713354708434",
+            "chan_point": "dejycxhhet:1",
+            "last_update": 1720108241,
+            "node1_pub": "SQURSN",
+            "node2_pub": "BBSRQT",
+            "capacity": "885885",
+            "node1_policy": {
+                "time_lock_delta": 76,
+                "min_htlc": "875",
+                "fee_base_msat": "722",
+                "fee_rate_milli_msat": "2",
+                "disabled": false,
+                "max_htlc_msat": "5518604",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 68,
+                "min_htlc": "472",
+                "fee_base_msat": "355",
+                "fee_rate_milli_msat": "4",
+                "disabled": false,
+                "max_htlc_msat": "7943180",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "343932230355934441",
+            "chan_point": "bomlbxofir:1",
+            "last_update": 1720108241,
+            "node1_pub": "LDVOCG",
+            "node2_pub": "GLUVUH",
+            "capacity": "2285407",
+            "node1_policy": {
+                "time_lock_delta": 91,
+                "min_htlc": "140",
+                "fee_base_msat": "250",
+                "fee_rate_milli_msat": "8",
+                "disabled": false,
+                "max_htlc_msat": "9916435",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 100,
+                "min_htlc": "748",
+                "fee_base_msat": "133",
+                "fee_rate_milli_msat": "3",
+                "disabled": false,
+                "max_htlc_msat": "6974117",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "369639993382514540",
+            "chan_point": "ltofmjxchq:1",
+            "last_update": 1720108241,
+            "node1_pub": "BBSRQT",
+            "node2_pub": "HHHQQM",
+            "capacity": "3663215",
+            "node1_policy": {
+                "time_lock_delta": 95,
+                "min_htlc": "940",
+                "fee_base_msat": "538",
+                "fee_rate_milli_msat": "4",
+                "disabled": false,
+                "max_htlc_msat": "5222823",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 56,
+                "min_htlc": "255",
+                "fee_base_msat": "630",
+                "fee_rate_milli_msat": "5",
+                "disabled": true,
+                "max_htlc_msat": "3640265",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "147512458058016077",
+            "chan_point": "iwlqcqhtjd:1",
+            "last_update": 1720108241,
+            "node1_pub": "LRUSDV",
+            "node2_pub": "LRSDEI",
+            "capacity": "3923702",
+            "node1_policy": {
+                "time_lock_delta": 52,
+                "min_htlc": "499",
+                "fee_base_msat": "691",
+                "fee_rate_milli_msat": "10",
+                "disabled": true,
+                "max_htlc_msat": "7945793",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 80,
+                "min_htlc": "761",
+                "fee_base_msat": "988",
+                "fee_rate_milli_msat": "8",
+                "disabled": false,
+                "max_htlc_msat": "8469512",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "814546779703646292",
+            "chan_point": "apcbqplczk:1",
+            "last_update": 1720108241,
+            "node1_pub": "BBSRQT",
+            "node2_pub": "VBNVLH",
+            "capacity": "3351107",
+            "node1_policy": {
+                "time_lock_delta": 55,
+                "min_htlc": "131",
+                "fee_base_msat": "765",
+                "fee_rate_milli_msat": "7",
+                "disabled": true,
+                "max_htlc_msat": "3426351",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 96,
+                "min_htlc": "101",
+                "fee_base_msat": "850",
+                "fee_rate_milli_msat": "6",
+                "disabled": true,
+                "max_htlc_msat": "9195784",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "936991061686281473",
+            "chan_point": "dhzjagumbo:1",
+            "last_update": 1720108241,
+            "node1_pub": "HIBUMN",
+            "node2_pub": "LDVOCG",
+            "capacity": "9976241",
+            "node1_policy": {
+                "time_lock_delta": 82,
+                "min_htlc": "694",
+                "fee_base_msat": "872",
+                "fee_rate_milli_msat": "6",
+                "disabled": true,
+                "max_htlc_msat": "8013415",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 62,
+                "min_htlc": "760",
+                "fee_base_msat": "850",
+                "fee_rate_milli_msat": "8",
+                "disabled": true,
+                "max_htlc_msat": "9937394",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "990507449660364966",
+            "chan_point": "bfqgvgwzdh:1",
+            "last_update": 1720108241,
+            "node1_pub": "EPCHBS",
+            "node2_pub": "ARFUZV",
+            "capacity": "5192720",
+            "node1_policy": {
+                "time_lock_delta": 69,
+                "min_htlc": "634",
+                "fee_base_msat": "492",
+                "fee_rate_milli_msat": "5",
+                "disabled": false,
+                "max_htlc_msat": "5860313",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 96,
+                "min_htlc": "598",
+                "fee_base_msat": "68",
+                "fee_rate_milli_msat": "8",
+                "disabled": true,
+                "max_htlc_msat": "3357758",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "468740181283155511",
+            "chan_point": "fodiyejtdx:1",
+            "last_update": 1720108241,
+            "node1_pub": "HTHLZO",
+            "node2_pub": "ZVMBLR",
+            "capacity": "9917421",
+            "node1_policy": {
+                "time_lock_delta": 66,
+                "min_htlc": "638",
+                "fee_base_msat": "350",
+                "fee_rate_milli_msat": "9",
+                "disabled": false,
+                "max_htlc_msat": "6390938",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 59,
+                "min_htlc": "661",
+                "fee_base_msat": "25",
+                "fee_rate_milli_msat": "4",
+                "disabled": true,
+                "max_htlc_msat": "2584449",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "268578343351623904",
+            "chan_point": "vwlkqabxoo:1",
+            "last_update": 1720108241,
+            "node1_pub": "HHHQQM",
+            "node2_pub": "GPBGSG",
+            "capacity": "6841974",
+            "node1_policy": {
+                "time_lock_delta": 84,
+                "min_htlc": "207",
+                "fee_base_msat": "264",
+                "fee_rate_milli_msat": "10",
+                "disabled": false,
+                "max_htlc_msat": "4682916",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 65,
+                "min_htlc": "696",
+                "fee_base_msat": "854",
+                "fee_rate_milli_msat": "8",
+                "disabled": true,
+                "max_htlc_msat": "7757736",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "398988419155723322",
+            "chan_point": "lsfwpmbxjn:1",
+            "last_update": 1720108241,
+            "node1_pub": "TMETCQ",
+            "node2_pub": "NVTDEO",
+            "capacity": "2250006",
+            "node1_policy": {
+                "time_lock_delta": 65,
+                "min_htlc": "189",
+                "fee_base_msat": "286",
+                "fee_rate_milli_msat": "3",
+                "disabled": false,
+                "max_htlc_msat": "6268048",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 95,
+                "min_htlc": "591",
+                "fee_base_msat": "648",
+                "fee_rate_milli_msat": "6",
+                "disabled": true,
+                "max_htlc_msat": "2572998",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "010961906383993065",
+            "chan_point": "eqoeekzeza:1",
+            "last_update": 1720108241,
+            "node1_pub": "NVTDEO",
+            "node2_pub": "MCBADS",
+            "capacity": "3802645",
+            "node1_policy": {
+                "time_lock_delta": 69,
+                "min_htlc": "250",
+                "fee_base_msat": "650",
+                "fee_rate_milli_msat": "7",
+                "disabled": false,
+                "max_htlc_msat": "5347123",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 60,
+                "min_htlc": "719",
+                "fee_base_msat": "6",
+                "fee_rate_milli_msat": "2",
+                "disabled": true,
+                "max_htlc_msat": "4246252",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "263346552573652233",
+            "chan_point": "goteigshxd:1",
+            "last_update": 1720108241,
+            "node1_pub": "ZVMBLR",
+            "node2_pub": "BGRTDL",
+            "capacity": "4055205",
+            "node1_policy": {
+                "time_lock_delta": 88,
+                "min_htlc": "680",
+                "fee_base_msat": "215",
+                "fee_rate_milli_msat": "8",
+                "disabled": false,
+                "max_htlc_msat": "8169554",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 87,
+                "min_htlc": "806",
+                "fee_base_msat": "980",
+                "fee_rate_milli_msat": "5",
+                "disabled": true,
+                "max_htlc_msat": "7247621",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "482308958643617295",
+            "chan_point": "cusityqwro:1",
+            "last_update": 1720108241,
+            "node1_pub": "GPBGSG",
+            "node2_pub": "MCBADS",
+            "capacity": "6288017",
+            "node1_policy": {
+                "time_lock_delta": 59,
+                "min_htlc": "385",
+                "fee_base_msat": "112",
+                "fee_rate_milli_msat": "2",
+                "disabled": false,
+                "max_htlc_msat": "4557602",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 100,
+                "min_htlc": "858",
+                "fee_base_msat": "577",
+                "fee_rate_milli_msat": "6",
+                "disabled": true,
+                "max_htlc_msat": "2054991",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "853146908829782859",
+            "chan_point": "blsrlhenqo:1",
+            "last_update": 1720108241,
+            "node1_pub": "GPBGSG",
+            "node2_pub": "LRSDEI",
+            "capacity": "1695737",
+            "node1_policy": {
+                "time_lock_delta": 100,
+                "min_htlc": "356",
+                "fee_base_msat": "178",
+                "fee_rate_milli_msat": "10",
+                "disabled": true,
+                "max_htlc_msat": "8118649",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 77,
+                "min_htlc": "363",
+                "fee_base_msat": "190",
+                "fee_rate_milli_msat": "10",
+                "disabled": true,
+                "max_htlc_msat": "1997573",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "800640089827250838",
+            "chan_point": "xyxbsrmggm:1",
+            "last_update": 1720108241,
+            "node1_pub": "LDVOCG",
+            "node2_pub": "OPEPRQ",
+            "capacity": "9266010",
+            "node1_policy": {
+                "time_lock_delta": 50,
+                "min_htlc": "285",
+                "fee_base_msat": "515",
+                "fee_rate_milli_msat": "8",
+                "disabled": false,
+                "max_htlc_msat": "6968092",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 91,
+                "min_htlc": "143",
+                "fee_base_msat": "54",
+                "fee_rate_milli_msat": "3",
+                "disabled": true,
+                "max_htlc_msat": "7354765",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "960153397825253540",
+            "chan_point": "rmmjmwcboa:1",
+            "last_update": 1720108241,
+            "node1_pub": "LRSDEI",
+            "node2_pub": "TMETCQ",
+            "capacity": "225705",
+            "node1_policy": {
+                "time_lock_delta": 83,
+                "min_htlc": "191",
+                "fee_base_msat": "639",
+                "fee_rate_milli_msat": "2",
+                "disabled": true,
+                "max_htlc_msat": "3439126",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 100,
+                "min_htlc": "919",
+                "fee_base_msat": "282",
+                "fee_rate_milli_msat": "5",
+                "disabled": false,
+                "max_htlc_msat": "3660938",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "050873568500000051",
+            "chan_point": "pwsgwxxsda:1",
+            "last_update": 1720108241,
+            "node1_pub": "ARFUZV",
+            "node2_pub": "HHHQQM",
+            "capacity": "6445466",
+            "node1_policy": {
+                "time_lock_delta": 54,
+                "min_htlc": "194",
+                "fee_base_msat": "606",
+                "fee_rate_milli_msat": "3",
+                "disabled": false,
+                "max_htlc_msat": "5721695",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 98,
+                "min_htlc": "743",
+                "fee_base_msat": "20",
+                "fee_rate_milli_msat": "8",
+                "disabled": true,
+                "max_htlc_msat": "6572506",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "464268528359979031",
+            "chan_point": "gssapabacp:1",
+            "last_update": 1720108241,
+            "node1_pub": "GMOEUE",
+            "node2_pub": "QHHTIP",
+            "capacity": "8394327",
+            "node1_policy": {
+                "time_lock_delta": 97,
+                "min_htlc": "575",
+                "fee_base_msat": "894",
+                "fee_rate_milli_msat": "2",
+                "disabled": false,
+                "max_htlc_msat": "8642859",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 96,
+                "min_htlc": "990",
+                "fee_base_msat": "591",
+                "fee_rate_milli_msat": "4",
+                "disabled": false,
+                "max_htlc_msat": "8595242",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "732109104880208995",
+            "chan_point": "xorjfgleua:1",
+            "last_update": 1720108241,
+            "node1_pub": "MCBADS",
+            "node2_pub": "HTHLZO",
+            "capacity": "4865741",
+            "node1_policy": {
+                "time_lock_delta": 67,
+                "min_htlc": "154",
+                "fee_base_msat": "21",
+                "fee_rate_milli_msat": "9",
+                "disabled": true,
+                "max_htlc_msat": "9931766",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 81,
+                "min_htlc": "581",
+                "fee_base_msat": "946",
+                "fee_rate_milli_msat": "9",
+                "disabled": true,
+                "max_htlc_msat": "6325380",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "687300207934583879",
+            "chan_point": "ijprcnsyvw:1",
+            "last_update": 1720108241,
+            "node1_pub": "SZHMET",
+            "node2_pub": "ARFUZV",
+            "capacity": "3308024",
+            "node1_policy": {
+                "time_lock_delta": 65,
+                "min_htlc": "426",
+                "fee_base_msat": "889",
+                "fee_rate_milli_msat": "0",
+                "disabled": false,
+                "max_htlc_msat": "1983520",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 77,
+                "min_htlc": "462",
+                "fee_base_msat": "970",
+                "fee_rate_milli_msat": "5",
+                "disabled": true,
+                "max_htlc_msat": "2697940",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "575385006423269297",
+            "chan_point": "yumbewlmtb:1",
+            "last_update": 1720108241,
+            "node1_pub": "LRUSDV",
+            "node2_pub": "SQURSN",
+            "capacity": "6945735",
+            "node1_policy": {
+                "time_lock_delta": 85,
+                "min_htlc": "909",
+                "fee_base_msat": "518",
+                "fee_rate_milli_msat": "5",
+                "disabled": false,
+                "max_htlc_msat": "6907385",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 61,
+                "min_htlc": "128",
+                "fee_base_msat": "903",
+                "fee_rate_milli_msat": "5",
+                "disabled": true,
+                "max_htlc_msat": "9429736",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "476745601743158829",
+            "chan_point": "ozrryplvcj:1",
+            "last_update": 1720108241,
+            "node1_pub": "SZHMET",
+            "node2_pub": "ZVMBLR",
+            "capacity": "8415842",
+            "node1_policy": {
+                "time_lock_delta": 77,
+                "min_htlc": "517",
+                "fee_base_msat": "369",
+                "fee_rate_milli_msat": "4",
+                "disabled": false,
+                "max_htlc_msat": "3453022",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 89,
+                "min_htlc": "884",
+                "fee_base_msat": "12",
+                "fee_rate_milli_msat": "4",
+                "disabled": false,
+                "max_htlc_msat": "1253273",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "681511929098671159",
+            "chan_point": "wvqzvfxwnt:1",
+            "last_update": 1720108241,
+            "node1_pub": "ECADQA",
+            "node2_pub": "LRUSDV",
+            "capacity": "3920689",
+            "node1_policy": {
+                "time_lock_delta": 97,
+                "min_htlc": "956",
+                "fee_base_msat": "804",
+                "fee_rate_milli_msat": "3",
+                "disabled": true,
+                "max_htlc_msat": "9812047",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 84,
+                "min_htlc": "250",
+                "fee_base_msat": "58",
+                "fee_rate_milli_msat": "1",
+                "disabled": false,
+                "max_htlc_msat": "8987262",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "635492237278432750",
+            "chan_point": "oferikpmdd:1",
+            "last_update": 1720108241,
+            "node1_pub": "ECADQA",
+            "node2_pub": "MCBADS",
+            "capacity": "2293367",
+            "node1_policy": {
+                "time_lock_delta": 51,
+                "min_htlc": "373",
+                "fee_base_msat": "145",
+                "fee_rate_milli_msat": "1",
+                "disabled": false,
+                "max_htlc_msat": "6645873",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 75,
+                "min_htlc": "638",
+                "fee_base_msat": "989",
+                "fee_rate_milli_msat": "9",
+                "disabled": true,
+                "max_htlc_msat": "5248545",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "802535800599400157",
+            "chan_point": "obbyyjeuzo:1",
+            "last_update": 1720108241,
+            "node1_pub": "BBSRQT",
+            "node2_pub": "GMOEUE",
+            "capacity": "9856064",
+            "node1_policy": {
+                "time_lock_delta": 73,
+                "min_htlc": "715",
+                "fee_base_msat": "245",
+                "fee_rate_milli_msat": "7",
+                "disabled": false,
+                "max_htlc_msat": "8580341",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 69,
+                "min_htlc": "216",
+                "fee_base_msat": "763",
+                "fee_rate_milli_msat": "1",
+                "disabled": false,
+                "max_htlc_msat": "3452845",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "816973451576453147",
+            "chan_point": "zfuxynjtil:1",
+            "last_update": 1720108241,
+            "node1_pub": "LRSDEI",
+            "node2_pub": "SZHMET",
+            "capacity": "7544427",
+            "node1_policy": {
+                "time_lock_delta": 61,
+                "min_htlc": "971",
+                "fee_base_msat": "50",
+                "fee_rate_milli_msat": "2",
+                "disabled": false,
+                "max_htlc_msat": "5476782",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 63,
+                "min_htlc": "788",
+                "fee_base_msat": "341",
+                "fee_rate_milli_msat": "4",
+                "disabled": true,
+                "max_htlc_msat": "2837372",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "581326294716933774",
+            "chan_point": "tkqqswvmad:1",
+            "last_update": 1720108241,
+            "node1_pub": "NVTDEO",
+            "node2_pub": "LRUSDV",
+            "capacity": "7924540",
+            "node1_policy": {
+                "time_lock_delta": 64,
+                "min_htlc": "927",
+                "fee_base_msat": "214",
+                "fee_rate_milli_msat": "6",
+                "disabled": true,
+                "max_htlc_msat": "6282900",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 71,
+                "min_htlc": "172",
+                "fee_base_msat": "504",
+                "fee_rate_milli_msat": "7",
+                "disabled": true,
+                "max_htlc_msat": "3931067",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "custom_records": {}
+        },
+        {
+            "channel_id": "813112343440620445",
+            "chan_point": "ssnzfrlspz:1",
+            "last_update": 1720108241,
+            "node1_pub": "ECADQA",
+            "node2_pub": "PRTNLT",
+            "capacity": "2542293",
+            "node1_policy": {
+                "time_lock_delta": 71,
+                "min_htlc": "425",
+                "fee_base_msat": "795",
+                "fee_rate_milli_msat": "0",
+                "disabled": false,
+                "max_htlc_msat": "6696069",
+                "last_update": 1720108241,
+                "custom_records": {}
+            },
+            "node2_policy": {
+                "time_lock_delta": 60,
+                "min_htlc": "794",
+                "fee_base_msat": "307",
+                "fee_rate_milli_msat": "1",
+                "disabled": false,
+                "max_htlc_msat": "4491214",
                 "last_update": 1720108241,
                 "custom_records": {}
             },

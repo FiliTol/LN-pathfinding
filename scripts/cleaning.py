@@ -193,7 +193,7 @@ def _find_channels(n: str, df_channels: pd.DataFrame) -> list:
     """
     channels_list = []
     for c in df_channels.index:
-        if df_channels.loc[c, "node1_pub"] == n.name:
+        if df_channels.loc[c, "node1_pub"] == n.name or df_channels.loc[c, "node2_pub"] == n.name :
             channels_list.append(c)
     return channels_list
 
@@ -289,7 +289,8 @@ def _fees_amount_conversion(pd_object: pd.DataFrame) -> pd.DataFrame:
 
     # Transform fees accordingly (base fee already in millisats)
     # Fee rate in parts per million of a sat (ppm)
-    #pd_object["fee_rate_milli_msat"] = pd_object["fee_rate_milli_msat"] / 1000
+    pd_object["fee_base_msat"] = pd_object["fee_base_msat"]/1000
+    pd_object["fee_rate_milli_msat"] = pd_object["fee_rate_milli_msat"] / 1000000
     pd_object.rename(columns={"fee_base_msat": "base_fee", "fee_rate_milli_msat": "rate_fee"}, inplace=True)
     return pd_object
 
@@ -329,6 +330,29 @@ def create_demand(pd_object: pd.DataFrame) -> pd.DataFrame:
     return pd_object
 
 
+def group_channels(channels: pd.DataFrame) -> pd.DataFrame:
+    """
+    Note that the following are arbitrary policies, that can be changed as needed.
+    Deal with multi-edges (aka multiple channels between two peers):
+    - average rate fee
+    - average base fee,
+    - average capacity
+    - keep one of the two channel ids
+    :return: channels dataframe withoud multiedges
+    """
+    aggregation_dict = {
+        "channel_id": "first",
+        "rate_fee": "mean",
+        "base_fee": "mean",
+        "capacity": "sum"
+    }
+    channels.reset_index(inplace=True)
+    channels = channels.groupby(["node1_pub", "node2_pub"]).agg(aggregation_dict)
+    channels.reset_index(inplace=True)
+    channels.set_index("channel_id", inplace=True)
+    return channels
+
+
 if __name__ == "__main__":
     start = time.time()
     print("Cleaning script started")
@@ -337,7 +361,7 @@ if __name__ == "__main__":
     channels = channels_cleaning(channels)
 
     print("Working on the parallel multiprocess channel search. Please wait without interrupting.")
-    nodes = split_compute_concat(nodes, channels, slices=9)
+    nodes = split_compute_concat(nodes, channels, slices=5)
 
     channels = directed_channels_final(channels)
 

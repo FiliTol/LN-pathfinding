@@ -12,7 +12,7 @@ def generate_node(pub_key):
     node = {
         "last_update": 1720108241,
         "pub_key": pub_key,
-        "alias": generate_random_string(10) + ".com",
+        "alias": pub_key + ".com",
         "addresses": [
             {
                 "network": "tcp",
@@ -35,11 +35,11 @@ def generate_node(pub_key):
 def generate_edge(channel_id, node1_pub, node2_pub):
     edge = {
         "channel_id": channel_id,
-        "chan_point": generate_random_string(32) + ":1",
+        "chan_point": generate_random_string(10) + ":1",
         "last_update": 1720108241,
         "node1_pub": node1_pub,
         "node2_pub": node2_pub,
-        "capacity": str(random.randint(1000000, 9999999)),
+        "capacity": str(random.randint(100000, 9999999)),
         "node1_policy": {
             "time_lock_delta": random.randint(50, 100),
             "min_htlc": str(random.randint(100, 1000)),
@@ -69,12 +69,12 @@ nodes = []
 edges = []
 list_pub_key = []
 
-for i in range(10):
-    pub_key = ''.join(random.choices('0123456789abcdef', k=66))
+for i in range(30):
+    pub_key = ''.join(random.choices('ABCDEFGHILMNOPQRSTUVZ', k=6))
     list_pub_key.append(pub_key)
     nodes.append(generate_node(pub_key))
 
-for i in range(30):
+for i in range(100):
     channel_id = ''.join(random.choices(string.digits, k=18))
     ris = random.sample(list_pub_key, k = 2)
     node1_pub = ris[0]
