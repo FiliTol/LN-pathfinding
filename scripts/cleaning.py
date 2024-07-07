@@ -285,10 +285,9 @@ def _fees_amount_conversion(pd_object: pd.DataFrame) -> pd.DataFrame:
     :return: channels dataframe with converted fees
     """
     # Turn channel capacity into millisats
-    pd_object["capacity"] = pd_object["capacity"]# * 1000
+    pd_object["capacity"] = pd_object["capacity"]
 
-    # Transform fees accordingly (base fee already in millisats)
-    # Fee rate in parts per million of a sat (ppm)
+    # Transform fees accordingly
     pd_object["fee_base_msat"] = pd_object["fee_base_msat"]/1000
     pd_object["fee_rate_milli_msat"] = pd_object["fee_rate_milli_msat"] / 1000000
     pd_object.rename(columns={"fee_base_msat": "base_fee", "fee_rate_milli_msat": "rate_fee"}, inplace=True)
@@ -306,11 +305,12 @@ def directed_channels_final(pd_object: pd.DataFrame) -> pd.DataFrame:
     return pd_object
 
 
-def create_demand(pd_object: pd.DataFrame) -> pd.DataFrame:
+def create_demand(pd_object: pd.DataFrame, amount: int) -> pd.DataFrame:
     """
     This function assigns the role of sender and receiver to
     two random nodes in the network
     :param pd_object: nodes dataframe
+    :param amount: int representing the amount in sats
     :return: nodes dataset with demand column
     """
     random.seed(874631)
@@ -318,7 +318,6 @@ def create_demand(pd_object: pd.DataFrame) -> pd.DataFrame:
     sender = counterparties[0]
     receiver = counterparties[1]
     # Amounts in millisat (aka 10'000'000 is 10'000 sats)
-    amount = 10000000 #random.randint(a=10000000, b=30000000)
 
     print(
         f"Transaction of {amount} sats from {pd_object[pd_object.index == sender]['alias'].item()} to {pd_object[pd_object.index == receiver]['alias'].item()}.")
@@ -356,17 +355,17 @@ def group_channels(channels: pd.DataFrame) -> pd.DataFrame:
 if __name__ == "__main__":
     start = time.time()
     print("Cleaning script started")
-    nodes, channels = json_to_pd("data/mock/mock_dataset.json")
+    nodes, channels = json_to_pd("data/original/network_graph_2024_06_27.json")
     nodes = nodes_cleaning(nodes)
     channels = channels_cleaning(channels)
 
     print("Working on the parallel multiprocess channel search. Please wait without interrupting.")
-    nodes = split_compute_concat(nodes, channels, slices=5)
+    nodes = split_compute_concat(nodes, channels, slices=7)
 
     channels = directed_channels_final(channels)
 
-    nodes.to_pickle("data/mock/mock_nodes.pkl")
-    channels.to_pickle("data/mock/mock_channels.pkl")
+    nodes.to_pickle("data/original/nodes.pkl")
+    channels.to_pickle("data/original/channels.pkl")
     print("Dataframes saved as pickles in the data/ folder")
 
     end = time.time()
