@@ -69,12 +69,12 @@ nodes = []
 edges = []
 list_pub_key = []
 
-for i in range(30):
-    pub_key = ''.join(random.choices('ABCDEFGHILMNOPQRSTUVZ', k=6))
+for i in range(100):
+    pub_key = ''.join(random.choices('ABCDEFGHILMNOPQRSTUVZ', k=10))
     list_pub_key.append(pub_key)
     nodes.append(generate_node(pub_key))
 
-for i in range(100):
+for i in range(350):
     channel_id = ''.join(random.choices(string.digits, k=18))
     ris = random.sample(list_pub_key, k = 2)
     node1_pub = ris[0]

@@ -6,9 +6,9 @@ tutorials/
 data/original/features.json
 .python-version
 scripts/__pycache__/
-scripts/testing.ipynb
+scripts/mock/testing.ipynb
 data/Input/
 scripts/.ipynb_checkpoints
-scripts/mock.ipynb
-scripts/scrape_mempool.ipynb
+scripts/mock/mock.ipynb
+scripts/original/scrape_mempool.ipynb
 data/mock/mock.json

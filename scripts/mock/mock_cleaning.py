@@ -5,21 +5,24 @@ import pandas as pd
 import json
 import re
 from random import sample
+from typing import Tuple
+
+from pandas import DataFrame
 
 
 # Import data
-def json_to_pd(data: str) -> (pd.DataFrame, pd.DataFrame):
+def json_to_pd(data: str) -> tuple[DataFrame, DataFrame]:
     """
     :param data: provide json path
     :return:     pd.DataFrame for nodes and channels, as required
     """
     with open(data) as f:
         d = json.load(f)
-    nodes, channels = pd.DataFrame(d["nodes"]), pd.DataFrame(d["edges"])
-    return nodes, channels
+    df_nodes, df_channels = pd.DataFrame(d["nodes"]), pd.DataFrame(d["edges"])
+    return df_nodes, df_channels
 
 
-def _filter_dates(pd_object: pd.DataFrame) -> pd.DataFrame:
+def _filter_dates(pd_object: DataFrame) -> DataFrame:
     """
     This method filters out the entries with no update time, thus
     not useful.
@@ -28,14 +31,14 @@ def _filter_dates(pd_object: pd.DataFrame) -> pd.DataFrame:
     """
     pd_object["last_update"] = pd.to_datetime(pd_object["last_update"], unit="s")
     pd_object = pd_object[pd_object.loc[:, "last_update"] > "1970-01-01"]
-    return pd_object
+    return pd.DataFrame(pd_object)
 
 
 # --------------------------------
 # Nodes initial dataset cleaning |
 # --------------------------------
 
-def _allocate_code(addresses):
+def _allocate_code(addresses: list[str]) -> int:
     """
     Provides a code for the connection type used by the node, provided
     the list of Ip addresses used by the node.
@@ -54,7 +57,7 @@ def _allocate_code(addresses):
     return sum(set(code))
 
 
-def _node_addresses(pd_object: pd.DataFrame) -> pd.DataFrame:
+def _node_addresses(pd_object: DataFrame) -> DataFrame:
     """
     :param pd_object: pandas dataframe for nodes
     :return: cleaned pandas dataframe for nodes
@@ -72,7 +75,7 @@ def _node_addresses(pd_object: pd.DataFrame) -> pd.DataFrame:
     return pd_object
 
 
-def nodes_cleaning(pd_object: pd.DataFrame) -> pd.DataFrame:
+def nodes_cleaning(pd_object: DataFrame) -> DataFrame:
     pd_object = _node_addresses(_filter_dates(pd_object))
     pd_object = pd_object.filter(
         items=[
@@ -88,7 +91,7 @@ def nodes_cleaning(pd_object: pd.DataFrame) -> pd.DataFrame:
 # Channels initial dataset cleaning |
 # -----------------------------------
 
-def _channel_filtering(pd_object: pd.DataFrame) -> pd.DataFrame:
+def _channel_filtering(pd_object: DataFrame) -> DataFrame:
     """
     :param pd_object: pandas dataframe for channels
     :return: cleaned pandas dataframe for channels
@@ -100,7 +103,7 @@ def _channel_filtering(pd_object: pd.DataFrame) -> pd.DataFrame:
     return pd_object
 
 
-def _fees_extraction(pd_object: pd.DataFrame) -> pd.DataFrame:
+def _fees_extraction(pd_object: DataFrame) -> DataFrame:
     """
     :param pd_object: raw dataframe of channels with raw fees
     :return: fees extraction for dataframe of channels
@@ -122,7 +125,7 @@ def _fees_extraction(pd_object: pd.DataFrame) -> pd.DataFrame:
     return pd_object
 
 
-def _channel_data_types(pd_object: pd.DataFrame) -> pd.DataFrame:
+def _channel_data_types(pd_object: DataFrame) -> DataFrame:
     """
     :param pd_object: raw dataframe of channels
     :return: new datatypes i channels dataframe
@@ -139,7 +142,7 @@ def _channel_data_types(pd_object: pd.DataFrame) -> pd.DataFrame:
     return pd_object
 
 
-def channels_cleaning(pd_object: pd.DataFrame) -> pd.DataFrame:
+def channels_cleaning(pd_object: DataFrame) -> DataFrame:
     pd_object = _filter_dates(pd_object)
     pd_object = _channel_filtering(pd_object)
     pd_object = _fees_extraction(pd_object)
@@ -163,7 +166,7 @@ def channels_cleaning(pd_object: pd.DataFrame) -> pd.DataFrame:
 # Functions to execute in parallel the channel discovery for nodes |
 # ------------------------------------------------------------------
 
-def _nodes_df_splitting(pd_object: pd.DataFrame, n: int) -> list:
+def _nodes_df_splitting(pd_object: DataFrame, n: int) -> list[DataFrame]:
     """
     :param pd_object: nodes dataframe
     :param n: number of chunks desired to split the dataframe
@@ -180,7 +183,7 @@ def _nodes_df_splitting(pd_object: pd.DataFrame, n: int) -> list:
     return results
 
 
-def _find_channels(n: str, df_channels: pd.DataFrame) -> list:
+def _find_channels(n, df_channels: DataFrame) -> list[str]:
     """
     :param n: node pub key
     :return: list of channels for the node
@@ -193,54 +196,54 @@ def _find_channels(n: str, df_channels: pd.DataFrame) -> list:
     """
     channels_list = []
     for c in df_channels.index:
-        if df_channels.loc[c, "node1_pub"] == n.name or df_channels.loc[c, "node2_pub"] == n.name :
+        if df_channels.loc[c, "node1_pub"] == n.name or df_channels.loc[c, "node2_pub"] == n.name:
             channels_list.append(c)
     return channels_list
 
 
-def _parallel_channel_finding(args: tuple, df_channels: pd.DataFrame) -> pd.DataFrame:
+def _parallel_channel_finding(args: tuple[DataFrame, int], df_channels: DataFrame) -> DataFrame:
     dfs, i = args
     df = dfs[i].copy()
     df["outgoing_channels"] = df.apply(_find_channels, args=(df_channels,), axis=1)
-    return df
+    return pd.DataFrame(df)
 
 
-def _append_inv_channel(c: list) -> list:
+def _append_inv_channel(c: list[str]) -> list[str]:
     ris = []
     for i in c:
         ris.append("INV" + str(i))
     return ris
 
 
-def _flipped_channels(pd_object: pd.DataFrame) -> pd.DataFrame:
+def _flipped_channels(pd_object: DataFrame) -> DataFrame:
     pd_object["incoming_channels"] = pd_object["outgoing_channels"].apply(_append_inv_channel)
     return pd_object
 
 
-def _drop_not_connected(nodes: pd.DataFrame, channels: pd.DataFrame ) -> pd.DataFrame:
+def _drop_not_connected(df_nodes: DataFrame, df_channels: DataFrame) -> DataFrame:
     """
-    :param nodes: nodes dataframe
-    :param channels: channels dataframe
+    :param df_nodes: nodes dataframe
+    :param df_channels: channels dataframe
     :return: filtered nodes dataframe containing only the nodes
      that appear at least once in the channels dataframe
     """
-    nodes = nodes[nodes.index.isin(channels["node1_pub"]) | nodes.index.isin(channels["node2_pub"])]
-    return nodes
+    df_nodes = df_nodes[df_nodes.index.isin(df_channels["node1_pub"]) | df_nodes.index.isin(df_channels["node2_pub"])]
+    return df_nodes
 
 
-def split_compute_concat(nodes: pd.DataFrame, channels: pd.DataFrame, slices: int) -> pd.DataFrame:
+def split_compute_concat(df_nodes: DataFrame, df_channels: DataFrame, slices: int) -> DataFrame:
     """
-    :param nodes: nodes dataframe before splitting
-    :param channels: channels dataframe
+    :param df_nodes: nodes dataframe before splitting
+    :param df_channels: channels dataframe
     :param slices: number of slices to split the nodes df into
     :return: nodes dataframe with the new columns computed after splitting
     """
-    pd_object = _drop_not_connected(nodes, channels)
+    pd_object = _drop_not_connected(df_nodes, df_channels)
     dataframes = _nodes_df_splitting(pd_object, slices)
 
     # Compute in parallel the channel finding and appending of channels list
     pool = Pool()
-    inputs: list = [((dataframes, y), channels) for y in range(slices)]
+    inputs: list = [((dataframes, y), df_channels) for y in range(slices)]
     outputs: list = pool.starmap(_parallel_channel_finding, inputs)
     pd_object = _flipped_channels(pd.concat(outputs))
 
@@ -251,7 +254,7 @@ def split_compute_concat(nodes: pd.DataFrame, channels: pd.DataFrame, slices: in
 # Directed edges creation for channels dataframe |
 # ------------------------------------------------
 
-def _channel_directed_edges_creation(pd_object: pd.DataFrame) -> pd.DataFrame:
+def _channel_directed_edges_creation(pd_object: DataFrame) -> DataFrame:
     """
     This function transforms the channels dataframe into a dataframe with the directed
     relationships between peers and keep only the fee charged for going trough the specific
@@ -279,7 +282,7 @@ def _channel_directed_edges_creation(pd_object: pd.DataFrame) -> pd.DataFrame:
     return pd_object.set_index("channel_id")
 
 
-def _fees_amount_conversion(pd_object: pd.DataFrame) -> pd.DataFrame:
+def _fees_amount_conversion(pd_object: DataFrame) -> DataFrame:
     """
     :param pd_object: channels dataframe
     :return: channels dataframe with converted fees
@@ -294,7 +297,7 @@ def _fees_amount_conversion(pd_object: pd.DataFrame) -> pd.DataFrame:
     return pd_object
 
 
-def directed_channels_final(pd_object: pd.DataFrame) -> pd.DataFrame:
+def directed_channels_final(pd_object: DataFrame) -> DataFrame:
     """
     :param pd_object: channels dataframe
     :return: directed channel dataframe with adjusted fees
@@ -305,7 +308,7 @@ def directed_channels_final(pd_object: pd.DataFrame) -> pd.DataFrame:
     return pd_object
 
 
-def create_demand(pd_object: pd.DataFrame, amount: int) -> pd.DataFrame:
+def create_demand(pd_object: DataFrame, amount: int) -> DataFrame:
     """
     This function assigns the role of sender and receiver to
     two random nodes in the network
@@ -319,8 +322,9 @@ def create_demand(pd_object: pd.DataFrame, amount: int) -> pd.DataFrame:
     receiver = counterparties[1]
     # Amounts in millisat (aka 10'000'000 is 10'000 sats)
 
-    print(
-        f"Transaction of {amount} sats from {pd_object[pd_object.index == sender]['alias'].item()} to {pd_object[pd_object.index == receiver]['alias'].item()}.")
+    print(f"Transaction of {amount} sats.")
+    print(f"Sender: {pd_object[pd_object.index == sender]['alias'].item()}")
+    print(f"Receiver: {pd_object[pd_object.index == receiver]['alias'].item()}.")
 
     pd_object["demand"] = 0
     pd_object.loc[pd_object.index == sender, "demand"] = -amount
@@ -329,7 +333,7 @@ def create_demand(pd_object: pd.DataFrame, amount: int) -> pd.DataFrame:
     return pd_object
 
 
-def group_channels(channels: pd.DataFrame) -> pd.DataFrame:
+def group_channels(df_channels: DataFrame) -> DataFrame:
     """
     Note that the following are arbitrary policies, that can be changed as needed.
     Deal with multi-edges (aka multiple channels between two peers):
@@ -345,17 +349,17 @@ def group_channels(channels: pd.DataFrame) -> pd.DataFrame:
         "base_fee": "mean",
         "capacity": "sum"
     }
-    channels.reset_index(inplace=True)
-    channels = channels.groupby(["node1_pub", "node2_pub"]).agg(aggregation_dict)
-    channels.reset_index(inplace=True)
-    channels.set_index("channel_id", inplace=True)
-    return channels
+    df_channels.reset_index(inplace=True)
+    df_channels = df_channels.groupby(["node1_pub", "node2_pub"]).agg(aggregation_dict)
+    df_channels.reset_index(inplace=True)
+    df_channels.set_index("channel_id", inplace=True)
+    return df_channels
 
 
 if __name__ == "__main__":
     start = time.time()
     print("Cleaning script started")
-    nodes, channels = json_to_pd("data/original/network_graph_2024_06_27.json")
+    nodes, channels = json_to_pd("data/mock/mock_dataset.json")
     nodes = nodes_cleaning(nodes)
     channels = channels_cleaning(channels)
 
@@ -364,23 +368,9 @@ if __name__ == "__main__":
 
     channels = directed_channels_final(channels)
 
-    nodes.to_pickle("data/original/nodes.pkl")
-    channels.to_pickle("data/original/channels.pkl")
+    nodes.to_pickle("data/mock/mock_nodes.pkl")
+    channels.to_pickle("data/mock/mock_channels.pkl")
     print("Dataframes saved as pickles in the data/ folder")
 
     end = time.time()
     print(f"It took {end - start} seconds to execute the whole script.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
