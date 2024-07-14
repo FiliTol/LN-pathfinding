@@ -183,10 +183,10 @@ def _nodes_df_splitting(pd_object: DataFrame, n: int) -> list[DataFrame]:
     return results
 
 
-def _find_channels(n, df_channels: DataFrame) -> list[str]:
+def _find_outgoing_channels(n, df_channels: DataFrame) -> tuple[list, list]:
     """
     :param n: node pub key
-    :return: list of channels for the node
+    :return: tuple of list of channels for the node
     Note that the listed channels are directed channels
     that have also a mirrored channel that describes the
     flow of funds in the opposite direction.
@@ -194,17 +194,21 @@ def _find_channels(n, df_channels: DataFrame) -> list[str]:
     flow of channels by considering the channels
     with id "INV<channel_id>"
     """
-    channels_list = []
+    outgoing_channels_list: list = []
+    incoming_channels_list: list = []
     for c in df_channels.index:
-        if df_channels.loc[c, "node1_pub"] == n.name or df_channels.loc[c, "node2_pub"] == n.name:
-            channels_list.append(c)
-    return channels_list
+        if df_channels.loc[c, "node1_pub"] == n.name:
+            outgoing_channels_list.append(c)
+        if df_channels.loc[c, "node2_pub"] == n.name:
+            incoming_channels_list.append(c)
+    return outgoing_channels_list, incoming_channels_list
 
 
 def _parallel_channel_finding(args: tuple[DataFrame, int], df_channels: DataFrame) -> DataFrame:
     dfs, i = args
     df = dfs[i].copy()
-    df["outgoing_channels"] = df.apply(_find_channels, args=(df_channels,), axis=1)
+    df["outgoing_channels"] = df.apply(lambda x: _find_outgoing_channels(x, df_channels)[0], axis=1)
+    df["incoming_channels"] = df.apply(lambda x: _find_outgoing_channels(x, df_channels)[1], axis=1)
     return pd.DataFrame(df)
 
 
@@ -216,7 +220,10 @@ def _append_inv_channel(c: list[str]) -> list[str]:
 
 
 def _flipped_channels(pd_object: DataFrame) -> DataFrame:
-    pd_object["incoming_channels"] = pd_object["outgoing_channels"].apply(_append_inv_channel)
+    pd_object1 = pd_object.copy()
+    pd_object["incoming_channels"] = pd_object["incoming_channels"] + pd_object["outgoing_channels"].apply(_append_inv_channel)
+    pd_object["outgoing_channels"] = pd_object1["outgoing_channels"] + pd_object1["incoming_channels"].apply(_append_inv_channel)
+    del pd_object1
     return pd_object
 
 
@@ -341,7 +348,7 @@ def group_channels(df_channels: DataFrame) -> DataFrame:
     - average base fee,
     - average capacity
     - keep one of the two channel ids
-    :return: channels dataframe withoud multiedges
+    :return: channels dataframe without multiedges
     """
     aggregation_dict = {
         "channel_id": "first",

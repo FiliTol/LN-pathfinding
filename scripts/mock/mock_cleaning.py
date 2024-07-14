@@ -204,20 +204,12 @@ def _find_outgoing_channels(n, df_channels: DataFrame) -> tuple[list, list]:
     return outgoing_channels_list, incoming_channels_list
 
 
-#def _parallel_channel_finding(args: tuple[DataFrame, int], df_channels: DataFrame) -> DataFrame:
-#    dfs, i = args
-#    df = dfs[i].copy()
-#    df["outgoing_channels"] = df.apply(_find_outgoing_channels[0], args=(df_channels,), axis=1)
-#    df["incoming_channels"] = df.apply(_find_outgoing_channels[1], args=(df_channels,), axis=1)
-#    return pd.DataFrame(df)
-
 def _parallel_channel_finding(args: tuple[DataFrame, int], df_channels: DataFrame) -> DataFrame:
     dfs, i = args
     df = dfs[i].copy()
     df["outgoing_channels"] = df.apply(lambda x: _find_outgoing_channels(x, df_channels)[0], axis=1)
     df["incoming_channels"] = df.apply(lambda x: _find_outgoing_channels(x, df_channels)[1], axis=1)
     return pd.DataFrame(df)
-
 
 
 def _append_inv_channel(c: list[str]) -> list[str]:
@@ -356,7 +348,7 @@ def group_channels(df_channels: DataFrame) -> DataFrame:
     - average base fee,
     - average capacity
     - keep one of the two channel ids
-    :return: channels dataframe withoud multiedges
+    :return: channels dataframe without multiedges
     """
     aggregation_dict = {
         "channel_id": "first",
