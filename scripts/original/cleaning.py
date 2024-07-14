@@ -5,7 +5,6 @@ import pandas as pd
 import json
 import re
 from random import sample
-from typing import Tuple
 
 from pandas import DataFrame
 
@@ -363,24 +362,81 @@ def group_channels(df_channels: DataFrame) -> DataFrame:
     return df_channels
 
 
+def delete_multiedge_from_nodes(df_nodes: DataFrame, df_channels: DataFrame):
+    """
+    :param df_nodes: nodes dataset
+    :param df_channels: channels dataset
+    :return: #the function does not return specific values, only modify input datasets#
+    """
+    for i in df_nodes.index:
+        chan = []
+        for l in df_nodes.loc[i, "outgoing_channels"]:
+            if l in df_channels.index:
+                chan.append(l)
+        df_nodes.at[i, "outgoing_channels"] = chan
 
+    for i in df_nodes.index:
+        chan = []
+        for l in df_nodes.loc[i, "incoming_channels"]:
+            if l in df_channels.index:
+                chan.append(l)
+        df_nodes.at[i, "incoming_channels"] = chan
+
+    return
+
+
+def add_peers_list(df_nodes: DataFrame, df_channels: DataFrame):
+    """
+    This function adds to the nodes dataset the list of peers,
+    that are pubkeys who have a channel with the N node.
+    :param df_nodes: nodes dataframe
+    :param df_channels: channels dataframe
+    :return: #the function does not return specific values, only modify input datasets#
+    """
+    # Manipulate index to setup properly the channels dataframe
+    df_channels.reset_index(inplace=True)
+    df_channels.set_index(["node1_pub", "node2_pub"], inplace=True)
+
+    df_nodes["peers"] = None
+
+    for n in df_nodes.index:
+        peers = []
+        for c in df_nodes.loc[n, "outgoing_channels"]:
+            source, destination = df_channels[df_channels["channel_id"] == c].index[0]
+            try:
+                assert source == n
+                peers.append(destination)
+            except AssertionError as e:
+                print(f"{source} is NOT equal to {n} for channel {c}")
+        df_nodes.at[n, "peers"] = peers
+    df_channels.reset_index(inplace=True)
+    df_channels.set_index("channel_id", inplace=True)
+    return
 
 
 if __name__ == "__main__":
     start = time.time()
     print("Cleaning script started")
-    nodes, channels = json_to_pd("data/original/network_graph_2024_06_27.json")
+    nodes, channels = json_to_pd("data/original/network_graph_2024_07_14.json")
     nodes = nodes_cleaning(nodes)
     channels = channels_cleaning(channels)
 
     print("Working on the parallel multiprocess channel search. Please wait without interrupting.")
-    nodes = split_compute_concat(nodes, channels, slices=7)
+    nodes = split_compute_concat(nodes, channels, slices=8)
 
     channels = directed_channels_final(channels)
 
+    channels = group_channels(channels)
+    delete_multiedge_from_nodes(nodes, channels)
+    add_peers_list(nodes, channels)
+
     nodes.to_pickle("data/original/nodes.pkl")
     channels.to_pickle("data/original/channels.pkl")
-    print("Dataframes saved as pickles in the data/ folder")
+    print("Dataframes saved as pickles in the data/original folder")
+
+    nodes.to_csv("data/original/nodes.csv")
+    channels.to_csv("data/original/channels.csv")
+    print("Dataframes saved as pickles in the data/original folder")
 
     end = time.time()
     print(f"It took {end - start} seconds to execute the whole script.")
