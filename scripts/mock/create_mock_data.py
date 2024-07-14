@@ -5,7 +5,7 @@ import string
 
 def generate_random_string(length):
     letters = string.ascii_lowercase
-    return ''.join(random.choice(letters) for i in range(length))
+    return "".join(random.choice(letters) for i in range(length))
 
 
 def generate_node(pub_key):
@@ -14,20 +14,17 @@ def generate_node(pub_key):
         "pub_key": pub_key,
         "alias": pub_key + ".com",
         "addresses": [
-            {
-                "network": "tcp",
-                "addr": generate_random_string(20) + ".onion:9735"
-            }
+            {"network": "tcp", "addr": generate_random_string(20) + ".onion:9735"}
         ],
-        "color": "#" + ''.join(random.choices('0123456789abcdef', k=6)),
+        "color": "#" + "".join(random.choices("0123456789abcdef", k=6)),
         "features": {
             "0": {
                 "name": "data-loss-protect",
                 "is_required": random.choice([True, False]),
-                "is_known": random.choice([True, False])
+                "is_known": random.choice([True, False]),
             }
         },
-        "custom_records": {}
+        "custom_records": {},
     }
     return node
 
@@ -48,7 +45,7 @@ def generate_edge(channel_id, node1_pub, node2_pub):
             "disabled": random.choice([True, False]),
             "max_htlc_msat": str(random.randint(1000000, 9999999)),
             "last_update": 1720108241,
-            "custom_records": {}
+            "custom_records": {},
         },
         "node2_policy": {
             "time_lock_delta": random.randint(50, 100),
@@ -58,9 +55,9 @@ def generate_edge(channel_id, node1_pub, node2_pub):
             "disabled": random.choice([True, False]),
             "max_htlc_msat": str(random.randint(1000000, 9999999)),
             "last_update": 1720108241,
-            "custom_records": {}
+            "custom_records": {},
         },
-        "custom_records": {}
+        "custom_records": {},
     }
     return edge
 
@@ -70,23 +67,20 @@ edges = []
 list_pub_key = []
 
 for i in range(100):
-    pub_key = ''.join(random.choices('ABCDEFGHILMNOPQRSTUVZ', k=10))
+    pub_key = "".join(random.choices("ABCDEFGHILMNOPQRSTUVZ", k=10))
     list_pub_key.append(pub_key)
     nodes.append(generate_node(pub_key))
 
 for i in range(350):
-    channel_id = ''.join(random.choices(string.digits, k=18))
-    ris = random.sample(list_pub_key, k = 2)
+    channel_id = "".join(random.choices(string.digits, k=18))
+    ris = random.sample(list_pub_key, k=2)
     node1_pub = ris[0]
     node2_pub = ris[1]
-    #node1_pub = ''.join(random.choices('0123456789abcdef', k=66))
-    #node2_pub = ''.join(random.choices('0123456789abcdef', k=66))
+    # node1_pub = ''.join(random.choices('0123456789abcdef', k=66))
+    # node2_pub = ''.join(random.choices('0123456789abcdef', k=66))
     edges.append(generate_edge(channel_id, node1_pub, node2_pub))
 
-data = {
-    "nodes": nodes,
-    "edges": edges
-}
+data = {"nodes": nodes, "edges": edges}
 
 with open("data/mock/mock_dataset.json", "w") as file:
     json.dump(data, file, indent=4)
