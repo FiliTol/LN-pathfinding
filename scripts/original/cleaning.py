@@ -37,6 +37,7 @@ def _filter_dates(pd_object: DataFrame) -> DataFrame:
 # Nodes initial dataset cleaning |
 # --------------------------------
 
+
 def _allocate_code(addresses: list[str]) -> int:
     """
     Provides a code for the connection type used by the node, provided
@@ -66,7 +67,9 @@ def _node_addresses(pd_object: DataFrame) -> DataFrame:
         lambda x: [i["addr"] for i in x]
     )
     try:
-        pd_object.loc[:, "addresses"] = pd_object.loc[:, "addresses"].apply(_allocate_code)
+        pd_object.loc[:, "addresses"] = pd_object.loc[:, "addresses"].apply(
+            _allocate_code
+        )
     except:
         print("Address not found, going ahead without addresses creation")
         pass
@@ -76,13 +79,7 @@ def _node_addresses(pd_object: DataFrame) -> DataFrame:
 
 def nodes_cleaning(pd_object: DataFrame) -> DataFrame:
     pd_object = _node_addresses(_filter_dates(pd_object))
-    pd_object = pd_object.filter(
-        items=[
-            "pub_key",
-            "alias",
-            "addresses"
-        ]
-    )
+    pd_object = pd_object.filter(items=["pub_key", "alias", "addresses"])
     return pd_object.set_index("pub_key")
 
 
@@ -90,14 +87,16 @@ def nodes_cleaning(pd_object: DataFrame) -> DataFrame:
 # Channels initial dataset cleaning |
 # -----------------------------------
 
+
 def _channel_filtering(pd_object: DataFrame) -> DataFrame:
     """
     :param pd_object: pandas dataframe for channels
     :return: cleaned pandas dataframe for channels
     """
     pd_object = pd_object[
-        pd.notnull(pd_object.loc[:, "node1_policy"]) & pd.notnull(pd_object.loc[:, "node2_policy"])
-        ]
+        pd.notnull(pd_object.loc[:, "node1_policy"])
+        & pd.notnull(pd_object.loc[:, "node2_policy"])
+    ]
 
     return pd_object
 
@@ -133,8 +132,12 @@ def _channel_data_types(pd_object: DataFrame) -> DataFrame:
     pd_object["node1_fee_base_msat"] = pd_object["node1_fee_base_msat"].astype(int)
     pd_object["node2_fee_base_msat"] = pd_object["node2_fee_base_msat"].astype(int)
 
-    pd_object["node1_fee_rate_milli_msat"] = pd_object["node1_fee_rate_milli_msat"].astype(int)
-    pd_object["node2_fee_rate_milli_msat"] = pd_object["node2_fee_rate_milli_msat"].astype(int)
+    pd_object["node1_fee_rate_milli_msat"] = pd_object[
+        "node1_fee_rate_milli_msat"
+    ].astype(int)
+    pd_object["node2_fee_rate_milli_msat"] = pd_object[
+        "node2_fee_rate_milli_msat"
+    ].astype(int)
 
     pd_object.loc[:, "capacity"] = pd_object.loc[:, "capacity"].astype(int)
 
@@ -165,6 +168,7 @@ def channels_cleaning(pd_object: DataFrame) -> DataFrame:
 # Functions to execute in parallel the channel discovery for nodes |
 # ------------------------------------------------------------------
 
+
 def _nodes_df_splitting(pd_object: DataFrame, n: int) -> list[DataFrame]:
     """
     :param pd_object: nodes dataframe
@@ -174,10 +178,10 @@ def _nodes_df_splitting(pd_object: DataFrame, n: int) -> list[DataFrame]:
     results = []
     splitting: int = len(pd_object) // n
     for i in range(n):
-        ris = pd_object[i * splitting: (i + 1) * splitting]
+        ris = pd_object[i * splitting : (i + 1) * splitting]
         results.append(ris)
     if len(pd_object) % n != 0:
-        ris = pd_object[n * splitting: len(pd_object)-1]
+        ris = pd_object[n * splitting : len(pd_object) - 1]
         results.append(ris)
     return results
 
@@ -203,11 +207,17 @@ def _find_outgoing_channels(n, df_channels: DataFrame) -> tuple[list, list]:
     return outgoing_channels_list, incoming_channels_list
 
 
-def _parallel_channel_finding(args: tuple[DataFrame, int], df_channels: DataFrame) -> DataFrame:
+def _parallel_channel_finding(
+    args: tuple[DataFrame, int], df_channels: DataFrame
+) -> DataFrame:
     dfs, i = args
     df = dfs[i].copy()
-    df["outgoing_channels"] = df.apply(lambda x: _find_outgoing_channels(x, df_channels)[0], axis=1)
-    df["incoming_channels"] = df.apply(lambda x: _find_outgoing_channels(x, df_channels)[1], axis=1)
+    df["outgoing_channels"] = df.apply(
+        lambda x: _find_outgoing_channels(x, df_channels)[0], axis=1
+    )
+    df["incoming_channels"] = df.apply(
+        lambda x: _find_outgoing_channels(x, df_channels)[1], axis=1
+    )
     return pd.DataFrame(df)
 
 
@@ -220,8 +230,12 @@ def _append_inv_channel(c: list[str]) -> list[str]:
 
 def _flipped_channels(pd_object: DataFrame) -> DataFrame:
     pd_object1 = pd_object.copy()
-    pd_object["incoming_channels"] = pd_object["incoming_channels"] + pd_object["outgoing_channels"].apply(_append_inv_channel)
-    pd_object["outgoing_channels"] = pd_object1["outgoing_channels"] + pd_object1["incoming_channels"].apply(_append_inv_channel)
+    pd_object["incoming_channels"] = pd_object["incoming_channels"] + pd_object[
+        "outgoing_channels"
+    ].apply(_append_inv_channel)
+    pd_object["outgoing_channels"] = pd_object1["outgoing_channels"] + pd_object1[
+        "incoming_channels"
+    ].apply(_append_inv_channel)
     del pd_object1
     return pd_object
 
@@ -233,11 +247,16 @@ def _drop_not_connected(df_nodes: DataFrame, df_channels: DataFrame) -> DataFram
     :return: filtered nodes dataframe containing only the nodes
      that appear at least once in the channels dataframe
     """
-    df_nodes = df_nodes[df_nodes.index.isin(df_channels["node1_pub"]) | df_nodes.index.isin(df_channels["node2_pub"])]
+    df_nodes = df_nodes[
+        df_nodes.index.isin(df_channels["node1_pub"])
+        | df_nodes.index.isin(df_channels["node2_pub"])
+    ]
     return df_nodes
 
 
-def split_compute_concat(df_nodes: DataFrame, df_channels: DataFrame, slices: int) -> DataFrame:
+def split_compute_concat(
+    df_nodes: DataFrame, df_channels: DataFrame, slices: int
+) -> DataFrame:
     """
     :param df_nodes: nodes dataframe before splitting
     :param df_channels: channels dataframe
@@ -260,6 +279,7 @@ def split_compute_concat(df_nodes: DataFrame, df_channels: DataFrame, slices: in
 # Directed edges creation for channels dataframe |
 # ------------------------------------------------
 
+
 def _channel_directed_edges_creation(pd_object: DataFrame) -> DataFrame:
     """
     This function transforms the channels dataframe into a dataframe with the directed
@@ -280,10 +300,22 @@ def _channel_directed_edges_creation(pd_object: DataFrame) -> DataFrame:
 
     pd_object = pd.concat([pd_object, pd_object1])
     pd_object = pd_object.filter(
-        items=["channel_id", "node1_pub", "node2_pub", "capacity", "node2_fee_base_msat", "node2_fee_rate_milli_msat"])
+        items=[
+            "channel_id",
+            "node1_pub",
+            "node2_pub",
+            "capacity",
+            "node2_fee_base_msat",
+            "node2_fee_rate_milli_msat",
+        ]
+    )
     pd_object.rename(
-        columns={"node2_fee_base_msat": "fee_base_msat", "node2_fee_rate_milli_msat": "fee_rate_milli_msat"},
-        inplace=True)
+        columns={
+            "node2_fee_base_msat": "fee_base_msat",
+            "node2_fee_rate_milli_msat": "fee_rate_milli_msat",
+        },
+        inplace=True,
+    )
 
     return pd_object.set_index("channel_id")
 
@@ -297,9 +329,12 @@ def _fees_amount_conversion(pd_object: DataFrame) -> DataFrame:
     pd_object["capacity"] = pd_object["capacity"]
 
     # Transform fees accordingly
-    pd_object["fee_base_msat"] = pd_object["fee_base_msat"]/1000
+    pd_object["fee_base_msat"] = pd_object["fee_base_msat"] / 1000
     pd_object["fee_rate_milli_msat"] = pd_object["fee_rate_milli_msat"] / 1000000
-    pd_object.rename(columns={"fee_base_msat": "base_fee", "fee_rate_milli_msat": "rate_fee"}, inplace=True)
+    pd_object.rename(
+        columns={"fee_base_msat": "base_fee", "fee_rate_milli_msat": "rate_fee"},
+        inplace=True,
+    )
     return pd_object
 
 
@@ -353,7 +388,7 @@ def group_channels(df_channels: DataFrame) -> DataFrame:
         "channel_id": "first",
         "rate_fee": "mean",
         "base_fee": "mean",
-        "capacity": "sum"
+        "capacity": "sum",
     }
     df_channels.reset_index(inplace=True)
     df_channels = df_channels.groupby(["node1_pub", "node2_pub"]).agg(aggregation_dict)
@@ -418,18 +453,41 @@ if __name__ == "__main__":
     start = time.time()
     print("Cleaning script started")
     nodes, channels = json_to_pd("data/original/network_graph_2024_07_14.json")
+    print("Data imported from describegraph file")
     nodes = nodes_cleaning(nodes)
     channels = channels_cleaning(channels)
 
-    print("Working on the parallel multiprocess channel search. Please wait without interrupting.")
+    t1 = time.time()
+    print(f"Initial cleaning concluded in {t1 - start} seconds")
+
+    print(
+        "Working on the parallel multiprocess channel search. Please wait without interrupting."
+    )
     nodes = split_compute_concat(nodes, channels, slices=8)
+    t2 = time.time()
+    print(f"Parallel channel search ended in {t2 - t1} seconds")
 
+    print("Building directed graph...")
     channels = directed_channels_final(channels)
+    t3 = time.time()
+    print(f"Directed graph creation ended in {t3- t2} seconds")
 
+    print("Grouping channels...")
     channels = group_channels(channels)
-    delete_multiedge_from_nodes(nodes, channels)
-    add_peers_list(nodes, channels)
+    t4 = time.time()
+    print(f"Grouping channels ended in {t4 - t3} seconds")
 
+    print("Deleting multiedges...")
+    delete_multiedge_from_nodes(nodes, channels)
+    t5 = time.time()
+    print(f"Multiedges deleted in {t5 - t4} seconds")
+
+    print("Creating peers lists for nodes...")
+    add_peers_list(nodes, channels)
+    t6 = time.time()
+    print(f"Peers list creation ended in {t6 - t5} seconds")
+
+    print("Saving data...")
     nodes.to_pickle("data/original/nodes.pkl")
     channels.to_pickle("data/original/channels.pkl")
     print("Dataframes saved as pickles in the data/original folder")
@@ -439,4 +497,4 @@ if __name__ == "__main__":
     print("Dataframes saved as pickles in the data/original folder")
 
     end = time.time()
-    print(f"It took {end - start} seconds to execute the whole script.")
+    print(f"It took {end - start} seconds to execute the cleaning script.")
