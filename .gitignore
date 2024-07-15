@@ -1,11 +1,5 @@
 .idea
-data/blocks.csv
-data/inputs.csv
-data/transactions.csv
 data/Input/
 data/original/network_graph_2024_07_14.json
 tutorials/
 .python-version
-scripts/__pycache__/
-scripts/mock/.ipynb_checkpoints
-scripts/mock/mock.ipynb
