@@ -2,13 +2,10 @@
 data/blocks.csv
 data/inputs.csv
 data/transactions.csv
+data/Input/
+data/original/network_graph_2024_07_14.json
 tutorials/
-data/original/features.json
 .python-version
 scripts/__pycache__/
-scripts/mock/testing.ipynb
-data/Input/
-scripts/.ipynb_checkpoints
+scripts/mock/.ipynb_checkpoints
 scripts/mock/mock.ipynb
-scripts/original/scrape_mempool.ipynb
-data/mock/mock.json
