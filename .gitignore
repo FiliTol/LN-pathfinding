@@ -5,3 +5,4 @@ data/Input/
 data/original/network_graph_2024_07_14.json
 tutorials/
 .python-version
+scripts/mock/__pycache__/
