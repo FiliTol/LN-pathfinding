@@ -357,7 +357,7 @@ def create_demand(pd_object: DataFrame, amount: int) -> DataFrame:
     :param amount: int representing the amount in sats
     :return: nodes dataset with demand column
     """
-    random.seed(874631)
+    #random.seed(874631)
     counterparties = sample(pd_object.index.to_list(), 2)
     sender = counterparties[0]
     receiver = counterparties[1]
