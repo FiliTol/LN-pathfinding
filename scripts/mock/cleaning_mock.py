@@ -45,7 +45,7 @@ def _allocate_code(addresses: list[str]) -> int:
     :param addresses: list of strings with Ip or onion addresses
     :return: score for the kind of addresses used by the node.
              1 of only onion, 2 if only clearnet, 3 if both onion and clearnet
-             The score is independent from the number of addresses of each kind
+             The score is independent of the number of addresses of each kind
     """
     code = []
     onion_pattern = re.compile(r".*\.onion")
@@ -283,7 +283,7 @@ def split_compute_concat(
 def _channel_directed_edges_creation(pd_object: DataFrame) -> DataFrame:
     """
     This function transforms the channels dataframe into a dataframe with the directed
-    relationships between peers and keep only the fee charged for going trough the specific
+    relationships between peers and keep only the fee charged for going through the specific
     directed path.
     :param pd_object: channels dataframe
     :return: dataframe of channels with directed relationships and features

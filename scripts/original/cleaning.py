@@ -5,7 +5,6 @@ import pandas as pd
 import json
 import re
 from random import sample
-
 from pandas import DataFrame
 
 
@@ -29,7 +28,7 @@ def _filter_dates(pd_object: DataFrame) -> DataFrame:
     :return: pandas dataframe with filtered rows
     """
     pd_object["last_update"] = pd.to_datetime(pd_object["last_update"], unit="s")
-    pd_object = pd_object[pd_object.loc[:, "last_update"] > "1970-01-01"]
+    pd_object = pd_object.loc[pd_object["last_update"] > "1970-01-01", :]
     return pd.DataFrame(pd_object)
 
 
@@ -78,7 +77,8 @@ def _node_addresses(pd_object: DataFrame) -> DataFrame:
 
 
 def nodes_cleaning(pd_object: DataFrame) -> DataFrame:
-    pd_object = _node_addresses(_filter_dates(pd_object))
+    pd_object = _filter_dates(pd_object)
+    pd_object = _node_addresses(pd_object)
     pd_object = pd_object.filter(items=["pub_key", "alias", "addresses"])
     return pd_object.set_index("pub_key")
 
@@ -349,29 +349,43 @@ def directed_channels_final(pd_object: DataFrame) -> DataFrame:
     return pd_object
 
 
-def create_demand(pd_object: DataFrame, amount: int) -> DataFrame:
+def create_demand(df_nodes: DataFrame, amount: int, **kwargs) -> DataFrame:
     """
     This function assigns the role of sender and receiver to
     two random nodes in the network
-    :param pd_object: nodes dataframe
+    :param df_nodes: nodes dataframe
     :param amount: int representing the amount in sats
+    :param kwargs: sender and receiver pubkey (optional)
     :return: nodes dataset with demand column
     """
-    #random.seed(874631)
-    counterparties = sample(pd_object.index.to_list(), 2)
-    sender = counterparties[0]
-    receiver = counterparties[1]
-    # Amounts in millisat (aka 10'000'000 is 10'000 sats)
+    random.seed(874631)
+    sender = kwargs.get("source", None)
+    receiver = kwargs.get("destination", None)
+
+    counterparties = sample(df_nodes.index.to_list(), 2)
+    if sender == None:
+        sender = counterparties[0]
+    else:
+        if sender not in df_nodes.index.to_list():
+            print("Please provide a valid public key for Source node")
+            return
+    if receiver == None:
+        receiver = counterparties[1]
+    else:
+        if receiver not in df_nodes.index.to_list():
+            print("Please provide a valid public key for Receiver node")
+            return
 
     print(f"Transaction of {amount} sats.")
-    print(f"Sender: {pd_object[pd_object.index == sender]['alias'].item()}")
-    print(f"Receiver: {pd_object[pd_object.index == receiver]['alias'].item()}.")
+    print(f"Sender: {df_nodes[df_nodes.index == sender]['alias'].item()}")
+    print(f"Receiver: {df_nodes[df_nodes.index == receiver]['alias'].item()}.")
 
-    pd_object["demand"] = 0
-    pd_object.loc[pd_object.index == sender, "demand"] = -amount
-    pd_object.loc[pd_object.index == receiver, "demand"] = amount
+    df_nodes["demand"] = 0
+    # Amounts multiplied to make computation about integers
+    df_nodes.loc[df_nodes.index == sender, "demand"] = -amount * 1000000
+    df_nodes.loc[df_nodes.index == receiver, "demand"] = amount * 1000000
 
-    return pd_object
+    return df_nodes
 
 
 def group_channels(df_channels: DataFrame) -> DataFrame:
@@ -380,7 +394,7 @@ def group_channels(df_channels: DataFrame) -> DataFrame:
     Deal with multi-edges (aka multiple channels between two peers):
     - average rate fee
     - average base fee,
-    - average capacity
+    - sum capacity
     - keep one of the two channel ids
     :return: channels dataframe without multiedges
     """
@@ -494,7 +508,7 @@ if __name__ == "__main__":
 
     nodes.to_csv("data/original/nodes.csv")
     channels.to_csv("data/original/channels.csv")
-    print("Dataframes saved as pickles in the data/original folder")
+    print("Dataframes saved as csv in the data/original folder")
 
     end = time.time()
     print(f"It took {end - start} seconds to execute the cleaning script.")
