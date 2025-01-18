@@ -352,7 +352,7 @@ def directed_channels_final(pd_object: DataFrame) -> DataFrame:
 def create_demand(df_nodes: DataFrame, amount: int, **kwargs) -> DataFrame:
     """
     This function assigns the role of sender and receiver to
-    two random nodes in the network
+    two random nodes in the network or, if provided, to the required nodes
     :param df_nodes: nodes dataframe
     :param amount: int representing the amount in sats
     :param kwargs: sender and receiver pubkey (optional)
