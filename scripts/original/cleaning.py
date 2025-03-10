@@ -8,6 +8,8 @@ from random import sample
 from pandas import DataFrame
 
 
+additional_features = pd.read_csv('../../data/original/additional_features.csv')
+
 # Import data
 def json_to_pd(data: str) -> tuple[DataFrame, DataFrame]:
     """
@@ -352,17 +354,18 @@ def directed_channels_final(pd_object: DataFrame) -> DataFrame:
 def create_demand(df_nodes: DataFrame, amount: int, **kwargs) -> DataFrame:
     """
     This function assigns the role of sender and receiver to
-    two random nodes in the network or, if provided, to the required nodes
+    two random connected nodes in the network or, if provided, to the required nodes
     :param df_nodes: nodes dataframe
     :param amount: int representing the amount in sats
     :param kwargs: sender and receiver pubkey (optional)
     :return: nodes dataset with demand column
     """
-    random.seed(874631)
+    #random.seed(874631)
     sender = kwargs.get("source", None)
     receiver = kwargs.get("destination", None)
 
-    counterparties = sample(df_nodes.index.to_list(), 2)
+    #counterparties = sample(df_nodes.index.to_list(), 2)
+    counterparties = sample(additional_features.loc[additional_features['open_channels']>0, "pubkey"].to_list(), 2)
     if sender == None:
         sender = counterparties[0]
     else:

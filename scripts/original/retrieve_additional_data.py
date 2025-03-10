@@ -58,4 +58,4 @@ def additional_features_df(nodes: pd.DataFrame, rg_start: int = 1, rg_end: int =
         print("Something went wrong")
 
 
-additional_features_df(nodes=nodes, rg_start=3601, rg_end=11983)
+additional_features_df(nodes=nodes, rg_start=11985, rg_end=11985)
